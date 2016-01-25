@@ -1,0 +1,34 @@
+<div class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      <h1>
+        <a href="{{ site.url }}">
+          <img alt="logo" src="{{site.url}}/img/mehackit_logo_white.png" />
+        </a>
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      {% assign chapters = "" | split: ""  %}
+      {% for exercise in site.exercises %}
+        {% if chapters == empty %}
+          {% assign chapters = chapters | push: exercise.chapter %}
+        {% else %}
+          {% if chapters.last != exercise.chapter %}
+            {% assign chapters = chapters | push: exercise.chapter %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% for chapter in chapters %}
+        {% assign chapter_exercises = site.exercises | where: "chapter" , chapter %}
+        {% for exercise in chapter_exercises %}
+          <a class="sidebar-nav-item {% unless forloop.first %}sub{% endunless %} {% if page.url == exercise.url %} active{% endif %}" href="{{ exercise.url | prepend: site.url }}">{{ exercise.title }}</a>
+        {% endfor %}
+      {% endfor %}
+    </nav>
+
+    <p> &#10084; Mehackit {{ site.time | date: '%Y' }}</p>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="exercise">
+  <p class="chapter-title center"><small>{{ page.chapter }}</small></p>
+  <h1 class="exercise-title">{{ page.title }}</h1>
+  {{ content }}
+</div>
+
+{% assign exercises = site.exercises  %}
+{% for exercise in exercises %}
+    {% if exercise.url == page.url %}
+        {% unless forloop.last %}
+            {% assign next = exercises[forloop.index] %}
+            <a href="{{ site.url }}{{ next.url }}" class="exercise-nav nav-next" aria-label="Next: {{next.title}}"><i class="fa fa-angle-right"></i></a>
+        {% endunless %}
+        {% unless forloop.first %}
+            <a href="{{ site.url }}{{ prev.url }}" class="exercise-nav nav-prev" aria-label="Previous: {{ prev.title }}"><i class="fa fa-angle-left"></i></a>
+        {% endunless %}
+    {% endif %}
+    {% assign prev = exercise %}
+{% endfor %}
