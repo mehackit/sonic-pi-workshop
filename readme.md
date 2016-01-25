@@ -5,7 +5,7 @@
 - Log in to GitHub and fork this repo
 - Clone your fork of this repo. Open terminal, navigate to preferred folder and type:
 ```
-git clone git@github.com:YOUR-USERNAME/mehackit-processing.git
+git clone git@github.com:YOUR-USERNAME/sonic-pi-workshop.git
 ```
 - Create new branch for your fix and change to that branch:
 ```
