@@ -49,8 +49,14 @@ button {
   margin: 5px 0;
 }
 
-code {
-  padding: 0.25em 0em;
+code.highlighter-rouge {
+  padding: 0.25em;
+}
+
+pre {
+  padding: 0.25em 0.5em;
+  background: #F2F1F0 none repeat scroll 0% 0%;
+  border: 1px solid #DDD;
 }
 
 .highlight {
@@ -100,6 +106,16 @@ img.inline {
     text-align: left;
     overflow-y: auto;
   }
+}
+
+#licence {
+  border-width: 0px;
+  display: inline-block;
+  margin: 0px 0px 0px 3px;
+}
+
+#licence_text {
+  font-size: 12px;
 }
 
 /* Sidebar links*/
@@ -156,7 +172,7 @@ a.sidebar-nav-item:focus {
  * with a 25%-wide `.sidebar`.
  */
 
-.content {
+ .content {
   padding: 2rem;
   position: relative;
   // z-index: 0;
@@ -284,6 +300,69 @@ a.exercise-nav:hover, a.exercise-nav:focus {
 }
 
 /*
+ * audio.js
+ *
+ *
+ */
+
+ .player {
+  margin: 50px 0px;
+  text-align: center;
+}
+
+.audiojs {
+ width: 100px;
+ height: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+ border-radius: 100px;
+ -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.4);
+ -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.4);
+ box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.4);
+ background: #202020;
+ border: 5px solid #FFFFFF;
+ display: inline-block;
+ vertical-align: top;
+}
+
+.description {
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: top;
+  height: 100px;
+  line-height: 100px;
+  white-space: nowrap;
+}
+
+.audiojs .play-pause {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.audiojs p {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  left: 50%;
+  margin-top: -12.5px;
+  margin-left: -12.5px;
+}
+
+.audiojs .scrubber {
+  display: none;
+}
+
+.audiojs .time {
+  display: none;
+}
+
+.audiojs .error-message {
+  display: none;
+}
+
+/*
  * Canvas & editor
  *
  *
@@ -356,4 +435,85 @@ canvas.chapter {
 
 .controls {
   margin: 0px;
+}
+
+/*
+ * Piano
+ *
+ *
+ */
+
+ .key { 
+  position: absolute; 
+  font-family: Helvetica; 
+  font-weight: 100; 
+  font-size: 12px;
+  border: 1px solid rgba(32,32,32,0.2);
+  border-radius: 0px 0px 5px 5px;
+  cursor:pointer;
+  box-shadow: 0px 5px 1px rgba(32,32,32,0.2);
+  -webkit-transition: margin 0.05s ease, background-color 0.05s ease, box-shadow 0.05s 
+  ease; 
+}
+
+.key:hover { 
+  background-color: rgb(255,192,32); 
+}
+
+.key .label { 
+  position: absolute; 
+  bottom: 5px; 
+  text-align: center; 
+  left: 0px; 
+  right: 
+  0px; 
+}
+
+.black { 
+  background-color: rgb(32,32,32); 
+  color: #ffffff; 
+  z-index: 1; 
+  text-shadow: 0px -1px 1px rgba(255,255,255,0.5); 
+}
+
+.white { 
+  background-color: #ffffff; 
+  color: rgb(32,32,32); 
+  z-index: 0; 
+  text-shadow: 0px 1px 1px rgba(32,32,32,0.5); 
+}
+
+.scale_hl {
+  background-color: #B9B6AF; 
+}
+
+.keyboard-options { 
+  margin: 30px auto; 
+  width: auto; 
+  text-align: center; 
+  padding: 10px; 
+}
+
+.keyboard-holder { 
+  margin: 30px auto; 
+  height: 200px; 
+  position:relative; 
+  user-select:none; -
+  webkit-user-select:none;-
+  moz-user-select:none;-
+  o-user-select:none; 
+}
+
+#sound {
+  display: none;
+}
+
+table > tbody {
+  font-size: 12px;
+}
+
+#frontpage img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
 }
