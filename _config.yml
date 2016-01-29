@@ -1,10 +1,10 @@
 # Site settings
-title: Mehackit Media Art Workshop with Processing
+title: Mehackit creative programming workshop with Sonic Pi
 email: hello@mehackit.org
-description: Creative programming workshop with Processing
+description: Creative programming workshop with Sonic Pi
 baseurl: "" # the subpath of your site, e.g. /blog/
-# url: "http://sonic-pi.mehackit.org" # the base hostname & protocol for your site
-url : "http://127.0.0.1:4000"
+url: "http://sonic-pi.mehackit.org" # the base hostname & protocol for your site
+# url : "http://127.0.0.1:4000"
 twitter_username: mehackit
 github_username:  ohss
 
