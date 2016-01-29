@@ -12,7 +12,7 @@ You'll start with creating a drum beat and getting to know the `live_loop`. Then
 
 ## Tweak the sounds
 
-If you want to eplore more with Sonic Pi you can continue to tweak the sounds. In the second chapter you'll learn how to use effects and tweak options to create a richer soundscape.
+If you want to explore more with Sonic Pi you can continue to tweak the sounds. In the second chapter you'll learn how to use effects and tweak options to create a richer soundscape.
 
 ## Last chapter
 
