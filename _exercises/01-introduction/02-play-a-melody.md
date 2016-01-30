@@ -26,12 +26,12 @@ play 69
 
 `sleep 1` tells Sonic Pi to wait for one beat. You can try smaller and bigger numbers. If you're familiar with musical notation, this is what different notes look like in Sonic Pi:
 
-<img src="{{site.url}}/img/Notes_EN.png"> 
-<img src="{{site.url}}/img/Rests_en.png">
+<img src="{{ "/img/Notes_EN.png" | prepend: site.baseurl }}"> 
+<img src="{{ "/img/Rests_en.png" | prepend: site.baseurl }}">
 
 You can write the notes in MIDI (67, 80, 22) or in musical notes (:G4, :Ab5, :Bb), it's up to you. Here's a chart displaying notes and MIDI values:
 
-<img src="{{site.url}}/img/midi_notes.png">
+<img src="{{ "/img/midi_notes.png" | prepend: site.baseurl }}">
 
 ## Try it out
 
@@ -58,6 +58,6 @@ play 79
 play 84
 {% endhighlight %}
 
-{% include player.html filepath="c-major-melody.mp3" description="Listen to the previous example" %}
+{% include player.html filepath="/audio/c-major-melody.mp3" description="Listen to the previous example" %}
 
 Now make your own melody!

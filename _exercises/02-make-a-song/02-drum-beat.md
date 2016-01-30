@@ -37,7 +37,7 @@ That's a steady backbeat. Change the tempo and play with the samples. When you s
 
 The `:drums` loop starts with a kick, plays snare on the two, kick on the and of two and on three, then a snare on the four. Then the loop starts again:
 
-<img src="{{site.url}}/img/live_loop.png">
+<img src="{{ "/img/live_loop.png" | prepend: site.baseurl}}">
 
 ## Add hi-hat
 

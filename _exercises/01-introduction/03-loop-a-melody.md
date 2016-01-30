@@ -38,4 +38,4 @@ You can also use loops inside loops if you wish:
 end
 {% endhighlight %}
 
-{% include player.html filepath="looping-melody.mp3" description="Listen to the previous example" %}
+{% include player.html filepath="/audio/looping-melody.mp3" description="Listen to the previous example" %}

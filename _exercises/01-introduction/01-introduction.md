@@ -8,11 +8,11 @@ Sonic Pi is an open-source programming environment, designed to explore and teac
 
 This tutorial guides you through the basics and more of Sonic Pi. At the end of this tutorial you'll be able to create something like this:
 
-{% include player.html filepath="groove.mp3" %}
+{% include player.html filepath="/audio/groove.mp3" %}
 
 or like this:
 
-{% include player.html filepath="amen.mp3" %}
+{% include player.html filepath="/audio/amen.mp3" %}
 
 If you don't have Sonic Pi installed, go to <a href="http://sonic-pi.net/">sonic-pi.net</a>, download and install Sonic Pi.
 
@@ -22,7 +22,7 @@ Fire up Sonic Pi! Let's see how it looks like.
 
 This is the Sonic Pi interface; it has three main windows. The largest one is for writing your code, and we call it the Programming Panel. There is also an output panel that displays information about your program as it runs. When you click on the help button at the top of the window, the third panel appears along the bottom displaying help documentation. This contains information about different code you can try and use, as well as different synth sounds, samples, and much more.
 
-<img src="{{site.url}}/img/interface.png">
+<img src="{{ "/img/interface.png" | prepend: site.baseur l}}">
 <p class="center"><small><i>Sonic Pi interface</i></small></p>
 
 ## Play a note

@@ -4,7 +4,7 @@ chapter: Make a song
 title: Bass track
 ---
 
-Add another live loop for your bass. Compose a solid and simple bass groove. If it helps, you can use the <a href="/exercises/09-piano/01-piano.html">piano</a> on your browser to choose notes that you like. Here's an example:
+Add another live loop for your bass. Compose a solid and simple bass groove. If it helps, you can use the <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> on your browser to choose notes that you like. Here's an example:
 
 {% highlight ruby %}
 live_loop :bass do
@@ -45,7 +45,7 @@ There are lots of cool-sounding synths included with Sonic Pi. To find the names
 
 On occasion, you might like to make sounds play for a longer time or at a different rate. This can be achieved by modifying the parameters of the code you are using. `attac` and `release` control control the amplitude of a note over time:
 
-<img src="{{site.url}}/img/attackrelease.png">
+<img src="{{ "/img/attackrelease.png" | prepend: site.baseurl }}">
 
 Using attack and release looks like the following. Now the note would be 4 beats long.
 

@@ -16,23 +16,28 @@ sleep 1
 play_pattern_timed [:c2, :d2, :e2, :d2], [0.5, 0.25, 0.75, 0.5]
 {% endhighlight %}
 
-<img src="{{site.url}}/img/midi_notes.png">
+<img src="{{ "/img/midi_notes.png" | prepend: site.baseurl }}">
 
 
 ## Loop
 
 {% highlight ruby %}
 live_loop :drums do
-  2.times do
-    # code here
-  end
+  sample :drum_heavy_kick
   sleep 1
 end
+
+2.times do
+  play_pattern_timed [:E5, :Eb5], [0.25]
+end
+play_pattern_timed [:e5, :b4, :d5, :c5], [0.25]
+play :a4
+sleep 1
 {% endhighlight %}
 
 ## Synths and options
 
-<img src="{{site.url}}/img/adsr.png">
+<img src="{{ "/img/adsr.png" | prepend: site.baseurl }}">
 
 {% highlight ruby %}
 use_synth :fm
@@ -85,10 +90,10 @@ scale(:c2, :major) # ring of :c2, :d2, :e2, :f2, :g2, :a2, :b2
 chord(:c2, :major, , num_octaves: 2) # ring of :c2, :e2, :g2 :c3, :e3, :g3
 {% endhighlight %}
 
-<img src="{{site.url}}/img/play_scale_1_en.png">
-<img src="{{site.url}}/img/play_scale_2_en.png">
-<img src="{{site.url}}/img/play_scale_3_en.png">
-<img src="{{site.url}}/img/chords.png">
+<img src="{{ "/img/play_scale_1_en.png" | prepend: site.baseurl }}">
+<img src="{{ "/img/play_scale_2_en.png" | prepend: site.baseurl }}">
+<img src="{{ "/img/play_scale_3_en.png" | prepend: site.baseurl }}">
+<img src="{{ "/img/chords.png" | prepend: site.baseurl }}">
 
 ## Tick, ring and variables
 

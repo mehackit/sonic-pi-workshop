@@ -1,4 +1,4 @@
 <div class="player">
-<audio src="{{site.url}}/audio/{{ include.filepath }}" preload="auto"></audio>
+<audio src="{{ include.filepath | prepend: site.baseurl }}" preload="auto"></audio>
   <span class="description">{{ include.description }}</span>  
 </div>

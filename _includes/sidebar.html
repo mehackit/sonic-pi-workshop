@@ -2,8 +2,8 @@
   <div class="container">
     <div class="sidebar-about">
       <h1>
-        <a href="{{ site.url }}">
-          <img alt="logo" src="{{site.url}}/img/mehackit_logo_white.png" />
+        <a href="{{ "/" | prepend: site.baseurl }}">
+          <img alt="logo" src="{{ "/img/mehackit_logo_white.png" | prepend: site.baseurl }}" />
         </a>
       </h1>
       <p class="lead">{{ site.description }}</p>
@@ -24,7 +24,7 @@
       {% for chapter in chapters %}
         {% assign chapter_exercises = site.exercises | where: "chapter" , chapter %}
         {% for exercise in chapter_exercises %}
-          <a class="sidebar-nav-item {% unless forloop.first %}sub{% endunless %} {% if page.url == exercise.url %} active{% endif %}" href="{{ exercise.url | prepend: site.url }}">{{ exercise.title }}</a>
+          <a class="sidebar-nav-item {% unless forloop.first %}sub{% endunless %} {% if page.url == exercise.url %} active{% endif %}" href="{{ exercise.url | prepend: site.baseurl }}">{{ exercise.title }}</a>
         {% endfor %}
       {% endfor %}
     </nav>

@@ -7,14 +7,14 @@ title: Mehackit Creative programming workshop with Sonic Pi
 <div id="frontpage">
   <h1>Mehackit</h1>
   <h2>Creative programming workshop with Sonic Pi</h2>
-  <img src="{{site.url}}/img/logo.png">
+  <img src="{{ "/img/logo.png" | prepend: site.baseurl }}">
 </div>
 <!-- </div> -->
 
 {% assign next = site.exercises | first %}
-<a href="{{ site.url }}{{ next.url }}" class="exercise-nav nav-next" aria-label="Next: {{next.title}}">
+<a href="{{ next.url | prepend: site.baseurl }}" class="exercise-nav nav-next" aria-label="Next: {{ next.title }}">
   <i class="fa fa-angle-right"></i>
-  <img id="click_here_img" src="{{ site.url }}/img/click_here.png">
+  <img id="click_here_img" src="{{ "/img/click_here.png" | prepend: site.baseurl }}">
   <script type="text/javascript">
     setTimeout(function(){ $('#click_here_img').fadeIn(500); }, 5000);
     setTimeout(function(){ $('#click_here_img').fadeOut(500); }, 15000);

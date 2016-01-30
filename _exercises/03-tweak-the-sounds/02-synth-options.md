@@ -44,7 +44,7 @@ Time in beats for attack and release.
 play :c2, attack: 1, release: 1 #the note is two beats long
 {% endhighlight %}
 
-<img src="{{site.url}}/img/attackrelease.png">
+<img src="{{ "/img/attackrelease.png" | prepend: site.baseurl }}">
 
 ### `use_synth_defaults` and `use_sample_defaults`
 
