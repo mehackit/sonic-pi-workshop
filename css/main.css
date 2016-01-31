@@ -95,6 +95,7 @@ img.inline {
   width: 80%;
   display: inline-block;
   margin-bottom: 0px;
+  text-align: left;
 }
 
 #toggle {

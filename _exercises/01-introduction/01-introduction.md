@@ -10,13 +10,15 @@ This tutorial guides you through the basics and more of Sonic Pi. At the end of 
 
 {% include player.html filepath="/audio/groove.mp3" %}
 
-or like this:
+Or something like this:
 
 {% include player.html filepath="/audio/amen.mp3" %}
 
-If you don't have Sonic Pi installed, go to <a href="http://sonic-pi.net/">sonic-pi.net</a>, download and install Sonic Pi.
+Sonic Pi is all about exploring. There is no mistakes, there's only discoveries. And most of all, it's about having fun. So remember this: have fun, explore and hack away!
 
 ## Open Sonic Pi
+
+If you don't have Sonic Pi installed, go to <a href="http://sonic-pi.net/">sonic-pi.net</a>, download and install Sonic Pi.
 
 Fire up Sonic Pi! Let's see how it looks like.
 
@@ -37,7 +39,7 @@ Press **run** form the upper left corner. Can you hear a beep?
 
 Try different values. Write for example `play 50` or `play 70`. How does the sound change?
 
-Now try to write `pley 60` and click on the play icon. What happens?
+Now try to write `pley 60` and click run. What happens?
 
 > This is an example of a bug in your code. In later activities, if the error panel displays text you will know that you have a bug that you need to fix. It could be that you have misspelt a word like `play`.
 

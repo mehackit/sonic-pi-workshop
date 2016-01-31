@@ -4,9 +4,9 @@ chapter: Introduction
 title: Loop a melody
 ---
 
-Okay, so you wrote a nice melody. What if you want to repeat it, or parts of it, a few times. You could copy and paste the melody but that gets a bit tiring after a while. Luckily we can use **loops**!
+Okay, so you wrote a nice melody. What if you want to repeat it, or parts of it, a few times. You could copy and paste the melody but that gets a bit tiring after a while. Luckily you can use **loops**!
 
-Write `2.times do` in the beginning of your melody and `end` int the end of the melody (the notes are in musical notation just for example, you can use MIDI notes if you wish):
+Write `2.times do` to the beginning of your melody and `end` to the end of your melody (the notes are in musical notation just for example, you can use MIDI notes if you wish):
 
 {% highlight ruby %}
 2.times do

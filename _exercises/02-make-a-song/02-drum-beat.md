@@ -6,7 +6,7 @@ title: Drum beat
 
 Let’s look at how to create a simple drum beat, consisting of a kick drum, snare and hi-hat. You'll get to know two new things: `live_loop` and `sample`.
 
-Start with a empty buffer and create a `live_loop` called `:drums`. It could be named anything, the names is just for quickly identifying what the loop does. Live_loop is and endless loop that syncs with other live_loops (a live_loop has to have at least one sleep):
+Start with a empty buffer and create a `live_loop` called `:drums`. It could be named anything, the names is just for quickly identifying what the loop does. Live_loop is an endless loop that syncs with other live_loops (a live_loop has to have at least one sleep):
 
 {% highlight ruby %}
 live_loop :drums do
