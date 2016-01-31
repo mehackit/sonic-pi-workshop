@@ -1,32 +1,43 @@
 <div class="sidebar">
-  <div class="container">
-    <div class="sidebar-about">
-      <h1>
-        <a href="{{ "/" | prepend: site.baseurl }}">
-          <img alt="logo" src="{{ "/img/mehackit_logo_white.png" | prepend: site.baseurl }}" />
-        </a>
-      </h1>
-      <p class="lead">{{ site.description }}</p>
-    </div>
+  <div class="sidebar-about">
+    <h1><a href="{{ "/" | prepend: site.baseurl }}">
+      <img alt="logo" src="{{ "/img/mehackit_logo_white.png" | prepend: site.baseurl }}" />
+    </a></h1>
+    <p id="sidebar_lead" class="lead">{{ site.description }}</p>
+    <a aria-hidden="false" class="nav-toggle" id="toggle" href="#">Menu</a>
+  </div>
 
+  <div class="nav-collapse">
     <nav class="sidebar-nav">
-      {% assign chapters = "" | split: ""  %}
-      {% for exercise in site.exercises %}
-        {% if chapters == empty %}
-          {% assign chapters = chapters | push: exercise.chapter %}
-        {% else %}
-          {% if chapters.last != exercise.chapter %}
+      <ul>
+        {% assign chapters = "" | split: ""  %}
+        {% for exercise in site.exercises %}
+          {% if chapters == empty %}
             {% assign chapters = chapters | push: exercise.chapter %}
+          {% else %}
+            {% if chapters.last != exercise.chapter %}
+              {% assign chapters = chapters | push: exercise.chapter %}
+            {% endif %}
           {% endif %}
-        {% endif %}
-      {% endfor %}
-
-      {% for chapter in chapters %}
-        {% assign chapter_exercises = site.exercises | where: "chapter" , chapter %}
-        {% for exercise in chapter_exercises %}
-          <a class="sidebar-nav-item {% unless forloop.first %}sub{% endunless %} {% if page.url == exercise.url %} active{% endif %}" href="{{ exercise.url | prepend: site.baseurl }}">{{ exercise.title }}</a>
         {% endfor %}
-      {% endfor %}
+
+        {% for chapter in chapters %}
+          {% assign chapter_exercises = site.exercises | where: "chapter" , chapter %}
+          {% for exercise in chapter_exercises %}
+            {% if forloop.first and forloop.last %}
+              <li><a class="sidebar-nav-item {% if page.url == exercise.url %} active {% endif %}" href="{{ exercise.url | prepend: site.baseurl }}">{{ exercise.title }}</a></li>
+            {% elsif forloop.first %}
+              <li><a class="sidebar-nav-item {% if page.url == exercise.url %} active {% endif %}" href="{{ exercise.url | prepend: site.baseurl }}">{{ exercise.title }}</a></li>
+              <ul>
+            {% elsif forloop.last %}
+                <li><a class="sidebar-nav-item {% if page.url == exercise.url %} active {% endif %}" href="{{ exercise.url | prepend: site.baseurl }}">{{ exercise.title }}</a></li>
+              </ul>
+            {% else %}
+                <li><a class="sidebar-nav-item {% if page.url == exercise.url %} active {% endif %}" href="{{ exercise.url | prepend: site.baseurl }}">{{ exercise.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
     </nav>
 
     <p>Mehackit {{ site.time | date: '%Y' }} &#10084; <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img id="licence" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>

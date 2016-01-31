@@ -31,7 +31,7 @@
  * Update the foundational and global aspects of the page.
  */
 
- html {
+html {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
@@ -43,6 +43,10 @@
   html {
     font-size: 20px;
   }
+}
+
+html, body {
+  height: 100%;
 }
 
 button {
@@ -64,16 +68,6 @@ pre {
   margin-right: 0px;
 }
 
-/*
- * Full page wrapper for background animation
- *
- * 
- */
-
- html, body {
-  height: 100%;
-}
-
 .exercise img {
   display: block;
   margin: 2rem auto;
@@ -90,12 +84,29 @@ img.inline {
  * out above content in mobile and later moves to the side with wider viewports.
  */
 
- .sidebar {
+.sidebar {
   text-align: center;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
+
+#sidebar_lead {
+  width: 80%;
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+#toggle {
+  width: 20%;
+  float: right;
+  display: inline-block;
+}
+
+.sidebar-about {
+  padding: 0px 4rem;
+}
+
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
@@ -105,6 +116,24 @@ img.inline {
     width: 18rem;
     text-align: left;
     overflow-y: auto;
+  }
+
+  .sidebar-about {
+    padding: 0px;
+  }
+
+  #sidebar_lead {
+    width: 100%;
+    display: block;
+  }
+
+  #toggle {
+    display: none;
+  }
+
+  .sidebar-nav ul > ul {
+    margin-bottom: 0px;
+    padding-left: 12px;
   }
 }
 
@@ -133,6 +162,7 @@ img.inline {
 
 /* Sidebar nav*/
 .sidebar-nav {
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 .sidebar-nav-item {
@@ -140,14 +170,9 @@ img.inline {
   line-height: 1.75;
 }
 
-.sidebar-nav-item.sub {
+.sidebar-nav ul {
+  list-style-type: none;
   padding-left: 0px;
-}
-
-@media (min-width: 48em) {
-  .sidebar-nav-item.sub {
-    padding-left: 12px;
-  }
 }
 
 a.sidebar-nav-item:hover,
@@ -524,4 +549,61 @@ table > tbody {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5rem;
+}
+
+/* ------------------------------------------
+  NAV TOGGLE STYLES
+--------------------------------------------- */
+
+@font-face {
+  font-family: "responsivenav";
+  src:url("../img/icons/responsivenav.eot");
+  src:url("../img/icons/responsivenav.eot?#iefix") format("embedded-opentype"),
+    url("../img/icons/responsivenav.ttf") format("truetype"),
+    url("../img/icons/responsivenav.woff") format("woff"),
+    url("../img/icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nav-toggle {
+  position: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  text-indent: -999px;
+  position: relative;
+  overflow: hidden;
+  width: 70px;
+  height: 55px;
+  float: right;
+}
+
+.nav-toggle:before {
+  /*color: #f4421a; */
+  font-family: "responsivenav", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 28px;
+  text-transform: none;
+  position: absolute;
+  content: "≡";
+  text-indent: 0;
+  text-align: center;
+  line-height: 55px;
+  speak: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-toggle.active::before {
+  font-size: 24px;
+  content:"x";
 }
