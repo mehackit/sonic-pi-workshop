@@ -89,9 +89,7 @@ live_loop :drums do
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
-  sleep 0.5
-  sample :drum_heavy_kick
-  sleep 0.5
+  sleep 1
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard

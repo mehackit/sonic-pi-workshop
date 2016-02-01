@@ -14,7 +14,7 @@ live_loop :drums do
 end
 {% endhighlight %}
 
-Now you have your empty loop. Let's do a simple backbeat with kick drum on 1, 2.5 and 3, snare on 2 and 4. Instead of playing notes, you will be triggering samples. It's as simple as writing `sample :sample_name`. Here's an example drumbeat:
+Now you have your empty loop. Let's do a simple backbeat with kick drum on 1 and 3, snare on 2 and 4. Instead of playing notes, you will be triggering samples. It's as simple as writing `sample :sample_name`. Here's an example drumbeat:
 
 {% highlight ruby %}
 use_bpm 100
@@ -23,9 +23,7 @@ live_loop :drums do
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
-  sleep 0.5
-  sample :drum_heavy_kick
-  sleep 0.5
+  sleep 1
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
@@ -35,7 +33,7 @@ end
 
 That's a steady backbeat. Change the tempo and play with the samples. When you start writing the sample name, you can browse different samples with the auto-complete feature. Try different samples and check out what they sound like.
 
-The `:drums` loop starts with a kick, plays snare on the two, kick on the and of two and on three, then a snare on the four. Then the loop starts again:
+The `:drums` loop starts with a kick, plays snare on the two, kick on three, then a snare on the four. Then the loop starts again:
 
 <img src="{{ "/img/live_loop.png" | prepend: site.baseurl}}">
 
@@ -72,9 +70,7 @@ live_loop :drums do
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
-  sleep 0.5
-  sample :drum_heavy_kick
-  sleep 0.5
+  sleep 1
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
