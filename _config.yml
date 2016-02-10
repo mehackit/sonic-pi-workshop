@@ -2,6 +2,7 @@
 title: Mehackit creative programming workshop with Sonic Pi
 email: hello@mehackit.org
 description: Creative programming workshop with Sonic Pi
+description_fi: Musiikkiohjelmointia Sonic Pi -ohjelmalla
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://sonic-pi.mehackit.org" # the base hostname & protocol for your site
 # url : "http://127.0.0.1:4000"
@@ -14,3 +15,17 @@ markdown: kramdown
 collections:
   exercises:
     output: true
+
+defaults:
+  -
+    scope:
+      path: _exercises/en
+    values:
+      lang: en
+      layout: exercise
+  -
+    scope:
+      path: _exercises/fi
+    values:
+      lang: fi
+      layout: exercise
