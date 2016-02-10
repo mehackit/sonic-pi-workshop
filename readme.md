@@ -17,7 +17,7 @@ git commit -am "commit message"
 ```
 - Push your changes
 ```
-git push origin master
+git push origin your_branch_name
 ```
 - Go to the original repo on GitHub and click on the green compare & pull request button
 - Click on 'create pull request'
