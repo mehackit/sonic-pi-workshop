@@ -1,0 +1,18 @@
+<!-- <div class="page"> -->
+<div id="frontpage">
+  <h1>Mehackit</h1>
+  <h2>{% if page.lang == "fi" %} {{ site.description_fi }} {% else %} {{ site.description }} {% endif %}</h2>
+  <img src="{{ "/assets/img/logo.png" | prepend: site.baseurl }}">
+</div>
+<!-- </div> -->
+
+{% assign exercises = site.exercises | where: "lang", page.lang %}
+{% assign next = exercises | first %}
+<a href="{{ next.url | prepend: site.baseurl }}" class="exercise-nav nav-next" aria-label="Next: {{ next.title }}">
+  <i class="fa fa-angle-right"></i>
+  <img id="click_here_img" src="{{ "/assets/img/click_here.png" | prepend: site.baseurl }}">
+  <script type="text/javascript">
+    setTimeout(function(){ $('#click_here_img').fadeIn(500); }, 5000);
+    setTimeout(function(){ $('#click_here_img').fadeOut(500); }, 15000);
+  </script>
+</a>
