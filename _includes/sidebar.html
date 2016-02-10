@@ -1,9 +1,9 @@
 <div class="sidebar">
   <div class="sidebar-about">
-    <h1><a href="{{ "/" | prepend: site.baseurl }}">
-      <img alt="logo" src="{{ "/img/mehackit_logo_white.png" | prepend: site.baseurl }}" />
+    <h1>{% if page.lang == "fi" %} <a href="{{ "/index_fi.html" | prepend: site.baseurl }}"> {% else %} <a href="{{ "/" | prepend: site.baseurl }}"> {% endif %}
+      <img alt="logo" src="{{ "/assets/img/mehackit_logo_white.png" | prepend: site.baseurl }}" />
     </a></h1>
-    <p id="sidebar_lead" class="lead">{{ site.description }}</p>
+    <p id="sidebar_lead" class="lead">{% if page.lang == "fi" %} {{ site.description_fi }} {% else %} {{site.description }} {% endif %}</p>
     <a aria-hidden="false" class="nav-toggle" id="toggle" href="#">Menu</a>
   </div>
 
@@ -11,7 +11,8 @@
     <nav class="sidebar-nav">
       <ul>
         {% assign chapters = "" | split: ""  %}
-        {% for exercise in site.exercises %}
+        {% assign lang_exercises = site.exercises | where: "lang", page.lang %}
+        {% for exercise in lang_exercises %}
           {% if chapters == empty %}
             {% assign chapters = chapters | push: exercise.chapter %}
           {% else %}
@@ -22,7 +23,7 @@
         {% endfor %}
 
         {% for chapter in chapters %}
-          {% assign chapter_exercises = site.exercises | where: "chapter" , chapter %}
+          {% assign chapter_exercises = lang_exercises | where: "chapter", chapter %}
           {% for exercise in chapter_exercises %}
             {% if forloop.first and forloop.last %}
               <li><a class="sidebar-nav-item {% if page.url == exercise.url %} active {% endif %}" href="{{ exercise.url | prepend: site.baseurl }}">{{ exercise.title }}</a></li>
@@ -42,7 +43,11 @@
 
     <p>Mehackit {{ site.time | date: '%Y' }} &#10084; <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img id="licence" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
     
+    {% if page.lang == "fi" %}
+    <p id="licence_text">Lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen -lisenssillä</a>. Perustuu <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> -järjestön <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">"Getting started with Sonic Pi"</a> ja Stuart Brettin <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a> -oppaisiin.</p>
+    {% else %}
     <p id="licence_text">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Based on <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> by <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> and <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">An introduction to Sonic Pi</a> by Stuart Brett.</p>
+    {% endif %}
 
     <p id="licence_text">Fork at <a href="https://github.com/mehackit/sonic-pi-workshop">GitHub</a></p>
   </div>

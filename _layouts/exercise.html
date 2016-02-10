@@ -8,7 +8,7 @@ layout: default
   {{ content }}
 </div>
 
-{% assign exercises = site.exercises  %}
+{% assign exercises = site.exercises | where: "lang", page.lang %}
 {% for exercise in exercises %}
     {% if exercise.url == page.url %}
         {% unless forloop.last %}
