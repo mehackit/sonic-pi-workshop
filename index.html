@@ -1,22 +1,7 @@
 ---
 layout: default
-title: Mehackit Creative programming workshop with Sonic Pi
+title: Mehackit musiikkohjelmointia Sonic Pi -ohjelmalla
+lang: en
 ---
 
-<!-- <div class="page"> -->
-<div id="frontpage">
-  <h1>Mehackit</h1>
-  <h2>Creative programming workshop with Sonic Pi</h2>
-  <img src="{{ "/img/logo.png" | prepend: site.baseurl }}">
-</div>
-<!-- </div> -->
-
-{% assign next = site.exercises | first %}
-<a href="{{ next.url | prepend: site.baseurl }}" class="exercise-nav nav-next" aria-label="Next: {{ next.title }}">
-  <i class="fa fa-angle-right"></i>
-  <img id="click_here_img" src="{{ "/img/click_here.png" | prepend: site.baseurl }}">
-  <script type="text/javascript">
-    setTimeout(function(){ $('#click_here_img').fadeIn(500); }, 5000);
-    setTimeout(function(){ $('#click_here_img').fadeOut(500); }, 15000);
-  </script>
-</a>
+{% include index.html %}

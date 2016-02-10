@@ -9,7 +9,17 @@
     {% include sidebar.html %}
 
     <div class="content container">
+
+      <div class="lang">
+        {% if page.lang == "fi" %}
+          <a href="{{ "/index.html" | prepend: site.baseurl }}">in english</a>
+        {% else %}
+          <a href="{{ "/index_fi.html" | prepend: site.baseurl }}">suomeksi</a>
+        {% endif %}
+      </div>
+
       {{ content }}
+      
     </div>
 
     {% include scripts.html %}
