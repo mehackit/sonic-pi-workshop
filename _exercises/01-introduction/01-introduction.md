@@ -14,7 +14,7 @@ Or something like this:
 
 {% include player.html filepath="/audio/amen.mp3" %}
 
-Sonic Pi is all about exploring. There is no mistakes, there's only discoveries. And most of all, it's about having fun. So remember this: have fun, explore and hack away!
+Sonic Pi is all about exploring. There are no mistakes, there's only discoveries. And most of all, it's about having fun. So remember this: have fun, explore and hack away!
 
 ## Open Sonic Pi
 
@@ -35,7 +35,7 @@ Let’s start with programming Sonic Pi to play a note. Select the `Buffer 0` ta
 play 60
 {% endhighlight %}
 
-Press **run** form the upper left corner. Can you hear a beep?
+Press **Run** form the upper left corner. Can you hear a beep?
 
 Try different values. Write for example `play 50` or `play 70`. How does the sound change?
 

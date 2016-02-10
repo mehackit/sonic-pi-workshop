@@ -10,7 +10,7 @@ Take a look at the example below. What's going on?
 live_loop :melody do
   use_synth :blade
   r = [0.25, 0.25, 0.5, 1].choose
-  play chord(:c, :minor).choose, attack: 0, release: r
+  play (chord :c, :minor).choose, attack: 0, release: r
   sleep r
 end
 {% endhighlight %}
@@ -23,7 +23,7 @@ Let's add a synth and bass to the example to try out variables. The `:keys` loop
 live_loop :melody do
   use_synth :blade
   r = [0.25, 0.25, 0.5, 1].choose
-  play chord(:c, :minor).choose, attack: 0, release: r
+  play (chord :c, :minor).choose, attack: 0, release: r
   sleep r
 end
 
@@ -35,16 +35,16 @@ end
 
 live_loop :bass do
   use_synth :fm
-  n = chord(:c2, :minor).tick
+  n = (chord :c2, :minor).tick
   3.times do
     play n
     sleep 1
   end
   play n
   sleep 0.5
-  play chord(:c2, :minor).tick
+  play (chord :c2, :minor).tick
   sleep 0.5
 end
 {% endhighlight %}
 
-`n = chord(:c2, :minor).tick` takes a note from a C minor chord and saves it to a variable named `n`. `.tick` always moves forward to the next value after it's called. `play n` plays the saved note. Then `.tick` is called again to get the next note from the chord. When the loop starts again, `.tick` continues from where it was.
+`n = (chord :c2, :minor).tick` takes a note from a C minor chord and saves it to a variable named `n`. `.tick` always moves forward to the next value after it's called. `play n` plays the saved note. Then `.tick` is called again to get the next note from the chord. When the loop starts again, `.tick` continues from where it was.

@@ -39,11 +39,11 @@ loop do
 end
 {% endhighlight %}
 
-You don't even have to remember what notes are in what chords. Sonic Pi can handle that for you. Instead of writing `[:c, :e, :g]`, you can just use `chord(:C, :major)`. That creates a list of right notes for you automatically. Here's an example:
+You don't even have to remember what notes are in what chords. Sonic Pi can handle that for you. Instead of writing `[:c, :e, :g]`, you can just use `(chord :C, :major)`. That creates a list of right notes for you automatically. Here's an example:
 
 {% highlight ruby %}
 loop do
-  play chord(:c, :major).choose
+  play (chord :c, :major).choose
   sleep [0.25, 0.25, 0.5, 1].choose
 end
 {% endhighlight %}
@@ -53,7 +53,7 @@ Let's use this sorcery for a bubbling bass track. Save your work and copy your c
 {% highlight ruby %}
 live_loop :bass do
   use_synth :tb303
-  play chord(:C2, :major).choose
+  play (chord :C2, :major).choose
   sleep 0.25
 end
 {% endhighlight %}
@@ -63,7 +63,7 @@ Ough! Not quite right. Add `, release: 0.125` parameter in the end of the play c
 {% highlight ruby %}
 live_loop :bass do
   use_synth :tb303
-  play chord(:C2, :major).choose, release: 0.125
+  play (chord :C2, :major).choose, release: 0.125
   sleep 0.25
 end
 {% endhighlight %}
@@ -75,7 +75,7 @@ But don't just use a fixed cutoff value when you can have a random value! With `
 {% highlight ruby %}
 live_loop :bass do
   use_synth :tb303
-  play chord(:C2, :major).choose, release: 0.125, cutoff: rrand(60, 110)
+  play (chord :C2, :major).choose, release: 0.125, cutoff: rrand(60, 110)
   sleep 0.25
 end
 {% endhighlight %}
@@ -105,7 +105,7 @@ end
 
 live_loop :bass do
   use_synth :tb303
-  play chord(:C2, :major).choose, release: 0.125, cutoff: rrand(60, 110)
+  play (chord :C2, :major).choose, release: 0.125, cutoff: rrand(60, 110)
   sleep 0.25
 end
 

@@ -48,7 +48,7 @@ play :c2, attack: 1, release: 1 #the note is two beats long
 
 ### `use_synth_defaults` and `use_sample_defaults`
 
-If you don't want to set your ops for each play or sample on your loop, you can use `use_synth_defaults` and `use_sample_defaults` to set the ops for all the next samples and plays in the loop:
+If you don't want to set your ops for each play or sample on your loop, you can use `use_synth_defaults` and `use_sample_defaults` to set the opts for all the next plays and samples in the loop:
 
 {% highlight ruby %}
 live_loop :melody do
@@ -74,7 +74,7 @@ live_loop :amen_break do
 end 
 {% endhighlight %}
 
-There's an annoying gap in the end. The sample is 1.753310657596372 beats long, which isn't that handy when you want to play it with all the other stuff we have going on. Luckily you can use `beat_stretch: 2` to make the sample 2 beats long:
+There's an annoying gap in the end. The sample is 1.753310657596372 beats long, which isn't that handy when you want to play it with all the other stuff we have going on. Luckily you can use `beat_stretch: 2` to stretch/shrink the sample to make it exactly 2 beats long:
 
 {% highlight ruby %}
 live_loop :amen_break do
