@@ -1,12 +1,12 @@
 ---
-chapter: Make a song
-title: Bass track
+chapter: Kappaleen tekeminen
+title: Bassoraita
 ---
 
-Add another live loop for your bass. Compose a solid and simple bass groove. If it helps, you can use the <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> on your browser to choose notes that you like. Here's an example:
+Lisää uusi `live_loop` bassoa varten ja kirjoita sille yksinkertainan ja toimiva bassolinja. Voit käyttää halutessasi selaimessa toimivaa <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">virtuaalipianoa</a>  bassolinjan melodian tavailua varten. Alla on esimerkki bassolinjasta:
 
 {% highlight ruby %}
-live_loop :bass do
+live_loop :basso do
   play :c2
   sleep 0.25
   play :c2
@@ -18,14 +18,14 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-## Change the synth
+## Soivan äänen muuttaminen
 
-It's time to make your tune sound more interesting! We can do this by changing the synthesizer sounds it is using. The default Sonic Pi synth is called `beep`. To use a different synth, you need to add the code `use_synth :name_of_synth` above the sequence of code you want to use it in.
+Seuraavaksi opit miten Sonic Pi:n `play`-komennon soivan äänen saa muunnettua. Joka kerta kun kutsut Sonic Pi:ssä komentoa `play` se käyttää syntetisaattorin oletusääntä `beep` ellei sitä ole aiemmin koodissa muutettu. Syntetisaattorin (tuttavallisemmin syntikan) äänen voi vaihtaa komennolla `use_synth :syntikan_nimi` ennen `play`-komentojen kutsuminen.
 
-In this example, fm is the name of the synth:
+Alla olevassa esimerkissä käytämme syntikan bassona ääntä nimeltä `fm`:
 
 {% highlight ruby %}
-live_loop :bass do
+live_loop :basso do
   use_synth :fm
   play :c2
   sleep 0.25
@@ -38,34 +38,34 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-There are lots of cool-sounding synths included with Sonic Pi. To find the names of them, click on the help icon at the top of the screen so that the help documents window appears. Then select Synths from the tabs along the left hand side of the help window. Click on any of the synth names to get more information on how to use it.
+Sonic Pi:ssä on todella monia mielenkiintoisen kuuloisia syntikoita. Voit löytää eri ääniä helposti `use_synth` komennon jälkeen avautuvasta listasta tai Apupaneelin (Help) Synths-välilehdeltä. 
 
-## Change the length of notes
+## Soivan sävelen pituuden muuttaminen
 
-On occasion, you might like to make sounds play for a longer time or at a different rate. This can be achieved by modifying the parameters of the code you are using. `attac` and `release` control control the amplitude of a note over time:
+Toisinaan saatat haluta soittaa säveliä eri pituisina. Tämä voidaan tehdä lisäämällä `play`-komentoon parametrit `attack` ja `release`, jotka muokkaavat äänenvoimakkuutta suhteessa aikaan: 
 
-<img src="{{ "/assets/img/attackrelease.png" | prepend: site.baseurl }}">
+Komennot `attack` ja `release` näyttäävät seuraavanlaiselta. Nyt sävel soi yhteensä 4 iskun ajan: Se voimistuu ensimmäisen iskun ajan ja hiljenee 3 iskun ajan. 
 
-Using attack and release looks like the following. Now the note would be 4 beats long.
+<img src="{{ "/assets/img/attackrelease.png" | prepend: site.baseurl }}"> 
 
 {% highlight ruby %}
 play 60, attack: 1, release: 3
 {% endhighlight %}
 
-You could make a short staccato note by setting attack to zero and release to a very short value:
+Voit myös sävelistä lyhyitä iskuja (staccato) asettamalla `attack`-arvo nollaan ja antamalla `release`-arvolla hyvin pieni arvo: 
 
 {% highlight ruby %}
 play :c4, attack: 0, release: 0.2
 {% endhighlight %}
 
-Explore different synths and note lengths and get your bass track rolling.
+Tutki vielä erilaisia syntetisaattorin ääniä ja sävelten pituuksia ja muokkaa bassoraidastasi juuri sellainen kuin haluat! 
 
-Now the song could be something like this:
+Kertauksena, olemme nyt ohjelmoineet yksinkertaisen rumpubiitin ja bassolinjan ja koodi näyttää jotakuinkin tältä: 
 
 {% highlight ruby %}
 use_bpm 100
 
-live_loop :drums do
+live_loop :rummut do
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
@@ -83,7 +83,7 @@ live_loop :hihat do
   sleep 1
 end
 
-live_loop :bass do
+live_loop :basso do
   use_synth :fm
   play :c2, attack: 0, release: 0.25
   sleep 0.25

@@ -1,47 +1,45 @@
 ---
-chapter: Introduction
-title: Introduction
+chapter: Johdanto
+title: Johdanto
 ---
 
-Sonic Pi is an open-source programming environment, designed to explore and teach programming concepts through the process of creating new sounds. It's a free live coding synth for everyone. You can use code to compose and perform in classical and contemporary styles ranging from Canons to Dubstep.
+Sonic Pi on avoimeen lähdekoodiin perustuva ohjelmointiympäristö, joka yhdistää saumattomasti tekstipohjaisen koodauksen ja elektronisen musiikin reaaliaikaisen tuottamisen. Sen avulla on helppo tutustua ohjelmoinnin perusajatuksiin ja se sopiikin erinomaisesta ohjelmoinnin perusopetuksen työkaluksi. Sonic Pi:llä voit kirjoittaa koodia, säveltää ja esittää musiikkia aina klassisista tyylisuunnista nykyaikaiseen EDM:ään ja Dubstepiin. 
 
-This tutorial guides you through the basics and more of Sonic Pi. At the end of this tutorial you'll be able to create something like this:
+Tämä oppitunti ohjaa sinut Sonic Pi:n perusteiden ja edistyneempien toimintojen maailmaan. Oppitunnin päätteeksi voit jo luoda omia kappaleitasi ja se voi kuulostaa esimerkiksi tältä:
 
 {% include player.html filepath="/assets/audio/groove.mp3" %}
 
-Or something like this:
+Tai ehkä jopa tältä:
 
 {% include player.html filepath="/assets/audio/amen.mp3" %}
 
-Sonic Pi is all about exploring. There is no mistakes, there's only discoveries. And most of all, it's about having fun. So remember this: have fun, explore and hack away!
+Sonic Pi:llä ohjelmointi on hyvin koukuttava tutkimusmatka ohjelmoinnin ja elektronisen musiikin sydämeen, jossa varsinaisia virheitä ei ole ja voit tehdä merkittäviä löytöjä. Musiikin ohjelmoinnissa on helppo luoda yhteyksiä kirjoitetun koodin ja toistetun äänen suhteen. Se mahdollistaa myös nopeat oivallukset ja kokeilut, joita ei olisi tullut ajatelleeksikaan tavanomaisilla soittimilla. Kaikista tärkeintä on pitää mielessä että sen pitää olla hauskaa! Joten muista tämä: pidä kivaa, tutki ja luo jotain uutta. 
 
-## Open Sonic Pi
+## Sonic Pi:n avaaminen
 
-If you don't have Sonic Pi installed, go to <a href="http://sonic-pi.net/">sonic-pi.net</a>, download and install Sonic Pi.
+Sinun täytyy asentaa Sonic Pi -ohjelmointiympäristö ennen kuin voit lähteä seuraamaan tätä oppituntia. Lataa ja asenna sinun koneellesi sopiva versio (Windows, OS X tai Linux) osoitteesta <a href="http://sonic-pi.net/">sonic-pi.net</a>. 
 
-Fire up Sonic Pi! Let's see how it looks like.
+Tämän jälkeen Sonic Pi on käyttövalmis. Katsotaan miltä se näyttää!
 
-This is the Sonic Pi interface; it has three main windows. The largest one is for writing your code, and we call it the Programming Panel. There is also an output panel that displays information about your program as it runs. When you click on the help button at the top of the window, the third panel appears along the bottom displaying help documentation. This contains information about different code you can try and use, as well as different synth sounds, samples, and much more.
-
+Tässä on Sonic Pi:n käyttöliittymä, joka koostuu kolmesta pääikkunasta. Vasemmalla puolella oleva isoin ikkuna on koodin kirjoittamista varten, ja kutsumme sitä "Ohjelmointipaneeliksi". Sen oikealla puolella on "Lokipaneeli", jossa näkyy merkintöjä ohjelmasta silloin kun se ajetaan. Kun painat "Help"-nappia oikeasta yläkulmasta saat näkyviin ruudun alaosaan kolmannen ikkunan, "Apupaneelin". Sieltä voit löytää hyödyllisiä ohjelmointiesimerkkejä ja tietoa Sonic Pi:n lukuisista eri komennoista, äänistä ja efekteistä. 
+ 
 <img src="{{ "/assets/img/interface.png" | prepend: site.baseurl}}">
 <p class="center"><small><i>Sonic Pi interface</i></small></p>
 
-## Play a note
+## Sävelen soittaminen
 
-Let’s start with programming Sonic Pi to play a note. Select the `Buffer 0` tab and type:
+Aloitetaan Sonic Pi:llä ohjelmointi yksinkertaisimmasta komennosta, sävelen soittamisesta. Valitse `Buffer 0` välilehti Ohjelmointipaneelin alaosasta ja kirjoita siihen seuraava komento:
 
 {% highlight ruby %}
 play 60
 {% endhighlight %}
 
-Press **run** form the upper left corner. Can you hear a beep?
+Paina tämän jälkeen **Run**-nappia vasemmasta yläkulmasta. Kuuletko piippauksen?
 
-Try different values. Write for example `play 50` or `play 70`. How does the sound change?
+Kokeile **play**-komentoa eri arvoilla. Kirjoita esimerkiksi `play 50` tai `play 70`. Huomaatko kuinka äänen korkeus muuttuu?
 
-Now try to write `pley 60` and click run. What happens?
+Kokeile seuraavaksi kirjoittaa `pley 60` ja paina **Run**-nappia. Mitä seuraavaksi tapahtuu?
 
-> This is an example of a bug in your code. In later activities, if the error panel displays text you will know that you have a bug that you need to fix. It could be that you have misspelt a word like `play`.
+> Tämä tilanne on esimerkki koodissa olleesta virheestä. Jos kirjoitat jatkossa virheen koodissasi, se esitetään samanlaisena virheilmoituksena. Yleisimmiten virheet johtuvat ns. pilkkuvirheistä tai väärin kirjoitetuista komennoista. Tässä tapauksessa sana `play` on kirjoitettu väärin. 
 
-The numbers you used are _MIDI notes_. MIDI is a useful way to compose and is a useful tool for quickly 
-testing your notes and adjusting them by lowering their value (making your note lower) or increasing it, (making 
-the pitch higher). Sonic Pi is familiar with both MIDI numbers and traditional musical notation.
+Numerot joita syötetään `play`-komennon perään ovat niin sanottuja MIDI-nuotteja. MIDI:ssä numerot 0:sta 127:ään vastaavat pianon säveliä yli 10 oktaavin alueelta. MIDI-nuottien lisäksi Sonic Pi:ssä voidaan käyttää tavanomaisempaa sävelten merkintää, johon tutustumme seuraavaksi. 

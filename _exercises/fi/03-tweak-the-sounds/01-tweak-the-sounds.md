@@ -1,6 +1,6 @@
 ---
-chapter: Tweak the sounds
-title: Tweak the sounds
+chapter: Äänen muokkaaminen
+title: Äänen muokkaaminen
 ---
 
-Now you have quite an impressive composition ready. Next you can look into synth options, sample options and effects to get your piece even further.
+Olet jo saanut todella vaikuttavan teoksen valmiiksi. Seuraavaksi on aika tutustua syvemmin syntetisaattorien ja samplejen äänien muokkaamiseen ja efektointiin.

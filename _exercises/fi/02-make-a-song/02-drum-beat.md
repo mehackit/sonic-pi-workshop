@@ -1,24 +1,26 @@
 ---
-chapter: Make a song
-title: Drum beat
+chapter: Kappaleen tekeminen
+title: Rumpubiitti
 ---
 
-Let’s look at how to create a simple drum beat, consisting of a kick drum, snare and hi-hat. You'll get to know two new things: `live_loop` and `sample`.
+Katsotaan aluksi kuinka Sonic Pi:ssä ohjelmoidaan rumpubiitti, jossa on bassorumpu, virveli ja hihat ja tutustutaan kahteen uuteen komentoon `live_loop` ja `sample`. 
 
-Start with a empty buffer and create a `live_loop` called `:drums`. It could be named anything, the names is just for quickly identifying what the loop does. Live_loop is an endless loop that syncs with other live_loops (a live_loop has to have at least one sleep):
+Aloita ohjelman kirjoittaminen tyhjälle välilehdelle (*Buffer*) ja luodaan sinne `live_loop` nimeltä `:rummut`. Luupin nimi voi olla mitä vain ja sen tarkoitus on vain selventää mitä kyseinen luuppi tekee. `live_loop` on jatkuva luuppi (ts. toistuu niin kauan kunnes ohjelma pysäytetään painamalla **Stop**-nappulaa) ja se ajetaan samanaikaisesti muiden `live_loop`:ien kanssa. 
 
 {% highlight ruby %}
-live_loop :drums do
+live_loop :rummut do
   sleep 1
 end
 {% endhighlight %}
 
-Now you have your empty loop. Let's do a simple backbeat with kick drum on 1 and 3, snare on 2 and 4. Instead of playing notes, you will be triggering samples. It's as simple as writing `sample :sample_name`. Here's an example drumbeat:
+Huomioi`live_loop`-komentoja voi olla lukuisia eri nimillä, mutta kahdella `live_loop`:lla ei voi olla samaa nimeä. Jokaisen `live_loop`:in sisällä täytyy olla vähintään yksi `sleep`-komento. 
+
+Nyt sinulla on ohjelmassa tyhjä luuppi nimeltä `:rummut`. Ohjelmoidaan sinne seuraavaksi yksinkertainen peruskomppi, jossa bassorummun iskut ovat ensimmäisellä ja kolmannella iskulla ja virvelirummun iskut ovat toisella ja neljännellä. Sävelten soittamisen sijaan käytetään tällä kertaa komentoa `sample :samplen_nimi`, jolla voidaan soittaa sample (nauhoitettu ääninäyte). Tässä on esimerkkiohjelma rumpubiitistiä :
 
 {% highlight ruby %}
 use_bpm 100
 
-live_loop :drums do
+live_loop :rummut do
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
@@ -30,15 +32,15 @@ live_loop :drums do
 end
 {% endhighlight %}
 
-That's a steady backbeat. Change the tempo and play with the samples. When you start writing the sample name, you can browse different samples with the auto-complete feature. Try different samples and check out what they sound like.
+Ohjelman pitäisi soittaa nyt tasaista peruskomppia. Tempoa voit kokeilla muuttaa vaihtamalla numeroa `use_bpm`-komennon perässä. Kun olet kirjoittanut `sample`-komennon ja painanut välilyöntiä Sonic Pi tarjoaa sinulle automaattisesti listan eri sample-mahdollisuuksista, joita voit käyttää komennon kanssa. Kokeile seuraavaksi vaihtaa eri iskuilla kuuluvia rumpusampleja. 
 
-The `:drums` loop starts with a kick, plays snare on the two, kick on three, then a snare on the four. Then the loop starts again:
+Alla oleva kuva vielä havainnollistaa kuinka yksi `live_loop`:in kierto toimii:
 
 <img src="{{ "/assets/img/live_loop.png" | prepend: site.baseurl}}">
 
-## Add hi-hat
+## Lisää hi-hat
 
-Now add a hi-hat. Create another live loop called `:hihat` and add your hi-hat samples. You could do for example straight 8th or 16th notes like this (this is 16th notes):
+Seuraavaksi lisätään rumpukomppiin hi-hatin iskut. Sitä varten luodaan uusi `live_loop` nimeltä `:hihat` ja ohjelmoidaan se soittamaan hi-hatilta kuulostava sample esimerkiksi joka 1/16-nuotilla: 
 
 {% highlight ruby %}
 live_loop :hihat do
@@ -47,7 +49,7 @@ live_loop :hihat do
 end
 {% endhighlight %}
 
-But it doesn't have to be so square. You could also go for a bit more funky like this:
+Noin monotoninen hi-hat-komppi ei kuitenkaan istu hirveän hyvin peruskompin sekaan. Tehdään siitä vähän mielenkiintoisempi esimerkiksi seuraavalla muokkauksella:
 
 {% highlight ruby %}
 live_loop :hihat do
@@ -58,14 +60,14 @@ live_loop :hihat do
 end
 {% endhighlight %}
 
-The polyrhythmic hi-hat pattern was fist a "mistake". The loop is 1.25 beats long instead of the supposed 1. But it sounds cool! So remember to make a lot of mistakes to find something you weren't even looking for.
+Hi-hat-komppi soikin nyt polyrytmisesti, sillä luupin pituus on nyt 1.25 iskua, joten se ei aina alakaan alusta rumpukompin ykkösellä. Alunperin tarkoituksenamme oli tehdä siitä tasan yhden iskun pituinen, mutta annetaan tämän hi-hat-kompin nyt olla, sillä sehän kuulostaa todella hyvältä ja se onkin tärkeintä! Sonic Pi -ohjelmoinnissa voi ja on varaa tehdä paljon virheitä, sillä niiden avulla voit monesti löytää ääniä ja rytmejä jotka ovatkin mielenkiintoisempia kuin lopputulos mihin alunperin olit pyrkimässä. 
 
-Now the song looks something like this:
+Nyt kappaleen alun pitäisi näyttää jotakuinkin tältä: 
 
 {% highlight ruby %}
 use_bpm 100
 
-live_loop :drums do
+live_loop :rummut do
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
@@ -84,4 +86,4 @@ live_loop :hihat do
 end
 {% endhighlight %}
 
-Play around with different samples and rhythms. You could also add a third live_loop for percussions or other effects. Next you'll create a bass track for your composition.
+Kokeile seuraavaksi muuttaa rumpukompin sampleja ja rytmejä. Voit halutessasi lisätä kolmannen live_loopin perkussiosoittimille tai muille. Seuraavaksi luomme bassoraidan kappaletta varten…  
