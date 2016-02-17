@@ -1,6 +1,6 @@
 ---
-chapter: Generate sounds
-title: Generate sounds
+chapter: Generatiivisuus
+title: Generatiivisuus
 ---
 
-You have a lot covered already. On this chapter you'll learn a bit more about how to use `chord` and `scale`, iterate through lists and use variables. The aim is to take the composition into a more generative direction, where parts of the song are generated based on parameters that you can modify on the fly.
+Onnittelut siitä että olet jo käynyt läpi todella ison annoksen Sonic Pi:n perusteita! Seuraavaksi tutustumme miten käydään läpi sointujen ja sävellajien (`chord` ja `scale`) listoja generatiivisessa musiikissa. Tarkoituksena on viedä Sonic Pi:llä ohjelmoitu musiikkiteos siihen suuntaan, että tietokone voi ohjata sen kulkua vain muutamien muuttujien avulla. 

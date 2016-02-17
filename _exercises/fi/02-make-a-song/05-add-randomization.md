@@ -1,16 +1,16 @@
 ---
-chapter: Make a song
-title: Add randomization
+chapter: Kappaleen tekeminen
+title: Lisää satunnaisuutta
 ---
 
-Great! Now you got your song running nicely with a steady beat and a bass with the melody hook on the top. Now we're going to do something really cool and unleash the true potential of Sonic Pi. Let's add some generative elements to the track and program the computer to compose for us!
+Mahtavaa! Nyt sinulla on valmiina kappaleen alku, jossa on tukeva peruskomppi, hihatit, basso ja melodiakoukku kaiken huipulla. Seuraavaksi teemme jotain mikä avaa Sonic Pi:n todelliset mahdollisuudet. Lisätään seuraavaksi satunnaisia elementtejä kappaleen koodiin! Se tarkoittaa sitä että voimme antaa tietokoneen "heittää noppaa" puolestamme ja tehdä valintoja esim. siitä mitä säveliä jossain kappaleen kohdassa soitetaan. 
 
-## Throw a dice and transpose the melody
+## Heitä noppaa ja transponoi melodiaa
 
-Transposing means changing the pitch up or down. We could randomly transpose the melody a bit every now and then to add some spice to the track. You can throw a dice to decide when to shift the pitch up for the melody. Here's an example:
+Transponointi tarkoittaa sävelkorkeuden muuttamista ylös (korkeammalle) tai alas (matalammalle). Me voimme esimerkiksi antaa tietokoneen välillä transponoida yhden `live_loopin` sisällä olevat sävelet kaksi sävelaskelta korkeammalle. Sitä varten tutustumme komentoon `if one_in(6)` seuraavassa esimerkissä: 
 
 {% highlight ruby %}
-live_loop :melody do
+live_loop :melodia do
   if one_in(6)
     use_transpose 2
   else
@@ -20,15 +20,17 @@ live_loop :melody do
 end
 {% endhighlight %}
 
-## Create a random acid bass track
+Huomasitko miten kappaleen melodia soi välillä korkeammalta? Esimerkissä jokaisella live_loopin kierrolla kutsutaan komentoa `if one_in(6)`, joka käskee Sonic Pi:tä heittämään kuusisivuista noppaa. Jos nopanheiton tulos on kuusi, seuraavan rivin komento `use_tranpose 2` suoritetaan ja sen seurauksena `play_pattern_timed`-komennon sävelet soitetaan kaksi sävelaskelta korkeammalta. Jos nopanheiton tulos on alle kuusi, kutsutaan rivin `else` jälkeistä komentoa `use_transpose 0`, joka tarkoittaa että melodiaa ei transponoida. 
 
-Let's do something interesting for the bass loop. `.choose` is a handy method that randomly picks out an element from a list. Like this:
+## Luo satunnainen "Acid House" -bassolinja
+
+Kokeillaan seuraavaksi tehdä jotain mielenkiintoista bassolinjalle. `choose` on erittäin hyödyllinen komento, jolla voimme valita listasta satunnaisesti jonkin elementin. Esimerkiksi näin: 
 
 {% highlight ruby %}
 play [:c, :e, :g].choose
 {% endhighlight %}
 
-`[:c, :e, :g]` is a list of notes (in this case the notes of the C major chord). `.choose` picks out one of those notes at random. Instead of notes you could have anything in the list. Like sleep values for example:
+`[:c, :e, :g]` on lista nuotteja (tässä tapauksessa C-duurisoinnun sävelet). `.choose` valitsee satunnaisesti yhden sävelen kaikista listassa olevista sävelistä. Sävelten sijasta voit myös satunnaisesti valita esimerkiksi numerolukuja. Kuten tässä esimerkissä: 
 
 {% highlight ruby %}
 loop do
@@ -38,7 +40,7 @@ loop do
 end
 {% endhighlight %}
 
-You don't even have to remember what notes are in what chords. Sonic Pi can handle that for you. Instead of writing `[:c, :e, :g]`, you can just use `chord(:C, :major)`. That creates a list of right notes for you automatically. Here's an example:
+Tässä välissä on hyvä mainita muutama asia soinnuista, Sonic Pi:ssä sinun ei tarvitse muistaa mitkä sävelet kuuluvat mihinkin sointuun. Sen sijaan että kirjoittaisit `[:c, :e, :g]` voit kirjoittaa komennon `chord(:C, :major)`, joka palauttaa listana sävelet jotka kuuluvat C-duurisointuun. Esimerkiksi: 
 
 {% highlight ruby %}
 loop do
@@ -47,29 +49,29 @@ loop do
 end
 {% endhighlight %}
 
-Let's use this sorcery for a bubbling bass track. Save your work and copy your current `:bass` loop to another buffer, in case you want to come back to it. Then make room for our new bass track and delete the content of the loop. Let's use the classic `:tb303` synth and play random 16th notes from C major chord:
+Käytetään tätä komentoa esimerkiksi Acid House -musiikista tuttuun "kuplivaan" bassoraitaan. Tallenna työsi (**Save**-nappia painamalla) ja kopioi sinun `:basso`-luuppi uudelle **Buffer**-välilehdelle. Tyhjennä `live_loop`:in sisältö ja kirjoitetaan se uusiksi. Käytetään uutta bassolinjaa varten syntetisaattorin ääntä `:tb303` ja soitetaan C-duurisoinnun säveliä 1/16-nuotin pituisina: 
 
 {% highlight ruby %}
-live_loop :bass do
+live_loop :basso do
   use_synth :tb303
   play chord(:C2, :major).choose
   sleep 0.25
 end
 {% endhighlight %}
 
-Ough! Not quite right. Add `, release: 0.125` parameter in the end of the play command, like this:
+No se ei kuulostanut vielä kovin hyvältä. Sävelten pituus (oletuksena `release: 1`) aiheuttaa sen että ne soivat päällekäin ja puuroutuvat. Lisätään `play`-komennon perään parametri `, release: 0.125` ja lopputulos kuulostaa jo paljon paremmalta: 
 
 {% highlight ruby %}
-live_loop :bass do
+live_loop :basso do
   use_synth :tb303
   play chord(:C2, :major).choose, release: 0.125
   sleep 0.25
 end
 {% endhighlight %}
 
-That's better, but there's still a bit polishing to do. So far you have used the `attack:` and `release:` parameters for a play command. Depending on the synth you are using, there's a lot lot more parameters to use. For example the tb303 synth has 45 different options to tweak. Let's use a parameter called `cutoff` for the bass. Cutoff removes all frequencies above the cutoff frequency. You can use values between 0-130.
+Tähän mennessä olet käyttänyt parametreja `attack:` ja `release:` play-komennon kanssa, mutta parametreja on paljon enemmänkin ja voivat riippua siitä mitä syntetisaattorin ääntä käytät. Esimerkiksi `:tb303`-äänellä on 45 erilaista parametria, joilla ääntä voi muokata. Kokeillaan seuraavaksi muokata bassoääntä parametrillä `cutoff`, joka leikkaa äänestä pois kaikki taajuudet cutoff-arvon yläpuolelta. Cutoff:in kanssa voit käyttää arvoja väliltä 0-130. 
 
-But don't just use a fixed cutoff value when you can have a random value! With `rrand(min, max)` you can generate random numbers in a given range. Try that out:
+Cutoff:in kanssa ei kannata käyttää mitään kiinteätä lukua ja voimme tehdä äänestä paljon mielenkiintoisemman muuttamalla arvoa satunnaisesti. Voimme käyttää uutta komentoa `rrand(minimi, maksimi)`, joka arpoo satunnaisesti lukuja minimi- ja maksimiarvojen väliltä. Kokeillaan sitä bassolinjassa: 
 
 {% highlight ruby %}
 live_loop :bass do
@@ -79,12 +81,12 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-Grrreat! Remember to explore and try out different things. As a recap, here's an example about what you cold have going on at this point:
+Mahtavaa! Muista tutkia ja kokeille erilaisia arvoja esimerkin komennoilla. Kertauksena, tässä on ohjelma minkä olemme esimerkkien avulla kirjoittaneet: 
 
 {% highlight ruby %}
 use_bpm 120
 
-live_loop :drums do
+live_loop :rummut do
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
@@ -102,14 +104,14 @@ live_loop :hihat do
   sleep 1
 end
 
-live_loop :bass do
+live_loop :basso do
   use_synth :tb303
   play chord(:C2, :major).choose, release: 0.125, cutoff: rrand(60, 110)
   sleep 0.25
 end
 
 
-live_loop :melody do
+live_loop :melodia do
   if one_in(6)
     use_transpose 2
   else

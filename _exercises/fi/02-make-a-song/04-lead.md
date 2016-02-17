@@ -1,11 +1,11 @@
 ---
-chapter: Make a song
-title: Lead track
+chapter: Kappaleen tekeminen
+title: Päämelodia
 ---
 
-Now is the time for melody. Instead of writing a big bunch of `play` and `sleep` commands over and over again, we're going to use a shortcut: `play_pattern_timed`.
+Nyt kun kappaleen pohja on kunnossa on aika keksiä sille toimiva päämelodia. Sen sijaan että kirjoittaisimme melodiakulun toistuvilla `play` ja `sleep` komentojen sarjoilla, voimme käyttää komentoa `play_pattern_timed` säästääksemme aikaa ja koodirivejä. 
 
-Instead of writing:
+Sen sijaan että kirjoittaisit: 
 
 {% highlight ruby %}
 play :c2
@@ -18,30 +18,30 @@ play :d2
 sleep 0.5
 {% endhighlight %}
 
-you can write:
+Voit kirjoittaa saman asian myös näin:
 
 {% highlight ruby %}
 play_pattern_timed [:c2, :d2, :e2, :d2], [0.5, 0.25, 0.75, 0.5]
 {% endhighlight %}
 
-The first list `[:c2, :d2, :e2, :d2]` is a group of notes and the second list `[0.5, 0.25, 0.75, 0.5]` is a group of breaks in between the notes.
+Ensimmäinen lista `[:c2, :d2, :e2, :d2]` on joukko säveliä ja toinen lista `[0.5, 0.25, 0.75, 0.5]` on joukko sävelten välissä olevia taukoja. 
 
-## Melody
+## Melodia
 
-Create a new `live_loop` called `:melody` create a lead theme for your song. If it feel easier, use the `play_pattern_timed` function to write the melody. You can use the <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> also if it helps. Here's an example:
+Tee uusi `live_loop` nimeltä `melodia`, johon voimme kirjoittaa kappaleen päämelodian. Jos se tuntuu helpommalta, käytä `play_pattern_timed` komentoa melodian kirjoittamiseen. Voit myös halutessasi käyttää selaimessa toimivaa <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">pianoa</a> päämelodian tavailua varten. Alla on esimerkki melodiasta:
 
 {% highlight ruby %}
-live_loop :melody do
+live_loop :melodia do
   play_pattern_timed [:c4, :e4, :f4, :g4, :f4, :e4, :f4, :g4, :f4, :e4, :f4], [0.25, 0.25, 0.25, 1.5, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25]
 end
 {% endhighlight %}
 
-Now the whole song could be something like this:
+Nyt koko kappale kuulostaa jotakuinkin tältä: 
 
 {% highlight ruby %}
 use_bpm 120
 
-live_loop :drums do
+live_loop :rummut do
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
@@ -59,7 +59,7 @@ live_loop :hihat do
   sleep 1
 end
 
-live_loop :bass do
+live_loop :basso do
   use_synth :fm
   play :c2, attack: 0, release: 0.25
   sleep 0.25
@@ -71,9 +71,9 @@ live_loop :bass do
   sleep 1
 end
 
-live_loop :melody do
+live_loop :melodia do
   play_pattern_timed [:c4, :e4, :f4, :g4, :f4, :e4, :f4, :g4, :f4, :e4, :f4], [0.25, 0.25, 0.25, 1.5, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25], attack: 0, release: 0.2
 end
 {% endhighlight %}
 
-Yay, that's a great start! Now go and explore with different melodies, synths and `attack:` and `release:` values. 
+Nyt olet jo saanut upean alun kappaleen kirjoittamiseen Sonic Pi:llä. Seuraavaksi kannattaakin tutkia miten kappale muuttuu kokeilemalla erilaisia melodiakulkuja, syntetisaattorin ääniä, sampleja ja `sleep`, `attack` ja `release` -arvoja. 

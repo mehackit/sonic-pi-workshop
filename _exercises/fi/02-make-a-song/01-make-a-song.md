@@ -1,21 +1,20 @@
 ---
-chapter: Make a song
-title: Make a song
+chapter: Kappaleen tekeminen
+title: Kappaleen tekeminen
 ---
 
-Let's dig deeper into Sonic Pi by composing a song. Now you have a rough idea about how to play notes of different lengths with Sonic Pi. That's cool but we can do so much more!
+Syvennytään seuraavaksi Sonic Pi:n oppimiseen kirjoittamalla oikea kappale. Edellisen osion perusteella sinulla on jo tietämys siitä kuinka säveliä soitetaan, miten luodaan erilaisia rytmejä ja miten niitä toistetaan. Se on jo paljon, mutta Sonic Pi:llä voi tehdä vielä niin paljon enemmänkin. 
 
-## This chapter
+## Tämä osio
 
-You'll start with creating a drum beat and getting to know the `live_loop`. Then you will add a bass track and finish the song by adding a melody!
+Aloitat ensiksi luomalla oman rumpubiitin ja tutustumalla komentoon `live_loop`, jonka avulla voit toistaa jotain osuutta `4.times do` komennon tavoin, mutta loputtomasti. Sen jälkeen kappaletta täydennetään luomalla sille basso- ja päämelodiat. 
 
-## Tweak the sounds
+## Äänien muokkaaminen
 
-If you want to explore more with Sonic Pi you can continue to tweak the sounds. In the second chapter you'll learn how to use effects and tweak different options to create a richer soundscape.
+Sonic Pi:ssä kaikkia soitettavia ääniä voi muokata monin eri tavoin. Toisessa osiossa opit kuinka ääniä muokkaamalla ja efektejä käyttämällä voit luoda huomattavasti rikkaampia äänimaisemia. 
 
-## Last chapter
+## Viimeinen kappale
 
-And there's even more. In the third chapter you can create a generative piece out of you composition. You can create algorithms to generatively create parts of your track.
+Sonic Pi:stä löytyy vielä lisääkin! Kolmannessa osiossa pääset luomaan omasta kappaleestasi generatiivista musiikkia. Voit luoda satunnaisuutta ja erilaisia algoritmejä, jotka valitsevat puolestasi mitä säveliä ja melodioita ohjelma soittaa. 
 
-
-Sounds pretty sweet! Let's get started with the beat then!
+Kuulostaa todella hyvältä! Aloitetaan ensiksi rumpujen ohjelmoinnista… 

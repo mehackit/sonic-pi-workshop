@@ -1,9 +1,9 @@
 ---
-chapter: Cheatsheet
-title: Cheatsheet
+chapter: Lunttilappu
+title: Lunttilappu
 ---
 
-## Play a note
+## Sävelen soittaminen
 
 {% highlight ruby %}
 use_bpm 100
@@ -18,7 +18,7 @@ play_pattern_timed [:c2, :d2, :e2, :d2], [0.5, 0.25, 0.75, 0.5]
 <img src="{{ "/assets/img/midi_notes.png" | prepend: site.baseurl }}">
 
 
-## Loop
+## Luupit
 
 {% highlight ruby %}
 live_loop :drums do
@@ -34,7 +34,7 @@ play :a4
 sleep 1
 {% endhighlight %}
 
-## Synths and options
+## Syntetisaattorit ja parametrit
 
 <img src="{{ "/assets/img/adsr.png" | prepend: site.baseurl }}">
 
@@ -46,7 +46,7 @@ use_octave 0
 play :c, attack 1, decay: 0, sustain: 0, release: 1, amp: 0.5, pan: rrand(-0.5,0.5)
 {% endhighlight %}
 
-## Samples and options
+## Samplet ja parametrit
 
 {% highlight ruby %}
 sample :bd_haus, amp: 0.5
@@ -59,26 +59,26 @@ live_loop :amen_break do
 end
 {% endhighlight %}
 
-## Randomization
+## Satunnaisuus
 
 {% highlight ruby %}
 rrand(60, 110)
 
 if one_in(6)
-  # do something
+  # tee jotain
 else
-  # do something else
+  # tee jotain muuta
 end
 
 sleep [0, 1, 2].choose
 play [:c, :e, :g].choose
 {% endhighlight %}
 
-## FX
+## Efektit
 
 {% highlight ruby %}
 with_fx :reverb, mix: 0.5 do
-  # do something
+  # tee jotain
 end
 {% endhighlight %}
 
@@ -105,11 +105,11 @@ r = [0.25, 0.25, 0.5, 1].choose
 play chord(:c, :minor).choose, attack: 0, release: r
 sleep r
 
-chords = [chord(:C, :minor7), chord(:Ab, :major7)].ring # a ring of chords
-c = chords.tick # save next chord to a variable 'c'
-c[0] # get the first note of the chord
+chords = [chord(:C, :minor7), chord(:Ab, :major7)].ring # sointuketju
+c = chords.tick # tallenna seuraava sointu muuttujaan 'c'
+c[0] # hae soinnun ensimmäinen nuotti
 {% endhighlight %}
 
 ## Other
 
-If your code is getting slow, try `use_bebug: false` in the beginning of your code. This reduces the log messages Sonic Pi generates and can speed up the code.
+Jos koodis pyörii liian hitaasti, kokeila kirjoittaa komento `use_debug: false` ohjelman alkuun. Tämä vähentää Lokipaneeliin kirjoitettujen viestien määrää ja nopeuttaa Sonic Pi:tä. 

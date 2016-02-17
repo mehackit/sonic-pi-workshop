@@ -1,14 +1,12 @@
 ---
-chapter: Tweak the sounds
-title: Effects
+chapter: Äänen muokkaaminen
+title: Efektit
 ---
 
-We've been holding this off for too long now, so here it comes: `with_fx`! 
-
-That's a powerful tool for adding different effects to your composition. Let's start with `:reverb`. Pretty much everything sounds nice with a reverb. Start with surrounding your code with a `with_fx :reverb do` and `end` blocks:
+Seuraavaksi pääsemmekin värittämään ääniä oikein kunnolla `with_fx`-komennon avulla! Sen avulla voimme lisätä lukusia erilaisia ääniefektejä Sonic Pi -ohjelmiin. Kokeillaan sitä heti alkuun `:reverb`-efektin kanssa. Reverb (ts. kaikuefekti) lisää ääneen huonetilan kaiun ja melkein mikä vain ääni kuulostaa hyvältä sen kanssa. Katsotaan alkuun miten saamme efektin toimimaan `with_fx :reverb do` ja `end` -blokkien kanssa: 
 
 {% highlight ruby %}
-live_loop :effects do
+live_loop :efekti do
   with_fx :reverb do
     play 50
     sleep 0.5
@@ -19,10 +17,10 @@ live_loop :effects do
 end
 {% endhighlight %}
 
-Sounds bigger, doesn't it? Just like synths and samples, effects also have options. `mix:`is an option that sets how much the effect and the original sound is heard. `mix: 0` plays only the original sound, `mix: 1` plays only the FX. Reverb has a `:room` option also. Try different room sizes with values between 0-1. If you open the 'Fx' tab on the help menu you can find what options are available for which FX.
+Eikö kuulostakin heti isommalta? Kuten syntikoilla ja sampleilla, efekteilläkin on myös omat parametrinsa. Esimerkiksi `mix:` on parametri, joka määrittää suhteen kuinka paljon alkuperäistä ja efektoitua ääntä kuullaan. `mix: 0` soittaa vain alkuperäisen äänen, `mix: 1` soittaa vain efektoidun äänen ja `mix: 0.5` soittaa kumpaakin ääntä samassa suhteessa. Reverb-efektissä on myös `room:`-parametri, jolla voi määrittää efektin mallintaman huonekaiun koon. Kokeile `room:`-parametrille eri arvoja 0:n ja 1:n väliltä. Apupaneelin (Help) **Fx**-välilehdeltä löydät lisätietoa kaikista efekteistä ja niiden parametreista. 
 
 {% highlight ruby %}
-live_loop :effects do
+live_loop :efekti do
   with_fx :reverb, mix: 0.5, room: 0.9 do
     play 50
     sleep 0.5
@@ -33,7 +31,7 @@ live_loop :effects do
 end
 {% endhighlight %}
 
-There are so many FX to choose from. And you don't even have to settle for one: you can nest them! (At some point you computer can run out of resources but worry about that then.)
+Sonic Pi:ssä on niin monta efektiä joista voit valita, ja sinun ei tarvitse edes tyytyä yhteen, sillä efektejä voi ketjuttaa peräkkäin esimerkiksi seuraavalla tavalla: 
 
 {% highlight ruby %}
 live_loop :effects do
@@ -51,4 +49,4 @@ live_loop :effects do
 end
 {% endhighlight %}
 
-Now go crazy and add FX everywhere for some amazing new sounds! 
+Kokeile seuraavaksi eri efektejä mitä Sonic Pi:llä on tarjota ja luo niiden avulla aivan uudenlaisia ääniä! 	
