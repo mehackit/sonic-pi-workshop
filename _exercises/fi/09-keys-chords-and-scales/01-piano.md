@@ -1,9 +1,9 @@
 ---
-chapter: Keys, chords and scales
-title: Keys, chords and scales
+chapter: Sävelet, soinnut ja skaalat
+title: Sävelet, soinnut ja skaalat
 ---
 
-Sometimes composing a melody with Sonic Pi can be tricky, if you don't immediately know what `62` or `:c3` sounds like. To help with that, here's a browser keyboard for trying out your ideas. If you want, you can select a scale from the drop menu to see what keys might sound nice in a certain key. 
+Joskus Sonic Pi:llä säveltäminen voi olla mutkikasta, koska et välttämättä tiedä miten esimerkiksi melodia tulisi kehittää tai miltä sävel ´60´ tai ´:C3´ kuulostaa. Säveltämisen avuksi voit ottaa jonkin tavanomaisen soittimen tai esimerkiksi verkkoselaimessa toimivan virtuaalipianon, jonka avulla voit kokeilla nopeasti erilaisia melodiakulkuja. Voit myös valita pudotusvalikosta jonkin sävellajin, jolloin näet mitkä sävelet sopivat kyseiseen sävellajiin. 
 
 <div class="keyboard-options">
   <select ID="sound">
@@ -51,15 +51,15 @@ Sometimes composing a melody with Sonic Pi can be tricky, if you don't immediate
   </div>
 </div>
 
-## What chords and notes to play?
+## Mitä sointuja ja säveliä kannattaa soittaa?
 
-Obviously you can play whatever notes and chords you like to. There's no right or wrong. Music doesn't have to sound harmonic and some dissonance or noise belongs to a track as much as the artist wants it to belong. However there's some rules you can try out if you wish.
+Musiikin tekijänä voit luonnollisesti soittaa mitä vain säveliä ja sointuja, ja joskus jopa riitasoinnut eivät ole pahitteeksi! Otsikossa esitettyyn kysymykseen ei ole yksinkertaista oikeaa tai väärää vastausta, mutta musiikin teoriassa annetaan eväitä siihen miten saa sävellettyä ns. "harmonista" ja "miellyttävää" musiikkia.
 
-If your composition is in a certain key, let's say C major for an example, you have certain chords that probably sound nice on the track. Here's a table with some jazzy chords that should play along with each other quite nicely. If you want you can look more in to chord progressions here: <a href="http://www.lotusmusic.com/chord-progression-map.html">lotusmusic.com/chord-progression-map.html</a>
+Jos sävellyksesi on jossain tietyssä sävellajissa (**scale**), esimerkiksi C-duurissa, sinulla on käytössäsi tietyt soinnut ja sävelet, jotka kuulostavat hyvältä ja ei-riitaisilta. Alla on esitetty taulukko siitä mitkä soinnut ja sointukulut kuulostavat hyvältä keskenään. Voit tutustua syvemmin sointukulkuihin esimerkiksi täällä: <a href="http://www.lotusmusic.com/chord-progression-map.html">lotusmusic.com/chord-progression-map.html</a>
 
-Common chord progressions in major  |  I - IV - V   |   I - VI - IV - V   |   II - V - I
+Yleisiä sointukulkuja duurissa  |  I - IV - V   |   I - VI - IV - V   |   II - V - I
 
-|Major key| I | II | III | IV | V | VI |
+|Duurisävel| I | II | III | IV | V | VI |
 |---|---|---|---|---|---|---|
 |C|chord(:C, :major7)|chord(:D, :minor7)|chord(:E, :minor7)|chord(:F, :major7)|chord(:G, &quot;7&quot;)|chord(:A, :minor7)|
 |Db|chord(:Db, :major7)|chord(:Eb, :minor7)|chord(:F, :minor7)|chord(:Gb, :major7)|chord(:Ab, &quot;7&quot;)|chord(:Bb, :minor7)|
@@ -74,9 +74,9 @@ Common chord progressions in major  |  I - IV - V   |   I - VI - IV - V   |   II
 |Bb|chord(:Bb, :major7)|chord(:C, :minor7)|chord(:D, :minor7)|chord(:Eb, :major7)|chord(:F, &quot;7&quot;)|chord(:G, :minor7)|
 |B|chord(:B, :major7)|chord(:Db, :minor7)|chord(:Eb, :minor7)|chord(:E, :major7)|chord(:Gb, &quot;7&quot;)|chord(:Ab, :minor7)|
 
-Common chord progressions in natural minor  |  I - VI - VII  |   I - IV - VII  |   I - IV - V  |   I - VI - III - VII  |   II - V - I
+Yleisiä sointukulkuja mollissa  |  I - VI - VII  |   I - IV - VII  |   I - IV - V  |   I - VI - III - VII  |   II - V - I
 
-|Minor key| I | II | III | IV | V | VI | VII |
+|Mollisävel| I | II | III | IV | V | VI | VII |
 |---|---|---|---|---|---|---|
 |Cm|chord(:C, :minor7)|chord(:D, &quot;m7-5&quot;)|chord(:Eb, :major7)|chord(:F, :minor7)|chord(:G, :minor7)|chord(:Ab, :major7)|chord(:Bb, &quot;7&quot;)|
 |Ddm|chord(:Dd, :minor7)|chord(:Eb, &quot;m7-5&quot;)|chord(:E, :major7)|chord(:Gb, :minor7)|chord(:Ab, :minor7)|chord(:A, :major7)|chord(:B, &quot;7&quot;)|

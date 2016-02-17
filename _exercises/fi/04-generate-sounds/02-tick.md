@@ -1,23 +1,23 @@
 ---
-chapter: Generate sounds
+chapter: Generatiivisuus
 title: Tick
 ---
 
-Remember `chord`? The chord function gives you the notes of a certain chord:
+Muistathan komennon `chord`, joka palauttaa listana jonkin soinnun sävelet? 
 
 {% highlight ruby %}
 play chord(:c, :major).choose 
-# plays a random note of the C major chord (:c, :g r :f)
+# soittaa satunnaisesti C-duurisoinnun säveliä (:c, :e or :g)
 {% endhighlight %}
 
-There's also a function called `scale`. Scale returns all the notes in a _scale_, not just the ones in a chord:
+Sonic Pi:ssä on myös komento nimeltä `scale`, joka palauttaa kaikki määriteltyyn sävellajiin kuuluvat sävelet: 
 
 {% highlight ruby %}
 play scale(:c, :major).choose 
-# plays a random note of the C major scale (:c, :d, :e, :f, :g, :a or :b)
+# soittaa satunnaisesti C-duuriskaalan säveliä (:c, :d, :e, :f, :g, :a or :b)
 {% endhighlight %}
 
-With `choose` you can get a random element from a list. If you want to go through the values in a more structured manner, Sonic PI has a very powerful function called `tick`:
+`choose`-komennolla saat poimittua jonkin satunnaisen elementin listasta. Jos haluaisitkin käydä listan elementit järjestyksessä läpi, voit käyttää siihen erittäin tehokasta komentoa nimeltä `tick`:
 
 {% highlight ruby %}
 live_loop :arp do
@@ -26,7 +26,7 @@ live_loop :arp do
 end
 {% endhighlight %}
 
-Here, we’re just grabbing the scale E3 minor pentatonic and ticking through each element. This is done by adding .tick to the end of the scale declaration. This tick is local to the live loop, so each live loop can have its own independent tick: 
+Tämä esimerkki käy järjestyksessä läpi kaikki E-molliskaalaan kuuluvat sävelet kolmannesta oktaavista, ja se hoituu lisäämällä `.tick` sitä edeltävän `scale`- tai `chord`-komennon perään. `tick`-komento on paikallinen jokaiselle `live_loop`:lle, joka tarkoittaa sitä että jokaisessa `live_loop`:ssa voi olla käytössä oma `tick`:
 
 {% highlight ruby %}
 live_loop :arp do
@@ -41,9 +41,9 @@ live_loop :arp2 do
 end 
 {% endhighlight %}
 
-## Rings
+## Ketjut (Ring)
 
-You can tick through anything that is a _ring_ (well, you can tick through lists also but it will stop when you get to the end). Ring is a special list, that starts over when you get to the end. Like in the previous example the scale started again from the beginning after reaching the last note. `scale` and `chord` both return a ring. Sometimes you'll want to create a list and turn that into a ring by calling `.ring`:
+Ketju (**ring**) eroaa listasta siinä että ketjussa `tick` palaa aina ensimmäiseen elementtiin viimeisen jälkeen. Listan läpikäyminen `tick`:llä puolestaan aina päättyy viimeisen elementin jälkeen. Edellisessä esimerkissähän `scale`:n läpikäyminen `tick`:llä jatkui viimeisen elementin jälkeen. `scale` ja `chord` antavat aina ketjun normaalin listan sijaan. Joskus saatat haluta luoda oman listan (esimerkiksi säveliä) ja tehdä siitä ketjun kutsumalla komentoa `.ring`:
 
 {% highlight ruby %}
 live_loop :arp do
@@ -52,7 +52,7 @@ live_loop :arp do
 end
 {% endhighlight %}
 
-Here's a bit more complex example. Here you have a list or chords that is turned into a ring and ticked through:
+Katsotaan seuraavaksi hieman edistyneempää esimerkkiä. Tässä lista sointuja muutetaan ketjuksi ja sitä käydään läpi `.tick`:llä:
 
 {% highlight ruby %}
 live_loop :keys do
@@ -62,7 +62,7 @@ live_loop :keys do
 end
 {% endhighlight %}
 
-And then top it off with a lead 'melody':
+Koristellaan melodia vielä saman sävellajin melodialla! Huom. lisäkomento `.mirror` kääntää seuraavan esimerkin ketjun ympäri (ts. aloittaa ketjun korkeimmasta sävelestä matalimman sijaan): 
 
 {% highlight ruby %}
 live_loop :keys do
@@ -78,4 +78,4 @@ live_loop :lead do
 end
 {% endhighlight %}
 
-Start ticking, go wild! 
+Kokeile seuraavaksi `tick`:iä erilaisten ketjujen ja listojen kanssa ja anna tietokoneen hoitaa melodiakulkujen soitto.

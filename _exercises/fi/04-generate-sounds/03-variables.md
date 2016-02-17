@@ -1,12 +1,12 @@
 ---
-chapter: Generate sounds
-title: Variables
+chapter: Generatiivisuus
+title: Muuttujat
 ---
 
-Take a look at the example below. What's going on?
+Kokeile alkuun alla olevaa esimerkkiä. Mitä siinä oikein tapahtuu?
 
 {% highlight ruby %}
-live_loop :melody do
+live_loop :melodia do
   use_synth :blade
   r = [0.25, 0.25, 0.5, 1].choose
   play chord(:c, :minor).choose, attack: 0, release: r
@@ -14,25 +14,25 @@ live_loop :melody do
 end
 {% endhighlight %}
 
-There's a variable `r` that gets a certain value each time the loop is played and that value is being used as the release option for play and as the sleep length. A variable is a bit like a box where you can store things and take things out. Using a variable is as simple as `valiable_name = variable_value`. Now the variable_value is stored in variable_name. You can get the value just by typing variable_name.
+Siinä on muuttuja `r`, joka saa tietyn arvon listasta `[0.25, 0.25, 0.5, 1]` jokaisella kerralla kun luuppi ajetaan. Muuttujaa `r` käytetään `play`-komennon release-parametrin ja koko luupin viimeisen komennon `sleep` arvoina. Muuttuja on ikään kuin laatikko, jonne voi laittaa jonkin arvon säilöön ja ottaa sen sieltä myöhemmin käyttöön. Tässä laatikossa voi kuitenkin olla vain yksi arvo kerrallaan, joten aina kun sinne laittaa uuden arvon edellinen häviää. Muuttujan käyttäminen on niinkin helppoa kuin koodirivin `muuttujan_nimi = muuttujan_arvo` kirjoittaminen. Nyt `muuttujan_arvo` on tallennettu muuttujaan `muuttujan_nimi`. Myöhemmin voit koodissa ottaa `muuttujan_arvo`:n käyttöön vain kirjoittamalla `muuttujan_nimi`. 
 
-Let's add a synth and bass to the example to try out variables. The `:keys` loop is simple, nothing new happening, but the `:bass` loop is a bit tricky:
+Lisätään seuravaaksi kaksi uutta `live_loop`:ia edelliseen esimerkkiin. Ensimmäinen luuppi `:syna` on yksinkertainen eikä sisällä mitään uutta, mutta toinen luuppi `:basso` on jo vähän monimutkaisempi:
 
 {% highlight ruby %}
-live_loop :melody do
+live_loop :melodia do
   use_synth :blade
   r = [0.25, 0.25, 0.5, 1].choose
   play chord(:c, :minor).choose, attack: 0, release: r
   sleep r
 end
 
-live_loop :keys do
+live_loop :syna do
   use_synth :blade
   play chord(:c, :minor)
   sleep 1
 end
 
-live_loop :bass do
+live_loop :basso do
   use_synth :fm
   n = chord(:c2, :minor).tick
   3.times do
@@ -46,4 +46,4 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-`n = chord(:c2, :minor).tick` takes a note from a C minor chord and saves it to a variable named `n`. `.tick` always moves forward to the next value after it's called. `play n` plays the saved note. Then `.tick` is called again to get the next note from the chord. When the loop starts again, `.tick` continues from where it was.
+`n = chord(:c2, :minor).tick` ottaa sävelen C-mollisoinnusta ja tallentaa sen muuttujaan `n`. Samassa yhteydessä `.tick` siirtyy soinnun seuraavaan säveleen kun sitä on kutsuttu. Seuraavaksi `play n` soittaa muuttujaan `n` tallennetun sävelen. Sen jälkeen `.tick`:iä kutsutaan uudestaan saadaksemme seuraavan sävelen C-mollisoinnusta. Kun luuppi alkaa uudestaan, `tick` jatkaa siitä sävelestä mihin se viimeksi jäi.

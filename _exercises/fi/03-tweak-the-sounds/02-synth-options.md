@@ -1,53 +1,61 @@
 ---
-chapter: Tweak the sounds
-title: Options
+chapter: Äänen muokkaaminen
+title: Syntetisaattorit ja samplet
 ---
 
-So far you have used `attack`, `release`, and `cutoff` options after a play command. Options (or opts for short) are controls you pass to play which modify and control aspects of the sound you hear. Each synth has its own set of opts for finely tuning its sound. However, there are common sets of opts shared by many sounds. Now you'll get to know few options more to add more expression to your sounds.
-
-Note that you can use some of the options with samples too!
+Tähän mennessä olet käyttänyt parametreja `attack`, `release` ja `cutoff` syntetisaattorien ja samplejen soittamisen yhteydessä. Kuten aiemmassa osiossa mainittiin, jokaisella syntetisaattorilla on lukuisia parametreja, joilla niiden ääntä voi muokata. Katsotaan seuraavaksi muutamia yhteisiä parametreja, jotka ovat käytettävissä kaikilla äänillä ja sampleilla. Käyttämällä niitä voit lisätä musiikin ilmaisuvoimaa merkittävästi! 
 
 ### `amp:`
 
-Amplitude is the loudness of a sound. 0 is silent (you’ll hear nothing), 1 is normal volume. You can crank up the amplitude to 2, 10 or 100. However, this can often make the sound muddy and strange. So try to use low amplitudes, i.e. in the range 0 to 0.5 to avoid compression. 
+Amplitudi on yhtä kuin äänenvoimakkuus. Kun parametrille antaa arvon 0 ääntä ei kuule ollenkaan, arvolla 1 ääni soi normaalivolyymillä. Voit lisätä äänenvoimakkuutta antamalla esimerksi arvon 1.5 tai 2, mutta sitä kannattaa yleensä välttää sillä se voi toisinaan heikentää äänenlaatua. Äänen voi soittaa normaalivolyymiä hiljempaa arvolla joka on alle 1 (esimerkiksi arvolla 0.5 ääni soi puolella volyymillä). 
 
 {% highlight ruby %}
 play :c2, amp: 0.5
+sleep 1
+sample :bd_ada, amp: 0.8
 {% endhighlight %}
 
 ### `pan:`
 
-Pan controls the panning of a sound in stereo. -1 means that you hear it out of the left speaker, 1 means you hear it out of your right speaker and 0 is center. You can use any value between -1 and 1. You could try using a random pan value for your hi-hats for some texture.
+Panorointi musiikissa tarkoittaa äänen sijaintia vasemmassa ja oikeassa kanavassa. Arvolla -1 ääni kuuluu ainoastaan vasemmasta kanavasta, 0:lla keskeltä (molemmista kanavista yhtä lujaa) ja 1:llä ainoastaan oikeasta kanavasta. Voit käyttää mitä vain arvoja väliltä -1 ja 1. Esimerkiksi aiemmin tehtyyn hihat-luuppiin voisi antaa hieman lisää liikkeen ja energian tuntua panoroimalla hihat-samplea esimerksi komennolla rrand(-0.7, 0.7)
 
 {% highlight ruby %}
 play :c2, amp: 0.5, pan: -1 #left speaker
 play :c2, amp: 0.5, pan: 0 #center
 play :c2, amp: 0.5, pan: 1 #right speaker
+{% endhighlight %}
 
-sample :drum_cymbal_closed, pan: rrand(-0.7, 0.7)
+{% highlight ruby %}
+live_loop :hihat do
+  sample :drum_cymbal_closed, pan: rrand(-0.7, 0.7)
+  sleep 0.25
+  sample :drum_cymbal_pedal, pan: rrand(-0.7, 0.7)
+  sleep 1
+end
 {% endhighlight %}
 
 ### `cutoff:`
 
-Remove frequencies higher that the given value. Use values between 0-130.
+Cutoff poistaa syntetisaattorin äänestä tai samplesta korkeat taajuudet leikkausarvon jälkeen. Parametrin kanssa voi käyttää arvoja väliltä 0 - 130.
 
 {% highlight ruby %}
 play :c2, cutoff: 80
+sample :drum_cymbal_open, cutoff: 60
 {% endhighlight %}
 
-### `attac:` and `release:`
+### `attack:` ja `release:`
 
-Time in beats for attack and release.
+Attack tarkoittaa äänen voimistumiseen kuluvaa aikaa ja release puolestaan äänen vaimenemisaikaa. Molemmille parametreille aika annetaan iskujen määränä. 
 
 {% highlight ruby %}
-play :c2, attack: 1, release: 1 #the note is two beats long
+play :c2, attack: 1, release: 1 # kaksi iskua pitkä nuotti
 {% endhighlight %}
 
 <img src="{{ "/assets/img/attackrelease.png" | prepend: site.baseurl }}">
 
-### `use_synth_defaults` and `use_sample_defaults`
+### `use_synth_defaults` ja `use_sample_defaults`
 
-If you don't want to set your ops for each play or sample on your loop, you can use `use_synth_defaults` and `use_sample_defaults` to set the ops for all the next samples and plays in the loop:
+Jos et halua antaa jokaiselle `play`- tai `sample`-komennolle parametreja erikseen, voit määrittää komennoilla `use_synth_defaults` ja `use_sample_defaults` oletusparametrit kaikille niitä seuraaville `play`- ja `sample`-komennoille. Huom. näillä komennoilla asetetut olennusparametrit eivät siirry `live_loop`:sta toiseen vaan ne pitää määrittää jokaisessa luupissa erikseen. 
 
 {% highlight ruby %}
 live_loop :melody do
@@ -62,9 +70,9 @@ live_loop :melody do
 end
 {% endhighlight %}
 
-### Bonus: `beat_stretch:` and `rate:`
+### Bonus: `beat_stretch:` ja `rate:`
 
-These are too cool to skip. Try this out:
+Tässä on vielä kaksi todella siistiä parametriä `sample`-komennolle, joita ei voi jättää mainitsematta! Kokeile aluksi seuraavaa koodinpätkää: 
 
 {% highlight ruby %}
 live_loop :amen_break do
@@ -73,7 +81,7 @@ live_loop :amen_break do
 end 
 {% endhighlight %}
 
-There's an annoying gap in the end. The sample is 1.753310657596372 beats long, which isn't that handy when you want to play it with all the other stuff we have going on. Luckily you can use `beat_stretch: 2` to make the sample 2 beats long:
+Huomasitko että sampleluuppi soi katkonaisesti? Se johtuu siitä että kyseinen sample `:loop_amen` on tarkalleen 1.753310657596372 iskua pitkä, mikä ei ole ollenkaan käytännöllistä jos haluat pitää kappaleesi oikeassa rytmissä. Onneksi Sonic Pi:ssä on parametri `beat_stretch: 2`, jolla voi venyttää samplen soittamisen tasan 2 iskuun:
 
 {% highlight ruby %}
 live_loop :amen_break do
@@ -82,7 +90,7 @@ live_loop :amen_break do
 end
 {% endhighlight %}
 
-Nice! Now to the `rate` option. Rate controls how fast a sample is played. 1 is in original speed, 0.5 is in half speed and 2 is in double speed. The sample also sounds higher and lower pitched when you change the rate. And (drumroll...) you can have even negative values! Negative values play the samples _backwards_. Try playing this loop and changing the rate and sleep value:
+Nyt voit kokeilla `rate`-parametria, jolla voi ohjata sitä kuinka nopeasti sample soi. Arvolla 1 sample soi normaalinopeudella, 0.5:llä puolinopeudella ja 2:lla tuplanopeudella jne. Sample myös kuulostaa korkeammalta tai matalammalta riippuen sen nopeudesta. Voit myös käyttää negatiivisia arvoja, jolloin sample soi takaperin! Kopioi allaoleva luuppi tyhjään **Buffer**-välilehteen, suorita ohjelma ja kokeile muuttaa `rate`:n ja `sleep`:n arvoja. 
 
 {% highlight ruby %}
 live_loop :amen_break do
@@ -90,4 +98,3 @@ live_loop :amen_break do
   sleep 2
 end
 {% endhighlight %}
-

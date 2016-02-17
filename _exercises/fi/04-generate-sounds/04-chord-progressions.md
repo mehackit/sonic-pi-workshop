@@ -1,10 +1,10 @@
 ---
-chapter: Generate sounds
-title: Chord progressions
+chapter: Generatiivisuus
+title: Sointukulku
 ---
 
 
-The previous example was playing only in C minor. Here's an example that uses a ring of chords that all the loops use. All the loops will play around the same chord and one loop is changing the chord for all. It's getting quite complex, but check it out for inspiration if you wish. You can use the <a href="{{ "/exercises/09-piano/01-piano.html" | prepend: site.baseurl }}">chord progression charts</a> for choosing nice chords if you wish.
+Edellisessä esimerkissä käytimme ainoastaan C-mollisointua. Seuraavaksi katsomme esimerkkiä, jossa hyödynnetään ketjua (**ring**) koko kappaleen sointukulun määrittämistä varten. Kaikki esimerkissä olevat luupit käyttävät säveliä samasta soinnusta ja yksi luupeista määrittää sen milloin ketjussa edetään seuraavaan sointuun. Tämä on jo hieman monimutkaisempi esimerkki, mutta se kannattaa kuitenkin käydä läpi inspiraation vuoksi. Kopio esimerkki tyhjään **Buffer**-välilehteen ja kokeile muuttaa sen sointuja `chords`-ketjussa. Voit löytää sopivia sointukulkuja esimerkiksi tämän <a href="{{ "/exercises/09-piano/01-piano.html" | prepend: site.baseurl }}">sointukulkukaavion</a> avulla. 
 
 {% highlight ruby %}
 chords = [chord(:C, :minor7), chord(:Ab, :major7), chord(:Eb, :major7), chord(:Bb, "7")].ring

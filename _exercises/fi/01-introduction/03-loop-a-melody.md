@@ -1,11 +1,11 @@
 ---
-chapter: Introduction
-title: Loop a melody
+chapter: Johdanto
+title: Toistaminen
 ---
 
-Okay, so you wrote a nice melody. What if you want to repeat it, or parts of it, a few times. You could copy and paste the melody but that gets a bit tiring after a while. Luckily you can use **loops**!
+Nyt kun sinulla on kiva melodia valmiina, haluaisit mahdollisesti toistaa sen useammankin kerran? Koodin jatkaminen kopio ja liimaa -metodilla (copy & paste) on mahdollista, mutta se on väsyttävää, tehotonta ja epäsiistiä koodin luettavuuden kannalta. Sonic Pi:ssä meillä on onneksi *toistokomennot* (ts. luupit), jotka ratkaisevat tämän ongelman meille! 
 
-Write `2.times do` to the beginning of your melody and `end` to the end of your melody (the notes are in musical notation just for example, you can use MIDI notes if you wish):
+Kirjoita ennen melodiaosuuttasi komento `2.times do` ja komento `end` melodiaosuuden loppuun: 
 
 {% highlight ruby %}
 2.times do
@@ -20,9 +20,9 @@ Write `2.times do` to the beginning of your melody and `end` to the end of your 
 end
 {% endhighlight %}
 
-Instead of using `2.times do` you can choose how many times you want to loop the notes. For example `4.times do` or `99.times do`.
+Sen sijaan että käyttäisit ainoastaan komentoa `2.times do` voit vaihtaa komennossa olevan numeron ja kertoa sillä ohjelmalle kuinka monta toistokertaa haluat. Esimerkiksi `4.times do` tai `99.times do`.
 
-You can also use loops inside loops if you wish:
+Voit myös halutessasi kirjoittaa luupin toisen luupin sisään:
 
 {% highlight ruby %}
 4.times do
@@ -37,4 +37,4 @@ You can also use loops inside loops if you wish:
 end
 {% endhighlight %}
 
-{% include player.html filepath="/assets/audio/looping-melody.mp3" description="Listen to the previous example" %}
+{% include player.html filepath="/assets/audio/looping-melody.mp3" description="Kuuntele edellinen esimerkki" %}
