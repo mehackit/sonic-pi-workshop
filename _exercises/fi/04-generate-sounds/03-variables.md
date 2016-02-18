@@ -1,6 +1,8 @@
 ---
 chapter: Generatiivisuus
 title: Muuttujat
+lang: fi
+layout: exercise
 ---
 
 Kokeile alkuun alla olevaa esimerkkiä. Mitä siinä oikein tapahtuu?

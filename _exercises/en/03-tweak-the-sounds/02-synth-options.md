@@ -1,6 +1,8 @@
 ---
 chapter: Tweak the sounds
 title: Options
+lang: en
+layout: exercise
 ---
 
 So far you have used `attack`, `release`, and `cutoff` options after a play command. Options (or opts for short) are controls you pass to play which modify and control aspects of the sound you hear. Each synth has its own set of opts for finely tuning its sound. However, there are common sets of opts shared by many sounds. Now you'll get to know few options more to add more expression to your sounds.

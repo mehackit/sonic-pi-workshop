@@ -1,6 +1,8 @@
 ---
 chapter: Generate sounds
 title: Chord progressions
+lang: en
+layout: exercise
 ---
 
 

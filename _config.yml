@@ -15,17 +15,3 @@ markdown: kramdown
 collections:
   exercises:
     output: true
-
-defaults:
-  -
-    scope:
-      path: _exercises/en
-    values:
-      lang: en
-      layout: exercise
-  -
-    scope:
-      path: _exercises/fi
-    values:
-      lang: fi
-      layout: exercise

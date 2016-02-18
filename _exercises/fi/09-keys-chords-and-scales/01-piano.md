@@ -1,6 +1,8 @@
 ---
 chapter: Sävelet, soinnut ja skaalat
 title: Sävelet, soinnut ja skaalat
+lang: fi
+layout: exercise
 ---
 
 Joskus Sonic Pi:llä säveltäminen voi olla mutkikasta, koska et välttämättä tiedä miten esimerkiksi melodia tulisi kehittää tai miltä sävel ´60´ tai ´:C3´ kuulostaa. Säveltämisen avuksi voit ottaa jonkin tavanomaisen soittimen tai esimerkiksi verkkoselaimessa toimivan virtuaalipianon, jonka avulla voit kokeilla nopeasti erilaisia melodiakulkuja. Voit myös valita pudotusvalikosta jonkin sävellajin, jolloin näet mitkä sävelet sopivat kyseiseen sävellajiin. 

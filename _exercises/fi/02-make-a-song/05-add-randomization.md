@@ -1,6 +1,8 @@
 ---
 chapter: Kappaleen tekeminen
 title: Lisää satunnaisuutta
+lang: fi
+layout: exercise
 ---
 
 Mahtavaa! Nyt sinulla on valmiina kappaleen alku, jossa on tukeva peruskomppi, hihatit, basso ja melodiakoukku kaiken huipulla. Seuraavaksi teemme jotain mikä avaa Sonic Pi:n todelliset mahdollisuudet. Lisätään seuraavaksi satunnaisia elementtejä kappaleen koodiin! Se tarkoittaa sitä että voimme antaa tietokoneen "heittää noppaa" puolestamme ja tehdä valintoja esim. siitä mitä säveliä jossain kappaleen kohdassa soitetaan. 

@@ -1,6 +1,8 @@
 ---
 chapter: Kappaleen tekeminen
 title: Kappaleen tekeminen
+lang: fi
+layout: exercise
 ---
 
 Syvennytään seuraavaksi Sonic Pi:n oppimiseen kirjoittamalla oikea kappale. Edellisen osion perusteella sinulla on jo tietämys siitä kuinka säveliä soitetaan, miten luodaan erilaisia rytmejä ja miten niitä toistetaan. Se on jo paljon, mutta Sonic Pi:llä voi tehdä vielä niin paljon enemmänkin. 

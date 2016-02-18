@@ -1,6 +1,8 @@
 ---
 chapter: Lunttilappu
 title: Lunttilappu
+lang: fi
+layout: exercise
 ---
 
 ## Sävelen soittaminen

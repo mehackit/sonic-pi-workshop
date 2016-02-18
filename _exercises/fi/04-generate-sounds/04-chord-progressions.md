@@ -1,6 +1,8 @@
 ---
 chapter: Generatiivisuus
 title: Sointukulku
+lang: fi
+layout: exercise
 ---
 
 

@@ -1,6 +1,8 @@
 ---
 chapter: Make a song
 title: Add randomization
+lang: en
+layout: exercise
 ---
 
 Great! Now you got your song running nicely with a steady beat and a bass with the melody hook on the top. Now we're going to do something really cool and unleash the true potential of Sonic Pi. Let's add some generative elements to the track and program the computer to compose for us!

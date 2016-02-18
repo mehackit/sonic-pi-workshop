@@ -1,6 +1,8 @@
 ---
 chapter: Keys, chords and scales
 title: Keys, chords and scales
+lang: en
+layout: exercise
 ---
 
 Sometimes composing a melody with Sonic Pi can be tricky, if you don't immediately know what `62` or `:c3` sounds like. To help with that, here's a browser keyboard for trying out your ideas. If you want, you can select a scale from the drop menu to see what keys might sound nice in a certain key. 

@@ -1,6 +1,8 @@
 ---
 chapter: Generate sounds
 title: Variables
+lang: en
+layout: exercise
 ---
 
 Take a look at the example below. What's going on?

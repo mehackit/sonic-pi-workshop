@@ -1,6 +1,8 @@
 ---
 chapter: Make a song
 title: Make a song
+lang: en
+layout: exercise
 ---
 
 Let's dig deeper into Sonic Pi by composing a song. Now you have a rough idea about how to play notes of different lengths with Sonic Pi. That's cool but we can do so much more!

@@ -1,6 +1,8 @@
 ---
 chapter: Generatiivisuus
 title: Tick
+lang: fi
+layout: exercise
 ---
 
 Muistathan komennon `chord`, joka palauttaa listana jonkin soinnun sävelet? 

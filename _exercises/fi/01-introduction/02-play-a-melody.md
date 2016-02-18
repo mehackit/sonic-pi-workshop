@@ -1,6 +1,8 @@
 ---
 chapter: Johdanto
 title: Melodian soittaminen
+lang: fi
+layout: exercise
 ---
 
 Syötä allaoleva koodinpätkä ohjelmointipaneeliin ja paina **Run**-nappia:

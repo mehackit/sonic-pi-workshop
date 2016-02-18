@@ -1,6 +1,8 @@
 ---
 chapter: Johdanto
 title: Toistaminen
+lang: fi
+layout: exercise
 ---
 
 Nyt kun sinulla on kiva melodia valmiina, haluaisit mahdollisesti toistaa sen useammankin kerran? Koodin jatkaminen kopio ja liimaa -metodilla (copy & paste) on mahdollista, mutta se on väsyttävää, tehotonta ja epäsiistiä koodin luettavuuden kannalta. Sonic Pi:ssä meillä on onneksi *toistokomennot* (ts. luupit), jotka ratkaisevat tämän ongelman meille! 

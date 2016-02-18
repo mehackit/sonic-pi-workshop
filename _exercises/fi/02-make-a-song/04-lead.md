@@ -1,6 +1,8 @@
 ---
 chapter: Kappaleen tekeminen
 title: Päämelodia
+lang: fi
+layout: exercise
 ---
 
 Nyt kun kappaleen pohja on kunnossa on aika keksiä sille toimiva päämelodia. Sen sijaan että kirjoittaisimme melodiakulun toistuvilla `play` ja `sleep` komentojen sarjoilla, voimme käyttää komentoa `play_pattern_timed` säästääksemme aikaa ja koodirivejä. 

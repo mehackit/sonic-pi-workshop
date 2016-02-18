@@ -1,6 +1,8 @@
 ---
 chapter: Make a song
 title: Drum beat
+lang: en
+layout: exercise
 ---
 
 Let’s look at how to create a simple drum beat, consisting of a kick drum, snare and hi-hat. You'll get to know two new things: `live_loop` and `sample`.

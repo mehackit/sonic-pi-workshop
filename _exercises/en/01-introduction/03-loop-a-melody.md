@@ -1,6 +1,8 @@
 ---
 chapter: Introduction
 title: Repeating a melody
+lang: en
+layout: exercise
 ---
 
 Okay, so you wrote a nice melody. What if you want to repeat it, or parts of it, a few times. You could copy and paste the melody but that gets a bit tiring after a while. Luckily you can use **repetition**! The fancy computer science term for this is iteration which just means doing things more than once.

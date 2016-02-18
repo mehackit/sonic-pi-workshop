@@ -1,11 +1,30 @@
 # Website for mehackit media-art workshops with Processing
 
-## How to contribute
+## Setting up
 
 - Log in to GitHub and fork this repo
 - Clone your fork of this repo. Open terminal, navigate to preferred folder and type:
 ```
 git clone git@github.com:YOUR-USERNAME/sonic-pi-workshop.git
+```
+- Install bundler
+```
+gem install bundler
+```
+- Install dependencies
+```
+bundle install
+```
+- Run Jekyll
+```
+bundle exec jekyll serve
+```
+
+## How to contribute
+
+- Go to your flder:
+```
+cd <path to your folder>
 ```
 - Create new branch for your fix and change to that branch:
 ```

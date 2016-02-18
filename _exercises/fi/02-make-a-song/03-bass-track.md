@@ -1,6 +1,8 @@
 ---
 chapter: Kappaleen tekeminen
 title: Bassoraita
+lang: fi
+layout: exercise
 ---
 
 Lisää uusi `live_loop` bassoa varten ja kirjoita sille yksinkertainan ja toimiva bassolinja. Voit käyttää halutessasi selaimessa toimivaa <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">virtuaalipianoa</a>  bassolinjan melodian tavailua varten. Alla on esimerkki bassolinjasta:

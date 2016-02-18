@@ -1,6 +1,8 @@
 ---
 chapter: Tweak the sounds
 title: Effects
+lang: en
+layout: exercise
 ---
 
 We've been holding this off for too long now, so here it comes: `with_fx`! 

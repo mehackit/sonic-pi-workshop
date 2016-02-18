@@ -1,6 +1,8 @@
 ---
 chapter: Johdanto
 title: Johdanto
+lang: fi
+layout: exercise
 ---
 
 Sonic Pi on avoimeen lähdekoodiin perustuva ohjelmointiympäristö, joka yhdistää saumattomasti tekstipohjaisen koodauksen ja elektronisen musiikin reaaliaikaisen tuottamisen. Sen avulla on helppo tutustua ohjelmoinnin perusajatuksiin ja se sopiikin erinomaisesta ohjelmoinnin perusopetuksen työkaluksi. Sonic Pi:llä voit kirjoittaa koodia, säveltää ja esittää musiikkia aina klassisista tyylisuunnista nykyaikaiseen EDM:ään ja Dubstepiin. 

@@ -1,6 +1,8 @@
 ---
 chapter: Kappaleen tekeminen
 title: Rumpubiitti
+lang: fi
+layout: exercise
 ---
 
 Katsotaan aluksi kuinka Sonic Pi:ssä ohjelmoidaan rumpubiitti, jossa on bassorumpu, virveli ja hihat ja tutustutaan kahteen uuteen komentoon `live_loop` ja `sample`. 

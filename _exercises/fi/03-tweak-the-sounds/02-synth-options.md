@@ -1,6 +1,8 @@
 ---
 chapter: Äänen muokkaaminen
 title: Syntetisaattorit ja samplet
+lang: fi
+layout: exercise
 ---
 
 Tähän mennessä olet käyttänyt parametreja `attack`, `release` ja `cutoff` syntetisaattorien ja samplejen soittamisen yhteydessä. Kuten aiemmassa osiossa mainittiin, jokaisella syntetisaattorilla on lukuisia parametreja, joilla niiden ääntä voi muokata. Katsotaan seuraavaksi muutamia yhteisiä parametreja, jotka ovat käytettävissä kaikilla äänillä ja sampleilla. Käyttämällä niitä voit lisätä musiikin ilmaisuvoimaa merkittävästi! 

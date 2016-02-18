@@ -1,6 +1,8 @@
 ---
 chapter: Cheatsheet
 title: Cheatsheet
+lang: en
+layout: exercise
 ---
 
 ## Play a note

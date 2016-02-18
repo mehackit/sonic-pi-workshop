@@ -1,6 +1,8 @@
 ---
 chapter: Generate sounds
 title: Tick
+lang: en
+layout: exercise
 ---
 
 Remember `chord`? The chord function gives you the notes of a certain chord:

@@ -1,6 +1,8 @@
 ---
 chapter: Introduction
 title: Play a melody
+lang: en
+layout: exercise
 ---
 
 Type the following into the buffer and press run:

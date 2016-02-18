@@ -1,6 +1,8 @@
 ---
 chapter: Äänen muokkaaminen
 title: Efektit
+lang: fi
+layout: exercise
 ---
 
 Seuraavaksi pääsemmekin värittämään ääniä oikein kunnolla `with_fx`-komennon avulla! Sen avulla voimme lisätä lukusia erilaisia ääniefektejä Sonic Pi -ohjelmiin. Kokeillaan sitä heti alkuun `:reverb`-efektin kanssa. Reverb (ts. kaikuefekti) lisää ääneen huonetilan kaiun ja melkein mikä vain ääni kuulostaa hyvältä sen kanssa. Katsotaan alkuun miten saamme efektin toimimaan `with_fx :reverb do` ja `end` -blokkien kanssa: 

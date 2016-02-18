@@ -1,6 +1,8 @@
 ---
 chapter: Make a song
 title: Lead track
+lang: en
+layout: exercise
 ---
 
 Now is the time for melody. Instead of writing a big bunch of `play` and `sleep` commands over and over again, we're going to use a shortcut: `play_pattern_timed`.
