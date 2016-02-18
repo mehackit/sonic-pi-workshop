@@ -36,7 +36,7 @@ Let’s start with programming Sonic Pi to play a note. Select the `Buffer 0` ta
 play 60
 {% endhighlight %}
 
-Press **Run** form the upper left corner. Can you hear a beep?
+Press **Run** from the upper left corner. Can you hear a beep?
 
 Try different values. Write for example `play 50` or `play 70`. How does the sound change?
 

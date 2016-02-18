@@ -44,7 +44,7 @@ There are lots of cool-sounding synths included with Sonic Pi. To find the names
 
 ## Change the length of notes
 
-On occasion, you might like to make sounds play for a longer time or at a different rate. This can be achieved by modifying the optional parameters of the code you are using. `attac` and `release` control control the amplitude of a note over time:
+On occasion, you might like to make sounds play for a longer time or at a different rate. This can be achieved by modifying the optional parameters of the code you are using. `attack` and `release` control the amplitude of a note over time:
 
 <img src="{{ "/assets/img/attackrelease.png" | prepend: site.baseurl }}">
 

@@ -48,7 +48,7 @@ Toisinaan saatat haluta soittaa säveliä eri pituisina. Tämä voidaan tehdä l
 
 Komennot `attack` ja `release` näyttäävät seuraavanlaiselta. Nyt sävel soi yhteensä 4 iskun ajan: Se voimistuu ensimmäisen iskun ajan ja hiljenee 3 iskun ajan. 
 
-<img src="{{ "/assets/img/attackrelease.png" | prepend: site.baseurl }}"> 
+<img src="{{ "/assets/img/attackrelease_fi.png" | prepend: site.baseurl }}"> 
 
 {% highlight ruby %}
 play 60, attack: 1, release: 3

@@ -25,7 +25,7 @@ Tämän jälkeen Sonic Pi on käyttövalmis. Katsotaan miltä se näyttää!
 
 Tässä on Sonic Pi:n käyttöliittymä, joka koostuu kolmesta pääikkunasta. Vasemmalla puolella oleva isoin ikkuna on koodin kirjoittamista varten, ja kutsumme sitä "Ohjelmointipaneeliksi". Sen oikealla puolella on "Lokipaneeli", jossa näkyy merkintöjä ohjelmasta silloin kun se ajetaan. Kun painat "Help"-nappia oikeasta yläkulmasta saat näkyviin ruudun alaosaan kolmannen ikkunan, "Apupaneelin". Sieltä voit löytää hyödyllisiä ohjelmointiesimerkkejä ja tietoa Sonic Pi:n lukuisista eri komennoista, äänistä ja efekteistä. 
  
-<img src="{{ "/assets/img/interface.png" | prepend: site.baseurl}}">
+<img src="{{ "/assets/img/interface_fi.png" | prepend: site.baseurl}}">
 <p class="center"><small><i>Sonic Pi interface</i></small></p>
 
 ## Sävelen soittaminen
