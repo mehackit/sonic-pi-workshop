@@ -51,7 +51,7 @@ Attack tarkoittaa äänen voimistumiseen kuluvaa aikaa ja release puolestaan ä�
 play :c2, attack: 1, release: 1 # kaksi iskua pitkä nuotti
 {% endhighlight %}
 
-<img src="{{ "/assets/img/attackrelease.png" | prepend: site.baseurl }}">
+<img src="{{ "/assets/img/attackrelease_fi.png" | prepend: site.baseurl }}">
 
 ### `use_synth_defaults` ja `use_sample_defaults`
 

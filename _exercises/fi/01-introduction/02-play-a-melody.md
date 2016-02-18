@@ -23,14 +23,14 @@ play 69
 
 `sleep 1`-komento käskee ohjelmaa odottamaan kokonaisen iskun ennen kuin suorittaa seuraavalla rivillä olevan komennon. Voit seuraavaksi kokeilla `sleep`-komentoa pienemmillä ja isommilla arvoilla. Jos tavanomainen nuotinnus on sinulle tuttua, alla oleva kuva kertoo miten eri tauot ja sävelpituudet toimivat Sonic Pi:ssä:  
 
-<img src="{{ "/assets/img/Notes_EN.png" | prepend: site.baseurl }}"> 
-<img src="{{ "/assets/img/Rests_en.png" | prepend: site.baseurl }}">
+<img src="{{ "/assets/img/Notes_FI.png" | prepend: site.baseurl }}"> 
+<img src="{{ "/assets/img/Rests_fi.png" | prepend: site.baseurl }}">
 
 `play`-komennon perässä olevat nuotit voi kirjoittaa MIDI-arvoina (esim. 67, 80, 22) tai nuotteina (:G4, :Ab5, :Bb). Se on täysin sinusta kiinni kumpaa merkintätapaa haluat käyttää. 
 
 Alla on kaavio, joka kertoo mitä nuottia kukin MIDI-arvo vastaa: 
 
-<img src="{{ "/assets/img/midi_notes.png" | prepend: site.baseurl }}">
+<img src="{{ "/assets/img/midi_notes_fi.png" | prepend: site.baseurl }}">
 
 ## Kokeile itse
 
