@@ -198,8 +198,8 @@ a.sidebar-nav-item:focus {
 }
 .sidebar-nav-item.active {
   /* font-weight: bold; */
-  /* color: #fcff00; */
-  color: #ffc600;
+  color: #fff000;
+  /* color: #ffc600; */
 }
 
 /* Sticky sidebar
