@@ -1,7 +1,7 @@
 .highlight .hll { background-color: #ffc; }
 .highlight .c { color: #999; } /* Comment */
 .highlight .err { color: #a00; background-color: #faa } /* Error */
-.highlight .k { color: #069; } /* Keyword */
+.highlight .k { color: #ff8c00; } /* Keyword */
 .highlight .o { color: #555 } /* Operator */
 .highlight .cm { color: #09f; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #099 } /* Comment.Preproc */
@@ -23,8 +23,8 @@
 .highlight .kp { color: #069 } /* Keyword.Pseudo */
 .highlight .kr { color: #069; } /* Keyword.Reserved */
 .highlight .kt { color: #078; } /* Keyword.Type */
-.highlight .m { color: #f60 } /* Literal.Number */
-.highlight .s { color: #d44950 } /* Literal.String */
+.highlight .m { color: #f60; } /* Literal.Number */
+.highlight .s { color: #d44950; } /* Literal.String */
 .highlight .na { color: #4f9fcf } /* Name.Attribute */
 .highlight .nb { color: #366 } /* Name.Builtin */
 .highlight .nc { color: #0a8; } /* Name.Class */
@@ -32,7 +32,7 @@
 .highlight .nd { color: #99f } /* Name.Decorator */
 .highlight .ni { color: #999; } /* Name.Entity */
 .highlight .ne { color: #c00; } /* Name.Exception */
-.highlight .nf { color: #c0f } /* Name.Function */
+/*.highlight .nf { color: #c0f } /* Name.Function */ 
 .highlight .nl { color: #99f } /* Name.Label */
 .highlight .nn { color: #0cf; } /* Name.Namespace */
 .highlight .nt { color: #2f6f9f; } /* Name.Tag */
@@ -41,7 +41,7 @@
 .highlight .w { color: #bbb } /* Text.Whitespace */
 .highlight .mf { color: #f60 } /* Literal.Number.Float */
 .highlight .mh { color: #f60 } /* Literal.Number.Hex */
-.highlight .mi { color: #f60 } /* Literal.Number.Integer */
+.highlight .mi { color: #2090ff } /* Literal.Number.Integer */
 .highlight .mo { color: #f60 } /* Literal.Number.Oct */
 .highlight .sb { color: #c30 } /* Literal.String.Backtick */
 .highlight .sc { color: #c30 } /* Literal.String.Char */
@@ -53,8 +53,8 @@
 .highlight .sx { color: #c30 } /* Literal.String.Other */
 .highlight .sr { color: #3aa } /* Literal.String.Regex */
 .highlight .s1 { color: #c30 } /* Literal.String.Single */
-/*.highlight .ss { color: #fc3 } /* Literal.String.Symbol */
-.highlight .ss { color: #f60 } /* Literal.String.Symbol */
+/*.highlight .ss { color: #f51796 } /* Literal.String.Symbol */
+.highlight .ss { color: #f51796 } /* Literal.String.Symbol */
 .highlight .bp { color: #366 } /* Name.Builtin.Pseudo */
 .highlight .vc { color: #033 } /* Name.Variable.Class */
 .highlight .vg { color: #033 } /* Name.Variable.Global */

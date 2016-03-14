@@ -55,11 +55,12 @@ button {
 
 code.highlighter-rouge {
   padding: 0.25em;
-}
+  color: #f51796;
+ }
 
 pre {
   padding: 0.25em 0.5em;
-  background: #F2F1F0 none repeat scroll 0% 0%;
+  background: #FFFFFF none repeat scroll 0% 0%;
   border: 1px solid #DDD;
 }
 
@@ -81,6 +82,12 @@ img.inline {
   position: absolute;
   right: 2rem;
   z-index: 999;
+  color: #f51796;
+}
+
+.lang a {
+  color: #f51796;
+  font-size: 12px;
 }
 
 /*
@@ -94,7 +101,7 @@ img.inline {
   text-align: center;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #202020;
+  background-color: #101010;
 }
 
 #sidebar_lead {
@@ -102,6 +109,8 @@ img.inline {
   display: inline-block;
   margin-bottom: 0px;
   text-align: left;
+  color: #f51796;
+  font-size: 1em; 
 }
 
 #toggle {
@@ -175,6 +184,7 @@ img.inline {
 .sidebar-nav-item {
   display: block;
   line-height: 1.75;
+  font-size: 1em;
 }
 
 .sidebar-nav ul {
@@ -187,7 +197,9 @@ a.sidebar-nav-item:focus {
   text-decoration: underline;
 }
 .sidebar-nav-item.active {
-  font-weight: bold;
+  /* font-weight: bold; */
+  /* color: #fcff00; */
+  color: #ffc600;
 }
 
 /* Sticky sidebar
@@ -226,6 +238,12 @@ a.sidebar-nav-item:focus {
 .exercise {
   margin: 0px auto;
   max-width: 80%;
+}
+
+.exercise-title {
+  /* color: #818181; */
+  color: #f51796;
+  /* background-color: #202020;*/ 
 }
 
 .exercise-nav {
@@ -336,7 +354,10 @@ a.exercise-nav:hover, a.exercise-nav:focus {
  */
 
  .chapter-title {
-  color: #818181;
+  /* color: #818181; */
+  color: #f51796;
+  background-color: #202020;
+  display: none;
 }
 
 /*
