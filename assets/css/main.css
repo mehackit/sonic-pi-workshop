@@ -102,6 +102,8 @@ img.inline {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #101010;
+  background-image: url("/assets/img/menu_bg.jpg");
+  background-repeat: no-repeat;
 }
 
 #sidebar_lead {
@@ -112,6 +114,10 @@ img.inline {
   color: #f51796;
   font-size: 1em; 
 }
+
+  .line {
+  	display: none;
+  }
 
 #toggle {
   width: 20%;
@@ -143,13 +149,17 @@ img.inline {
     display: block;
   }
 
+  .line {
+  	display: block;
+  }
+
   #toggle {
     display: none;
   }
 
   .sidebar-nav ul > ul {
     margin-bottom: 0px;
-    padding-left: 12px;
+    padding-left: 16px;
   }
 }
 
@@ -183,7 +193,7 @@ img.inline {
 }
 .sidebar-nav-item {
   display: block;
-  line-height: 1.75;
+  line-height: 1.6;
   font-size: 1em;
 }
 
@@ -200,6 +210,18 @@ a.sidebar-nav-item:focus {
   /* font-weight: bold; */
   color: #fff000;
   /* color: #ffc600; */
+}
+
+.line {
+    border-color: rgb(253, 226, 0);
+    border-style: solid;
+    border-width: 2px 0px 1px 0px;
+	max-width: 5.25rem;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    position: relative;
 }
 
 /* Sticky sidebar
@@ -228,6 +250,7 @@ a.sidebar-nav-item:focus {
   padding: 2rem;
   position: relative;
   // z-index: 0;
+  background-image: url("/assets/img/index_bg.jpg");
 }
 
 .page {
@@ -237,7 +260,9 @@ a.sidebar-nav-item:focus {
 
 .exercise {
   margin: 0px auto;
+  padding: 10px;
   max-width: 80%;
+  background: rgba(255, 255, 255, .6);  
 }
 
 .exercise-title {
@@ -299,11 +324,12 @@ a.exercise-nav:hover, a.exercise-nav:focus {
  * 
  */
 
- #frontpage {
+#frontpage {
   text-align: center;
   margin-top: 6rem;
   position: relative;
   z-index: 99;
+  background: rgba(255, 255, 255, .5);
 }
 
 #frontpage h1 {
