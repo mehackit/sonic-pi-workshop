@@ -213,7 +213,7 @@ a.sidebar-nav-item:focus {
 }
 
 .line {
-    border-color: rgb(253, 226, 0);
+    border-color: #fff000;
     border-style: solid;
     border-width: 2px 0px 1px 0px;
 	max-width: 5.25rem;
