@@ -101,7 +101,8 @@ img.inline {
   text-align: center;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #101010;
+  /* background-color: #101010;  */
+  background-color: #000000;
   background-image: url("/assets/img/menu_bg.jpg");
   background-repeat: no-repeat;
 }
@@ -262,7 +263,7 @@ a.sidebar-nav-item:focus {
   margin: 0px auto;
   padding: 10px;
   max-width: 80%;
-  background: rgba(255, 255, 255, .6);  
+  background: rgba(255, 255, 255, .8);  
 }
 
 .exercise-title {
