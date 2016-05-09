@@ -22,39 +22,30 @@ Nyt voit soittaa kansiossa olevia sampleja suoraan `sample`-komennolla. Muistath
 sample "/Users/sam/Desktop/Samples/loop_1.wav", amp: 1.5
 {% endhighlight %}
 
-Jos `sample`-komennolle annettu polku on oikea, sinun pitäisi kuulla äänitiedoston `loop_1.wav` soivan ajaessasi ohjelman. Tällä tavoin voit hyvin suoraviivaisesti viitata mihin tahansa WAV-tiedostomuodossa olevaan sampleen (äänitiedostoon) kovalevylläsi ja soittaa sen. Tosin seuraavissa esimerkeissä haluamme kirjoittaa hakemistopolun vain kerran ohjelmaan ja käyttää sen jälkeen pelkkiä tiedostonimiä viitataksemme kyseisiin sampleihin. Tällöin voimme käyttää komentoa `use_sample_pack` määrittääksemme hakemistopolun sampleille ja sen jälkeen komentoa `sample :tiedostonimi` samplejen soittamiseen. Seuraavan esimerkin pitäisi aloittaa samplen `loop_4.wav` soittaminen ja luupata sitä: 
+Jos `sample`-komennolle annettu polku on oikea, sinun pitäisi kuulla äänitiedoston `loop_1.wav` soivan ajaessasi ohjelman. Tällä tavoin voit hyvin suoraviivaisesti viitata mihin tahansa WAV-tiedostomuodossa olevaan sampleen (äänitiedostoon) kovalevylläsi ja soittaa sen. Tosin seuraavissa esimerkeissä haluamme kirjoittaa hakemistopolun vain kerran ohjelmaan ja käyttää sen jälkeen pelkkiä tiedostonimiä viitataksemme kyseisiin sampleihin. Ensiksi sinun täytyy määrittää hakemistopolku uuteen muuttujaan, joka annetaan parametrina komennolle `sample`. Tämän jälkeen samplen nimi voidaan syöttää toisena parametrina komennolle `sample`. 
+
+Seuraava koodinpätkä helpottaa hahmottamaan kuinka esimerkiksi sample "loop_4.wav" nyt oikein soitetaankaan `sample`-komennolla. Tehdään alkuun uusi muuttuja nimeltä solenoids (johon tallennetaan samplejen hakemistopolku) ja käytetään sitä ja viitettä sampleen "loop_4" alla olevan esimerkin mukaisesti:
 
 {% highlight ruby %}
-use_sample_pack "/Users/sam/Desktop/Samples"
+solenoids = "/Users/sam/Desktop/Samples/"
 use_bpm 110
 
 live_loop :solenoid1 do
-  sample :loop_4, beat_stretch: 4, amp: 2
+  sample solenoids, "loop_4", beat_stretch: 4, amp: 2
   sleep 4
 end
 {% endhighlight %}
 
-Mitä tapahtuukaan nyt jos yrität soittaa esimerkiksi samplen `:bd_haus` Sonic Pi:n omasta samplekirjastosta? Sitä ei voidakaan soittaa, sillä `use_sample_pack` ohittaa kaikki muut sampleille asetetut hakemistopolut. Jos haluat käyttää useita hakemistopolkuja (mukaanlukien Sonic Pi:n oma samplekirjasto), sinun täytyy käyttää `use_sample_pack_as`-komentoa `use_sample_pack`:in sijasta.  Komennon `use_sample_pack_as` kanssa täytyy määrittää samplet sisältävän hakemistopolun lisäksi myös nimi, jolla samplepakettia kutsutaan (ja se nimi voi olla mikä vaan, aivan kuten `live_loop`:ien nimien kanssa).
-
-Käytetään seuraavaa komentoa:
-
-{% highlight ruby %}
-use_sample_pack_as "/Users/sam/Desktop/Samples", :mySamples
-{% endhighlight %}
-...määrittämään samplejen hakemistopolku ja antamaan samplepaketin nimeksi `:mySamples`. Nyt voit käyttää komentoa:
-{% highlight ruby %}
-sample :mySamples__loop_1
-{% endhighlight %}
-...soittamaan samplen `loop_1.wav`. Huomioithan että viitatessasi ulkoisiin sampleihin tulee aina käyttää samplepaketin nimen ja itse samplenimen välissä tupla-alaviivaa (__). Tällöin Sonic Pi ymmärtää että et yritä soittaa samplea sen omasta äänikirjastosta.
+Ohjelman pitäisi nyt aloittaa samplen `loop_4.wav` soittaminen ja luupata sitä. 
 
 Nyt voitkin vapaasti sekoitella omia sampleja ja Sonic Pi:n kirjaston sampleja. Kokeile esimerkiksi alla olevaa esimerkkiä, jossa soitetaan omia ja Sonic Pi:n kirjaston sampleja neljällä eri `live_loop`:lla. Huomioithan että live_loop:ssa `:solenoid2` käytetään muuttujaa `samplename` tallentamaan satunnaisesti valittu viittaus sampleihin `hit_1.wav` ... `hit_7.wav`.
 
 {% highlight ruby %}
-use_sample_pack_as "/Users/sam/Desktop/Samples", :mySamples
+solenoids = "/Users/sam/Desktop/Samples/"
 use_bpm 110
 
 live_loop :solenoid1 do
-  sample :mySamples__loop_4, beat_stretch: 4, amp: 2
+  sample solenoids, "loop_4", beat_stretch: 4, amp: 2
   sleep 4
 end
 
@@ -64,16 +55,16 @@ live_loop :kick do
 end
 
 live_loop :solenoid2 do
-  samplename = [:mySamples__hit_1, :mySamples__hit_2, :mySamples__hit_3, :mySamples__hit_4, :mySamples__hit_5, :mySamples__hit_6, :mySamples__hit_7].choose
+  samplename = ["hit_1", "hit_2", "hit_3", "hit_4", "hit_5", "hit_6", "hit_7"].choose
   time = [0.25, 0.5, 0.75].choose
-  sample samplename, amp: 1.5, rate: 2, pan: rrand(-0.8, 0.8)
+  sample solenoids, samplename, amp: 1.5, rate: 2, pan: rrand(-0.8, 0.8)
   sleep time
 end
 
 with_fx :reverb do
   live_loop :solenoid3 do
     sleep 2
-    sample :mySamples__hit_6, rate: (ring 0.5, 0.55, 0.6, 0.65).tick, amp: 1.5
+    sample solenoids, "hit_6", rate: (ring 0.5, 0.55, 0.6, 0.65).tick, amp: 1.5
     sleep 2
   end
 end

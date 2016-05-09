@@ -22,39 +22,26 @@ Now you can play them directly with the `sample` command by using the right file
 sample "/Users/sam/Desktop/Samples/loop_1.wav", amp: 1.5
 {% endhighlight %}
 
-If the path was set correctly for the `sample` command you should now hear the sound `loop_1.wav`. Just remember to use your own file path instead of the one shown in these examples! That is pretty straightforward way to access and play samples. However, you would probably like to write the folder path only once in the code and play the samples by only referring to their filenames. You can use the command `use_sample_pack` to set a folder path for the samples and then use `sample :filename` to play a sample from the folder. The example below should start playing and looping the sample `loop_4.wav`:
+If the path was set correctly for the `sample` command you should now hear the sound `loop_1.wav`. Just remember to use your own file path instead of the one shown in these examples! That is pretty straightforward way to access and play samples. However, you would probably like to write the folder path only once in the code and play the samples by only referring to their filenames. You can declare a variable for the file path and use that in conjunction with the `sample` command. After `sample` you can enter the variable name containing the file path and then the name of the sample. We'll declare a variable for the sample folder file path called solenoids in the example below. When you run it, the sample `loop_4.wav` should start playing and looping:
 
 {% highlight ruby %}
-use_sample_pack "/Users/sam/Desktop/Samples"
+solenoids = "/Users/sam/Desktop/Samples/"
 use_bpm 110
 
 live_loop :solenoid1 do
-  sample :loop_4, beat_stretch: 4, amp: 2
+  sample solenoids, "loop_4", beat_stretch: 4, amp: 2
   sleep 4
 end
 {% endhighlight %}
 
-But what happens now if you try to play a sample from Sonic Pi's own sample library, for example `:bd_haus`? It can't be accessed as `use_sample_pack` overrides all the other sample directories and paths for Sonic Pi. So if you want to use multiple sample directories (including Sonic Pi's own samples), you'll need to use the command `use_sample_pack_as` instead of `use_sample_pack`. With the `use_sample_pack_as` you'll need to specify the path of the sample directory and a name for the sample pack (which can be anything, just like naming a `live_loop`). 
-
-Let's use the following command:
+Now you're able to use external samples and samples from Sonic Pi's own library in your productions. Try playing the example below that uses four different instances of `live_loop` to play external and Sonic Pi's own samples. Please note that in the live_loop `:solenoid2` we're using a variable `samplename` to randomly select one of the samples from `hit_1.wav` to `hit_7.wav`.
 
 {% highlight ruby %}
-use_sample_pack_as "/Users/sam/Desktop/Samples", :mySamples
-{% endhighlight %}
-...to name the sample pack as `:mySamples`. Now you can use the command: 
-{% highlight ruby %}
-sample :mySamples__loop_1
-{% endhighlight %}
-...to play the sample `loop_1.wav` from the folder. Please note that you have to use double underscore (__) in the syntax to tell the `sample` command you're referring to an external sample. 
-
-Now you're free to mix external samples and samples from Sonic Pi's own library. Try playing the example below that uses four different instances of `live_loop` to play external and Sonic Pi's own samples. Please note that in the live_loop `:solenoid2` we're using a variable `samplename` to randomly select one of the samples from `hit_1.wav` to `hit_7.wav`.
-
-{% highlight ruby %}
-use_sample_pack_as "/Users/sam/Desktop/Samples", :mySamples
+solenoids = "/Users/sam/Desktop/Samples/"
 use_bpm 110
 
 live_loop :solenoid1 do
-  sample :mySamples__loop_4, beat_stretch: 4, amp: 2
+  sample solenoids, "loop_4", beat_stretch: 4, amp: 2
   sleep 4
 end
 
@@ -64,16 +51,16 @@ live_loop :kick do
 end
 
 live_loop :solenoid2 do
-  samplename = [:mySamples__hit_1, :mySamples__hit_2, :mySamples__hit_3, :mySamples__hit_4, :mySamples__hit_5, :mySamples__hit_6, :mySamples__hit_7].choose
+  samplename = ["hit_1", "hit_2", "hit_3", "hit_4", "hit_5", "hit_6", "hit_7"].choose
   time = [0.25, 0.5, 0.75].choose
-  sample samplename, amp: 1.5, rate: 2, pan: rrand(-0.8, 0.8)
+  sample solenoids, samplename, amp: 1.5, rate: 2, pan: rrand(-0.8, 0.8)
   sleep time
 end
 
 with_fx :reverb do
   live_loop :solenoid3 do
     sleep 2
-    sample :mySamples__hit_6, rate: (ring 0.5, 0.55, 0.6, 0.65).tick, amp: 1.5
+    sample solenoids, "hit_6", rate: (ring 0.5, 0.55, 0.6, 0.65).tick, amp: 1.5
     sleep 2
   end
 end

@@ -327,7 +327,7 @@ a.exercise-nav:hover, a.exercise-nav:focus {
 
 #frontpage {
   text-align: center;
-  margin-top: 6rem;
+  margin-top: 1rem;
   position: relative;
   z-index: 99;
   background: rgba(255, 255, 255, .5);
@@ -603,7 +603,7 @@ table > tbody {
 #frontpage img {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 /* ------------------------------------------
