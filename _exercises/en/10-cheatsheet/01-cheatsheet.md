@@ -114,4 +114,4 @@ c[0] # get the first note of the chord
 
 ## Other
 
-If your code is getting slow, try `use_bebug: false` in the beginning of your code. This reduces the log messages Sonic Pi generates and can speed up the code.
+If your code is getting slow, try `use_debug false` in the beginning of your code. This reduces the log messages Sonic Pi generates and can speed up the code.

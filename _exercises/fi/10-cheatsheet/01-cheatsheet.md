@@ -114,4 +114,4 @@ c[0] # hae soinnun ensimmäinen nuotti
 
 ## Other
 
-Jos koodis pyörii liian hitaasti, kokeila kirjoittaa komento `use_debug: false` ohjelman alkuun. Tämä vähentää Lokipaneeliin kirjoitettujen viestien määrää ja nopeuttaa Sonic Pi:tä. 
+Jos koodis pyörii liian hitaasti, kokeila kirjoittaa komento `use_debug false` ohjelman alkuun. Tämä vähentää Lokipaneeliin kirjoitettujen viestien määrää ja nopeuttaa Sonic Pi:tä. 
