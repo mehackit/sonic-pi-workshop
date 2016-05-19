@@ -22,8 +22,9 @@ Let's do a simple backbeat with kick drum on 1 and 3, snare on 2 and 4. Instead 
 
 {% highlight ruby %}
 
+use_bpm 100
+
 live_loop :drums do
-  use_bpm 100
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
