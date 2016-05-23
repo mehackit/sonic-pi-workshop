@@ -5,7 +5,7 @@ lang: en
 layout: exercise
 ---
 
-Sonic Pi is an open-source programming environment, designed to explore and teach programming concepts through the process of creating new sounds. It's a free live coding synth for everyone. You can use code to compose and perform in classical and contemporary styles ranging from Canons to Dubstep.
+Sonic Pi is an open-source programming environment, designed to explore and teach programming concepts through the process of creating new sounds. It's a free live coding synth for everyone created by Sam Aaron at the University of Cambridge Computer Laboratory. You can use Sonic Pi to program, compose and perform in classical and contemporary styles ranging from Canons to Dubstep.
 
 This tutorial guides you through the basics and more of Sonic Pi. At the end of this tutorial you'll be able to create something like this:
 
@@ -15,15 +15,15 @@ Or something like this:
 
 {% include player.html filepath="/assets/audio/amen.mp3" %}
 
-Sonic Pi is all about exploring. There are no mistakes, there's only discoveries. And most of all, it's about having fun. So remember this: have fun, explore and hack away!
+Sonic Pi is all about exploring. There are no mistakes, there are only discoveries. And most of all, it's about having fun. So remember this: have fun, explore and hack away!
 
 ## Open Sonic Pi
 
-If you don't have Sonic Pi installed, go to <a href="http://sonic-pi.net/">sonic-pi.net</a>, download and install Sonic Pi.
+If you don't have Sonic Pi installed, go to <a href="http://sonic-pi.net/">sonic-pi.net</a>, download and install Sonic Pi. It is available for Windows, OS X and Linux operating systems. 
 
-Fire up Sonic Pi! Let's see how it looks like.
+Next, fire up Sonic Pi! Let's see how it looks like.
 
-This is the Sonic Pi interface; it has three main windows. The largest one is for writing your code, and we call it the Programming Panel. There is also an output panel that displays information about your program as it runs. When you click on the help button at the top of the window, the third panel appears along the bottom displaying help documentation. This contains information about different code you can try and use, as well as different synth sounds, samples, and much more.
+This is the Sonic Pi interface; it has three main windows. The largest one is for writing your code, and we call it the Programming Panel. There is also an log panel that displays information about your program as it runs. When you click on the help button at the top of the window, the third panel appears along the bottom displaying help documentation. This contains information about the language for programming Sonic Pi as well as different synth sounds, samples, and much more. There are also plenty of ready-to-go examples that you can try and use!
 
 <img src="{{ "/assets/img/interface.png" | prepend: site.baseurl}}">
 <p class="center"><small><i>Sonic Pi interface</i></small></p>
@@ -46,4 +46,4 @@ Now try to write `pley 60` and click run. What happens?
 
 The numbers you used are _MIDI notes_. MIDI is a useful way to compose and is a useful tool for quickly 
 testing your notes and adjusting them by lowering their value (making your note lower) or increasing it, (making 
-the pitch higher). Sonic Pi is familiar with both MIDI numbers and traditional musical notation.
+the pitch higher). Sonic Pi is familiar with both MIDI note numbers (values between `0` and `127`) and traditional musical notation (such as `:C4`, `:Eb3` or `:G5`).

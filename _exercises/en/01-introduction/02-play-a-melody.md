@@ -13,7 +13,7 @@ play 67
 play 69
 {% endhighlight %}
 
-That didn't sound like a melody, did it? Instead of playing a sequence, Sonic Pi played all the notes at once (that's how you can write chords).
+That didn't sound like a melody, did it? Instead of playing a sequence, Sonic Pi played all the notes at once (and that's how you can actually write chords).
 
 If you want Sonic Pi to play each note in a sequence, you have to tell the software to take a break every now and then. Try typing in `sleep 1` underneath each note, like this:
 
@@ -30,13 +30,13 @@ play 69
 <img src="{{ "/assets/img/Notes_EN.png" | prepend: site.baseurl }}"> 
 <img src="{{ "/assets/img/Rests_en.png" | prepend: site.baseurl }}">
 
-You can write the notes in MIDI (67, 80, 22) or in musical notes (:G4, :Ab5, :Bb), it's up to you. Here's a chart displaying notes and MIDI values:
+As mentioned before, you can write the notes in MIDI (`67`, `80`, `22`) or in musical notes (`:G4`, `:Ab5`, `:Bb`), it's up to you. Here's a chart displaying notes and corresponding MIDI values:
 
 <img src="{{ "/assets/img/midi_notes.png" | prepend: site.baseurl }}">
 
 ## Try it out
 
-Use C-major notes (`72, 74, 76, 77, 79, 81, 83` or `:C5 :D5 :E5 :F5 :G5 :A5 :B5`) to create a melody. Use `sleep` with different values to vary the rhythm. You can use `use_bp` in the beginning to make your tune faster or slower. Here's an example:
+Use C-major notes (`72, 74, 76, 77, 79, 81, 83` or `:C5 :D5 :E5 :F5 :G5 :A5 :B5`) to create a melody. Use `sleep` with different values to vary the rhythm. You can use `use_bpm` in the beginning to make your tune faster or slower. The acronym BPM stands for _Beats Per Minute_. Here's an example:
 
 {% highlight ruby %}
 use_bpm 120
