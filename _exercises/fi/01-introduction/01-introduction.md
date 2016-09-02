@@ -5,7 +5,7 @@ lang: fi
 layout: exercise
 ---
 
-Sonic Pi on avoimeen lähdekoodiin perustuva ohjelmointiympäristö, joka yhdistää saumattomasti tekstipohjaisen koodauksen ja elektronisen musiikin reaaliaikaisen tuottamisen. Sen avulla on helppo tutustua ohjelmoinnin perusajatuksiin ja se sopiikin erinomaisesta ohjelmoinnin perusopetuksen työkaluksi. Sonic Pi:llä voit kirjoittaa koodia, säveltää ja esittää musiikkia aina klassisista tyylisuunnista nykyaikaiseen EDM:ään ja Dubstepiin. 
+Sonic Pi on avoimeen lähdekoodiin perustuva ohjelmointiympäristö, joka yhdistää saumattomasti tekstipohjaisen koodauksen ja elektronisen musiikin reaaliaikaisen tuottamisen. Sen avulla on helppo tutustua ohjelmoinnin perusajatuksiin ja se sopiikin erinomaisesti ohjelmoinnin perusopetuksen työkaluksi. Sonic Pi:llä voit kirjoittaa koodia, säveltää ja esittää musiikkia aina klassisista tyylisuunnista nykyaikaiseen EDM:ään ja Dubstepiin. 
 
 Tämä oppitunti ohjaa sinut Sonic Pi:n perusteiden ja edistyneempien toimintojen maailmaan. Oppitunnin päätteeksi voit jo luoda omia kappaleitasi ja se voi kuulostaa esimerkiksi tältä:
 
