@@ -89,4 +89,8 @@ live_loop :hihat do
 end
 {% endhighlight %}
 
-Play around with different samples and rhythms. You could also add a third `live_loop` for percussions or other effects. Next you'll create a bass track for your composition.
+You might be wondering how the live_loops would translate to music sequences in popular music-making apps? The following video might help you to understand their relation.
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/iFMNOb33_KM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+Now play around with different samples and rhythms. You could also add a third `live_loop` for percussions or other effects. Next you'll create a bass track for your composition.

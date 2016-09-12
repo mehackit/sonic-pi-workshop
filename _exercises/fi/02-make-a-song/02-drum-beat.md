@@ -88,4 +88,8 @@ live_loop :hihat do
 end
 {% endhighlight %}
 
+Millä tavoin live_loopit näyttäytyisivät normaaleissa musiikinteko-ohjelmissa? Katso alla oleva video, jonka avulla voit hahmottaa minkälaisia "sekvenssejä" live_loopit muodostavatkaan.
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/iFMNOb33_KM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
 Kokeile seuraavaksi muuttaa rumpukompin sampleja ja rytmejä. Voit halutessasi lisätä kolmannen live_loopin perkussiosoittimille tai muille. Seuraavaksi luomme bassoraidan kappaletta varten…  
