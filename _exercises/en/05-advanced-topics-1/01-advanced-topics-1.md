@@ -5,4 +5,4 @@ lang: en
 layout: exercise
 ---
 
-In this chapter we'll discover topics like sample chopping, custom methods and synthesizers. We'll add more content to this chapter during Spring 2016.
+In this chapter we'll discover topics like sample chopping, use of the slicer effect and explain how you can bring your own custom samples to Sonic Pi. 

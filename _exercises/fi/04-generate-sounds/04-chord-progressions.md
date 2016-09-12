@@ -6,7 +6,7 @@ layout: exercise
 ---
 
 
-Edellisessä esimerkissä käytimme ainoastaan C-mollisointua. Seuraavaksi katsomme esimerkkiä, jossa hyödynnetään ketjua (**ring**) koko kappaleen sointukulun määrittämistä varten. Kaikki esimerkissä olevat luupit käyttävät säveliä samasta soinnusta ja yksi luupeista määrittää sen milloin ketjussa edetään seuraavaan sointuun. Tämä on jo hieman monimutkaisempi esimerkki, mutta se kannattaa kuitenkin käydä läpi inspiraation vuoksi. Kopio esimerkki tyhjään **Buffer**-välilehteen ja kokeile muuttaa sen sointuja `chords`-ketjussa. Voit löytää sopivia sointukulkuja esimerkiksi tämän <a href="{{ "/exercises/09-piano/01-piano.html" | prepend: site.baseurl }}">sointukulkukaavion</a> avulla. 
+Edellisessä esimerkissä käytimme ainoastaan C-mollisointua. Seuraavaksi katsomme esimerkkiä, jossa hyödynnetään ketjua (**ring**) koko kappaleen sointukulun määrittämistä varten. Kaikki esimerkissä olevat luupit käyttävät säveliä samasta soinnusta ja yksi luupeista määrittää sen milloin ketjussa edetään seuraavaan sointuun. Tämä on jo hieman monimutkaisempi esimerkki, mutta se kannattaa kuitenkin käydä läpi inspiraation vuoksi. Kopio esimerkki tyhjään **Buffer**-välilehteen ja kokeile muuttaa sen sointuja `chords`-ketjussa. Voit löytää sopivia sointukulkuja esimerkiksi tämän <a href="{{ "/exercises/fi/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">sointukulkukaavion</a> avulla. 
 
 {% highlight ruby %}
 chords = [chord(:C, :minor7), chord(:Ab, :major7), chord(:Eb, :major7), chord(:Bb, "7")].ring
