@@ -5,45 +5,43 @@ lang: no
 layout: exercise
 ---
 
-Sonic Pi is an open-source programming environment, designed to explore and teach programming concepts through the process of creating new sounds. It's a free live coding synth for everyone created by Sam Aaron at the University of Cambridge Computer Laboratory. You can use Sonic Pi to program, compose and perform in classical and contemporary styles ranging from Canons to Dubstep.
+Sonic Pi er et programmeringsmiljø med åpen kildekode, laget for å utforske og lære bort programmeringskonsepter gjennom å lage nye lyder. Det er en gratis live-kode synth for alle laget av Sam Aaron ved  University of Cambridge Computer Laboratory. Du kan bruke Sonic PI for å programmere, komponere og fremføre både klassiske og moderne stilarter fra kanoner til dubstep.
 
-This tutorial guides you through the basics and more of Sonic Pi. At the end of this tutorial you'll be able to create something like this:
+Denne guiden tar deg gjennom det grunnlegende og mer av Sonic PI. Når du har kommet deg igjenom vil du være i stand til å lage noe slik som dette:
 
 {% include player.html filepath="/assets/audio/groove.mp3" %}
 
-Or something like this:
+Eller som dette:
 
 {% include player.html filepath="/assets/audio/amen.mp3" %}
 
-Sonic Pi is all about exploring. There are no mistakes, there are only discoveries. And most of all, it's about having fun. So remember this: have fun, explore and hack away!
+Sonic PI handler om å utforske. Man gjør ingen feil, bare oppdagelser. Og det aller viktigste, det handler om å ha det moro. Så husk dette: Ha det gøy, utforske og hack i vei!
 
-## Open Sonic Pi
+## Å åpne Sonic Pi
 
-If you don't have Sonic Pi installed, go to <a href="http://sonic-pi.net/">sonic-pi.net</a>, download and install Sonic Pi. It is available for Windows, OS X and Linux operating systems. 
+Hvis du ikke har installert Sonic PI, gå til <a href="http://sonic-pi.net/">sonic-pi.net</a>, last ned og installer Sonic Pi. Det er tilgjengelig for Windows, OS X og Linux. 
 
-Next, fire up Sonic Pi! Let's see how it looks like.
+Så, la oss starte opp Sonic PI og se hvordan det ser ut.
 
-This is the Sonic Pi interface; it has three main windows. The largest one is for writing your code, and we call it the Programming Panel. There is also an log panel that displays information about your program as it runs. When you click on the help button at the top of the window, the third panel appears along the bottom displaying help documentation. This contains information about the language for programming Sonic Pi as well as different synth sounds, samples, and much more. There are also plenty of ready-to-go examples that you can try and use!
+Dette er Sonic PI brukergrensesnittet. Det har tre hovedvinduer. Det største er for å skrive din kode, vi kaller det programmeringsvinduet. Det er også et logg panel som viser informasjon om programmet ditt mens det kjører. Når du klikker på hjelp-knappen på toppen av vinduet dukker det tredje vinduet opp og viser dokumentasjonen. Dette inneholder informasjon om språket for å skrive kode i Sonic PI og informasjon om synth lyder, samples og mye mer. Det er også mange ferdige eksempler som du kan prøve!
 
 <img src="{{ "/assets/img/interface.png" | prepend: site.baseurl}}">
-<p class="center"><small><i>Sonic Pi interface</i></small></p>
+<p class="center"><small><i>Sonic Pi brukergrensesnitt</i></small></p>
 
-## Play a note
+## Spill en tone
 
-Let’s start with programming Sonic Pi to play a note. Select the `Buffer 0` tab and type:
+La oss starte med å programmere Sonic PI til å spile en tone. Velg `Buffer 0` og skriv:
 
 {% highlight ruby %}
 play 60
 {% endhighlight %}
 
-Press **Run** from the upper left corner. Can you hear a beep?
+Trykk **Run**  i det øvre venstre hjørnet. Kn du høre et pip?
 
-Try different values. Write for example `play 50` or `play 70`. How does the sound change?
+Prøv med forskjellige verdier. Skriv for eksempel `play 50` eller `play 70`. Hvordan endrer det lyden?
 
-Now try to write `pley 60` and click run. What happens?
+Nå kan du prøve å skrive `pley 60` og klikke på run. Hva skjer?
 
-> This is an example of a bug in your code. In later activities, if the error panel displays text you will know that you have a bug that you need to fix. It could be that you have misspelt a word like `play`.
+> Dette er et eksempel på en bug i koden din. I senere oppgaver, hvis det kommer noe i feilvinduet så kan du se at du har en feil som du må fikse. Det kan være at du for eksempel har skrevet et ord feil, sånn som her hvor det skulle stått `play`.
 
-The numbers you used are _MIDI notes_. MIDI is a useful way to compose and is a useful tool for quickly 
-testing your notes and adjusting them by lowering their value (making your note lower) or increasing it, (making 
-the pitch higher). Sonic Pi is familiar with both MIDI note numbers (values between `0` and `127`) and traditional musical notation (such as `:C4`, `:Eb3` or `:G5`).
+Nummerene du bruker heter _MIDI toner_. MIDI er en nyttig måte å komponere på og er et nyttig verktøy for kjapt å teste ut toner på ved å senke verdien (gjøre tonen mørkere) eller å øke verdien (gjøre tonen lysere). Sonic PI kan spille både MIDI tone nummere (verdier mellom `0` og `127`) og tradisjonell musikknotasjon (slik som `:C4`, `:Eb3` eller `:G5`).
