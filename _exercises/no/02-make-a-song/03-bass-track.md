@@ -1,11 +1,11 @@
 ---
 chapter: Lag en sang
-title: Bass spor
+title: Bassspor
 lang: no
 layout: exercise
 ---
 
-Add another live loop for your bass. Compose a solid and simple bass groove. If it helps, you can use the <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> on your browser to choose notes that you like. Here's an example:
+Legg til en ny live_loop for bassen. Komponener en stødig og enkel bass. Hvis det hjelper kan du bruke <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> i browseren for å finne toner som du liker. Her er et eksempel:
 
 {% highlight ruby %}
 live_loop :bass do
@@ -20,11 +20,11 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-## Change the synth
+## Endre synthen
 
-It's time to make your tune sound more interesting! We can do this by changing the synthesizer sounds it is using. The default Sonic Pi synth is called `beep`. To use a different synth, you need to add the code `use_synth :name_of_synth` above the sequence of code you want to use it in.
+Det er på tide å gjøre sangen mer interessant. Vi kan oppnå dette ved å endre på synthesizer lydene den bruker. Som standard bruker Sonic PI en synth som heter `beep`. Prøv å bruke en annen synth, du må legge til koden `use_synth :navn_på_synthen_du_vil_bruke` over sekvensen av kode der du vil bruke den.
 
-In this example, fm is the name of the synth:
+I dette eksempelet er fm navnet på synthen vi bruker:
 
 {% highlight ruby %}
 live_loop :bass do
@@ -40,34 +40,34 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-There are lots of cool-sounding synths included with Sonic Pi. To find the names of them, click on the help icon at the top of the screen so that the help documents window appears. Then select Synths from the tabs along the left hand side of the help window. Click on any of the synth names to get more information on how to use it.
+Det er mange kule synther som følger med Sonic Pi. For å finne navnet på dem kan du tryke på hjelp-ikonet på toppen av skjermen sånn at hjelpevinduet dukker opp. Så kan du velge Synths fra venstresiden i hjelpevinduet. Trykk på navnet på en synth for å få mer informasjon om hvordan du kan bruke den.
 
-## Change the length of notes
+## Endre lengden på en tone
 
-On occasion, you might like to make sounds play for a longer time or at a different rate. This can be achieved by modifying the optional parameters of the code you are using. `attack` and `release` control the amplitude of a note over time:
+Innimellom ønsker man kanskje å få en lyd til å spille lenger eller i et annet tempo. Dette kan man få til ved å endre på parametere i koden du bruker. `attack` og`release` styrer volumet av en tone over tid:
 
 <img src="{{ "/assets/img/attackrelease.png" | prepend: site.baseurl }}">
 
-Using attack and release looks like the following. Now the note would be 4 beats long.
+Å bruke attack og release ser ut som i eksempelet under. Nå vil tonen være 4 takter lang.
 
 {% highlight ruby %}
 play 60, attack: 1, release: 3
 {% endhighlight %}
 
-You could make a short staccato note by setting attack to zero and release to a very short value:
+du kan lage korte, stakkato noter ved å sette attack til 0 og release til en veldig kort verdi:
 
 {% highlight ruby %}
 play :c4, attack: 0, release: 0.2
 {% endhighlight %}
 
-Explore different synths and note lengths and get your bass track rolling.
+Utforsk forskjellige synther og notelengder og lag et tøft bassspor.
 
-Now the song could be something like this:
+Nå høres sangen ut kanskje noe som det her:
 
 {% highlight ruby %}
 use_bpm 100
 
-live_loop :drums do
+live_loop :trommer do
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
