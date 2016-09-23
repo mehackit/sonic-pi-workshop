@@ -1,13 +1,13 @@
 ---
 chapter: Lag en sang
-title: Lead-på-norsk spor
+title: Melodien
 lang: no
 layout: exercise
 ---
 
-Now is the time for melody. Instead of writing a big bunch of `play` and `sleep` commands over and over again, we're going to use a shortcut: `play_pattern_timed`.
+Nå er det på tide å skrive en melodi. Istedenfor å skrive en hel masse `play` og `sleep` kommandoer igjen og igjen skal vi bruke en snarvei: `play_pattern_timed`.
 
-Instead of writing:
+Istedenfor å skrive:
 
 {% highlight ruby %}
 play :c2
@@ -20,30 +20,30 @@ play :d2
 sleep 0.5
 {% endhighlight %}
 
-you can write:
+kan du skrive:
 
 {% highlight ruby %}
 play_pattern_timed [:c2, :d2, :e2, :d2], [0.5, 0.25, 0.75, 0.5]
 {% endhighlight %}
 
-The first list `[:c2, :d2, :e2, :d2]` is a group of notes and the second list `[0.5, 0.25, 0.75, 0.5]` is a group of breaks in between the notes.
+Den første listen `[:c2, :d2, :e2, :d2]` er en gruppe av noter, og den andre listen `[0.5, 0.25, 0.75, 0.5]` er en gruppe av pauser mellom notene.
 
-## Melody
+## Melodi
 
-Create a new `live_loop` called `:melody` create a lead theme for your song. If it feel easier, use the `play_pattern_timed` function to write the melody. You can use the <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> also if it helps. Here's an example:
+Lag en ny `live_loop` som heter `:melodi` og lag en melodi til sangen din. Hvis du synes det er enklere kan du bruke `play_pattern_timed` funksjonen for å skrive melodien. Du kan også bruke <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> hvis det hjelper. Her er et eksempel:
 
 {% highlight ruby %}
-live_loop :melody do
+live_loop :melodi do
   play_pattern_timed [:c4, :e4, :f4, :g4, :f4, :e4, :f4, :g4, :f4, :e4, :f4], [0.25, 0.25, 0.25, 1.5, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25]
 end
 {% endhighlight %}
 
-Now the whole song could be something like this:
+Nå ser hele sangen ut omtrent som det her:
 
 {% highlight ruby %}
 use_bpm 120
 
-live_loop :drums do
+live_loop :trommer do
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
@@ -73,9 +73,9 @@ live_loop :bass do
   sleep 1
 end
 
-live_loop :melody do
+live_loop :melodi do
   play_pattern_timed [:c4, :e4, :f4, :g4, :f4, :e4, :f4, :g4, :f4, :e4, :f4], [0.25, 0.25, 0.25, 1.5, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25], attack: 0, release: 0.2
 end
 {% endhighlight %}
 
-Yay, that's a great start! Now go and explore with different melodies, synths and `attack:` and `release:` values. 
+Supert, det er en flott begynnelse! Nå kan du utforske med forskjellige melodier, synther og `attack:` og `release:` verdier. 
