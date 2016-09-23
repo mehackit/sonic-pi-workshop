@@ -5,24 +5,24 @@ lang: no
 layout: exercise
 ---
 
-Let’s look at how to create a simple drum beat, consisting of a kick drum, snare and hi-hat. You'll get to know two new things: `live_loop` and `sample`.
+La oss se på hvordan vi lager et enkelt trommespor, bestående av en basstromme, skarptromme og en hi-hat. Du kommer til å lære to nye ting: `live_loop` og `sample`.
 
-Start with a empty buffer and create a `live_loop` called `:drums`. It could be named anything, the names is just for quickly identifying what the loop does. `live_loop` is an endless repeating loop that can be synchronised with other live_loops (a `live_loop` has to have at least one sleep):
+Start med et tomt buffer og lag en `live_loop` som vi kaller `:trommer`. Den kan hete hva som helst, navnene er bare så vi lett skal kunne huske hva de gjør. `live_loop` er en uendelig gjentagende løkke som kan synkroniseres med andre live_looper. (en `live_loop` må ha minst en sleep):
 
 {% highlight ruby %}
-live_loop :drums do
+live_loop :trommer do
   sample :drum_heavy_kick
   sleep 1
 end
 {% endhighlight %}
 
-Hit **Run** to hear your first `live_loop` playing a nice kick drum every beat. 
+Trykk **Run** for å høre din første `live_loop` spille en fin basstromme på hvert taktslag. 
 
-Let's do a simple backbeat with kick drum on 1 and 3, snare on 2 and 4. Instead of playing notes, you will be triggering samples. It's as simple as writing `sample :sample_name`. Here's an example drumbeat:
+La oss lage en fin rytme med en basstromme på 1 og 3, skarptromme på 2 og 4. Istedenfor å spille noter spiller vi sampler. det er så lett som å skrive `sample :navn_på_sample`. Er er et eksempel:
 
 {% highlight ruby %}
 
-live_loop :drums do
+live_loop :trommer do
   use_bpm 100
   sample :drum_heavy_kick
   sleep 1
@@ -35,15 +35,15 @@ live_loop :drums do
 end
 {% endhighlight %}
 
-That's a steady backbeat. The `:drums` loop starts with a kick, plays snare on the two, kick on three, then a snare on the four. Then the loop starts again:
+Det er en stødig rytme. `:trommer` løkken starter med et bass, spiller skarptromme på nummer to, bass på tre, så en skarptromme på nummer fire. Så starter den igjen:
 
 <img src="{{ "/assets/img/live_loop.png" | prepend: site.baseurl}}">
 
-Now, try changing the tempo (the number after `use_bpm`) and play with the samples. When you start writing the sample name, you can browse different samples with the auto-complete feature. Try different samples and check out what they sound like. Notice that you don't have to hit stop to change the sound - just change the code and re-hit **Run** - the sounds will change automatically on the next loop without losing a beat!
+Nå kan du prøve å endre tempo (nummeret etter `use_bpm`) og lek litt med samplene. Når du begynner å skrive navnet på et sample kan du bla deg frem til andre sampler. Forsøk forskjellige samples og finn ut av hva de høres ut som. Legg merke til at du ikke trenger å trykke på stop for å endre lyden, bare skrive om koen og trykk på **Run**  igjen - lyden vil oppdatere seg på neste runde uten å miste et taktslag.
 
-## Add hi-hat
+## Legg på hi-hat
 
-Now add a hi-hat. Create another live loop called `:hihat` and add your hi-hat samples. You could do for example straight 8th or 16th notes like this (this is 16th notes):
+Nå kan du legge på en hi-ht. La en ny live loop som heter `:hihat` og legg til et hi-hat sample. du kan for eksempel legge på noe på hver åttende eller sekstendedels sånn som dette (dette er sekstendedels):
 
 {% highlight ruby %}
 live_loop :hihat do
@@ -52,7 +52,7 @@ live_loop :hihat do
 end
 {% endhighlight %}
 
-But it doesn't have to be so square. You could also go for a bit more funky like this:
+Men det trenger ikke være så rett frem. Du kan også prøve noe mer funky sånn som:
 
 {% highlight ruby %}
 live_loop :hihat do
@@ -63,14 +63,15 @@ live_loop :hihat do
 end
 {% endhighlight %}
 
-The polyrhythmic hi-hat pattern was fist a "mistake". The loop is 1.25 beats long instead of the supposed 1. But it sounds cool! So remember to make a lot of mistakes to find something you weren't even looking for.
 
-Now the song looks something like this:
+Rytmene i hi-hat mønsteret var først en "feil". Løkken er 1.25 takter lang istedenfor 1 som det skulle være, men det høres jo kult ut! Så husk og lage mange feil - det er da du kan finne det du ikke visste du lette etter.
+
+Nå ser sangen ut omtrent som dette:
 
 {% highlight ruby %}
 use_bpm 100
 
-live_loop :drums do
+live_loop :trommer do
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
@@ -89,8 +90,8 @@ live_loop :hihat do
 end
 {% endhighlight %}
 
-You might be wondering how the live_loops would translate to music sequences in popular music-making apps? The following video might help you to understand their relation.
+Du lurer kanskje på hvoran live_loops ville sett ut som en musikksekvens i vanlige musikkprogrammer? Denne videoen kan kanksje hjelpe deg med å forstå sammenhengen:
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/iFMNOb33_KM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
-Now play around with different samples and rhythms. You could also add a third `live_loop` for percussions or other effects. Next you'll create a bass track for your composition.
+Nå kan du prøve med forskjellige sampler og rytmer. Du kan også legge til en tredje `live_loop` for perkusjon eller andre effekter. Videre skal vi lage et bassspor for komposisjonen din

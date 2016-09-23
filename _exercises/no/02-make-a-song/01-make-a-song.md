@@ -5,19 +5,18 @@ lang: no
 layout: exercise
 ---
 
-Let's dig deeper into Sonic Pi by composing a song. Now you have a rough idea about how to play notes of different lengths with Sonic Pi. That's cool but we can do so much more!
+La oss gå litt dypere inn i Sonic Pi ved å lage en sang. Nå har du en ide om hvordan du kan skrive noter med forskjellig lengde med Sonic Pi. Det er kult, men vi kan få til så mye mer!
 
-## This chapter
+## Dette kapittelet
 
-You'll start with creating a drum beat and getting to know the `live_loop`. Then you will add a bass track and finish the song by adding a melody!
+Du begynner med å lage et trommespor og bli kjent med `live_loop`. Deretter lager du et bassspor og avslutter sangen med å legge på en melodi.
 
-## Tweak the sounds
+## Skru på lydene
 
-If you want to explore more with Sonic Pi you can continue to tweak the sounds. In the second chapter you'll learn how to use effects and tweak different options to create a richer soundscape.
+Hvis du vil utforske mer med Sonic Pi kan du justere på lydene. I det andre kapittelet lærer du hvordan du kan bruke effekter og justere på forskjellige egenskaper for å lage et rikere lydlandskap..
 
-## Last chapter
+## Siste kapittel
 
-And there's even more. In the third chapter you can create a generative piece out of you composition. You can create algorithms to generatively create parts of your track.
+Og det er mer. I det tredje kapittelet kan du få programmet til å skrive mer musikk basert på din komposisjon. Du kan skrive algoritmer som lager deler av lydsporet ditt.
 
-
-Sounds pretty sweet! Let's get started with the beat then!
+Høres kult ut! La oss starte med en beat!
