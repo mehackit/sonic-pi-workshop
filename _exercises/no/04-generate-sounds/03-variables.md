@@ -5,10 +5,10 @@ lang: no
 layout: exercise
 ---
 
-Take a look at the example below. What's going on?
+Ta en titt på eksempelet under. Hva er det som skjer her?
 
 {% highlight ruby %}
-live_loop :melody do
+live_loop :melodi do
   use_synth :blade
   r = [0.25, 0.25, 0.5, 1].choose
   play (chord :c, :minor).choose, attack: 0, release: r
@@ -16,12 +16,12 @@ live_loop :melody do
 end
 {% endhighlight %}
 
-There's a variable `r` that gets a certain value each time the loop is played and that value is being used as the release option for play and as the sleep length. A variable is a bit like a box where you can store things and take things out. Using a variable is as simple as `valiable_name = variable_value`. Now the variable_value is stored in variable_name. You can get the value just by typing variable_name.
+Det er en variabel `r` som får en gitt verdi hver gang man spiller løkken og den verdien brukes som release for play og som sleep lengde. En variabel er litt som en boks der du kan lagre ting og ta ting ut igjen. For å bruke en variabel trenger du bare å skrive `valiable_navn = variable_verdi`. Nå har du lagret variable_verdi i variable_navn. Du kan få ut verdien igjen bare ved å skrive variable_navn.
 
-Let's add a synth and bass to the example to try out variables. The `:keys` loop is simple, nothing new happening, but the `:bass` loop is a bit tricky:
+La oss legge til en synth og bass til eksemepelet og prøve variablene. `:keys` løkken er enkel, ikke noe nytt som skjer der, men i `:bass` løkken er det en del triks:
 
 {% highlight ruby %}
-live_loop :melody do
+live_loop :melodi do
   use_synth :blade
   r = [0.25, 0.25, 0.5, 1].choose
   play (chord :c, :minor).choose, attack: 0, release: r
@@ -48,4 +48,4 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-`n = (chord :c2, :minor).tick` takes a note from a C minor chord and saves it to a variable named `n`. `.tick` always moves forward to the next value after it's called. `play n` plays the saved note. Then `.tick` is called again to get the next note from the chord. When the loop starts again, `.tick` continues from where it was.
+`n = (chord :c2, :minor).tick` tar en note fra en C-moll akkord og lagrer den til en variabel vi kaller `n`. `.tick` går alltid videre til den neste verdien etter den er kjørt. `play n` spiller den lagrede noten. Så kalles `.tick` igjen for å få den neste noten i akkorden. Når løkken kalles på nytt fortsetter `.tick` der den slapp.
