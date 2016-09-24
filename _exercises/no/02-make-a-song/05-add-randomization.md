@@ -5,14 +5,14 @@ lang: no
 layout: exercise
 ---
 
-Great! Now you got your song running nicely with a steady beat and a bass with the melody hook on the top. Now we're going to do something really cool and unleash the true potential of Sonic Pi. Let's add some generative elements to the track and program the computer to compose for us!
+Strålende! Nå har du en sang med en fin rytme og bass og med melodien over. Nå skal vi gjøre noe skikkelig tøft og demonstrere Sonic Pis virkelige potensial. La oss legge til noe generert musikk til sangen og programmere datamaskinen til å komponere musikk for oss!
 
-## Throw a dice and transpose the melody
+## Kast en terning og transponer melodien
 
-Transposing means changing the pitch up or down. We could randomly transpose the melody a bit every now and then to add some spice to the track. You can throw a dice to decide when to shift the pitch up for the melody. Here's an example:
+Å transponere betyr å endre tonearten. Vi kan legge til litt tilfeldig transponering til en melodi innimellom for å krydre sangen litt. Du kan kaste en terning for å bestemme når vi skal endre melodiens tonehøyde. Her er ett eksempel:
 
 {% highlight ruby %}
-live_loop :melody do
+live_loop :melodi do
   if one_in(6)
     use_transpose 2
   else
@@ -22,15 +22,15 @@ live_loop :melody do
 end
 {% endhighlight %}
 
-## Create a random acid bass track
+## Å lage et tilfeldig acid bass spor
 
-Let's do something interesting for the bass loop. `.choose` is a handy method that randomly picks out an element from a list. Like this:
+La oss gjøre noe spennende med bassløkken. `.choose` er en nyttig metode som velger et tilfeldig element fra en liste. Det ser sånn ut:
 
 {% highlight ruby %}
 play [:c, :e, :g].choose
 {% endhighlight %}
 
-`[:c, :e, :g]` is a list of notes (in this case the notes of the C major chord). `.choose` picks out one of those notes at random. Instead of notes you could have anything in the list. Like sleep values for example:
+`[:c, :e, :g]` er en liste av noter (i dette eksempelet er det notene i C-dur akkorden). `.choose` velger ut en av disse notene tilfeldig. Istedenfor noter kn du ha hva du vil i listen, for eksempel verdier for sleep:
 
 {% highlight ruby %}
 loop do
@@ -40,7 +40,7 @@ loop do
 end
 {% endhighlight %}
 
-You don't even have to remember what notes are in what chords. Sonic Pi can handle that for you. Instead of writing `[:c, :e, :g]`, you can just use `(chord :C, :major)`. That creates a list of right notes for you automatically. Here's an example:
+Du trenger ikke engang å huske hvilke noter som er i hvilke akkorder. Sonic Pi kan fikse det for deg. Istedenfor å skrive `[:c, :e, :g]` kan du bare skrive `(chord :C, :major)`. Det lager en list av noter for deg automatisk. For eksempel:
 
 {% highlight ruby %}
 loop do
@@ -49,7 +49,7 @@ loop do
 end
 {% endhighlight %}
 
-Let's use this sorcery for a bubbling bass track. Save your work and copy your current `:bass` loop to another buffer, in case you want to come back to it. Then make room for our new bass track and delete the content of the loop. Let's use the classic `:tb303` synth and play random 16th notes from C major chord:
+La oss bruke trolldommen vi nettopp lærte for å lage et boblende bassspor. Lagre arbeidet ditt og kopier `:bass` løkken til et annet mellomlager (buffer) i tilfelle du vil bruke det siden. Slett det som er inni løkken så vi får plass til noe nyt. La oss bruke den klassiske `:tb303` synthen og spille tilfeldige noter fra C-dur akkorden:
 
 {% highlight ruby %}
 live_loop :bass do
@@ -59,7 +59,7 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-Ough! Not quite right. Add `, release: 0.125` parameter in the end of the play command, like this:
+Ough! Ikke akkurat sånn... Legg til `, release: 0.125` parameteren etter play kommandoen, som dette:
 
 {% highlight ruby %}
 live_loop :bass do
@@ -69,9 +69,9 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-That's better, but there's still a bit polishing to do. So far you have used the `attack:` and `release:` parameters for a play command. Depending on the synth you are using, there's a lot lot more parameters to use. For example the tb303 synth has 45 different options to tweak. Let's use a parameter called `cutoff` for the bass. Cutoff removes all frequencies above the cutoff frequency. You can use values between 0-130.
+Det høres bedre ut, men vi må pusse litt mer på det. Så langt har vi brukt `attack:` og `release:` parametere for play kommandoen. Avhengig av synthen du bruker så er det mange andre parametere man kan bruke. For eksempel har tb303 synthen 45 forskjellige muligheter å skru på. La oss bruke en parameter for en play kommando som heter `cutoff` på bassen. Cutoff fjerner alle frekvenser over cutoff frekvenser, altså den lyse/høye biten av tonen.  Du kan bruke verdier mellom 0-130.
 
-But don't just use a fixed cutoff value when you can have a random value! With `rrand(min, max)` you can generate random numbers in a given range. Try that out:
+Men hvorfor bruke en fast cutoff verdi når vi kan ha en tilfeldig verdi? Med `rrand(min, max)` kan du velge tilfeldige tall i et bestemt intervall. Prøv det:
 
 {% highlight ruby %}
 live_loop :bass do
@@ -81,12 +81,12 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-Grrreat! Remember to explore and try out different things. As a recap, here's an example about what you cold have going on at this point:
+Strrrrrålende! Husk å utforske og prøve forskjellige ting. Som en oppsummering, her er et eksempel på hva du kan lage basert på det vi har lært så langt:
 
 {% highlight ruby %}
 use_bpm 120
 
-live_loop :drums do
+live_loop :trommer do
   sample :drum_heavy_kick
   sleep 1
   sample :drum_snare_hard
@@ -111,7 +111,7 @@ live_loop :bass do
 end
 
 
-live_loop :melody do
+live_loop :melodi do
   if one_in(6)
     use_transpose 2
   else
