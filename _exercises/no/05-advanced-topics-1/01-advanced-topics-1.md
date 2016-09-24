@@ -5,4 +5,4 @@ lang: no
 layout: exercise
 ---
 
-In this chapter we'll discover topics like sample chopping, use of the slicer effect and explain how you can bring your own custom samples to Sonic Pi. 
+I dette kapittelet skal vi oppdate tema som å dele opp sampler (samplesplitting), bruke slicer effekten og lære hvordan du kan få dine egne sampler inn i Sonic Pi.
