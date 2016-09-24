@@ -1,8 +1,8 @@
 ---
-chapter: Skru på lydene
-title: Skru på lydene
-lang: en
+chapter: Juster lydene
+title: Juster lydene
+lang: no
 layout: exercise
 ---
 
-Now you have quite an impressive composition ready. Next you can look into synth options, sample options and effects to get your piece even further.
+Du har en ganske imponerende komposisjon klar. Videree kan du se på synth egenskaper, sample egenskaper og effekter for å musikkstykket ditt til å bli enda bedre.
