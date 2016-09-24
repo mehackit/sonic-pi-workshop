@@ -1,13 +1,13 @@
 ---
-chapter: Skru på lydene
+chapter: Juster lydene
 title: Effekter
 lang: no
 layout: exercise
 ---
 
-We've been holding this off for too long now, so here it comes: `with_fx`! 
+Vi har ventet med dette altfor lenge nå, endelig kommer det: `with_fx`! 
 
-That's a powerful tool for adding different effects to your composition. Let's start with `:reverb`. Pretty much everything sounds nice with a reverb. Start with surrounding your code with a `with_fx :reverb do` and `end` blocks:
+Det er et kraftig verktøy for å legge på forskjellige effekter på komposisjonen din. La oss starte med `:reverb`. Nesten alt høres fint ut med reverb. Begynn med å skrive `with_fx :reverb do` og `end` rundt den delen av koden du vil skal få effekten:
 
 {% highlight ruby %}
 live_loop :effects do
@@ -21,10 +21,10 @@ live_loop :effects do
 end
 {% endhighlight %}
 
-Sounds bigger, doesn't it? Just like synths and samples, effects also have options. `mix:`is an option that sets how much the effect and the original sound is heard. `mix: 0` plays only the original sound, `mix: 1` plays only the FX. Reverb has a `:room` option also. Try different room sizes with values between 0-1. If you open the 'Fx' tab on the help menu you can find what options are available for which FX.
+Høres større ut, gjør det ikke? Akkurat som med synther og sampler har effekter også justeringsmuligheter. `mix:` bestemmer hvor mye orginallyden og hvor mye av effekten som blir hørt. `mix: 0` spiller bare den orginale lyden og `mix: 1` spiller bare effekten. Reverb har en `:room` justeringsmulighet også. Forsøk med forskjellige romstørrelser med verdier mellom 0-1. Hvis du trykker på 'Fx' vinduet på hjelpemenyen kan du finne ut hvilke justeringsmuligheter som finnes for forskjellige effekter. 
 
 {% highlight ruby %}
-live_loop :effects do
+live_loop :effekter do
   with_fx :reverb, mix: 0.5, room: 0.9 do
     play 50
     sleep 0.5
@@ -35,10 +35,10 @@ live_loop :effects do
 end
 {% endhighlight %}
 
-There are so many FX to choose from. And you don't even have to settle for one: you can nest them! (At some point you computer can run out of resources but worry about that then.)
+Det finnes så mange forskjellige effekter (FX) å velge blant. Og du trenger ikke engang å velge bare en, du kan nøste dem i hverandre! (Til slutt kan maskinen din gå tom for ressurser om du bruker for mange, men la oss bry oss om det hvis det skjer...)
 
 {% highlight ruby %}
-live_loop :effects do
+live_loop :effekter do
   with_fx :wobble do
     with_fx :slicer do
       with_fx :reverb do
@@ -53,4 +53,4 @@ live_loop :effects do
 end
 {% endhighlight %}
 
-Now go crazy and add FX everywhere for some amazing new sounds! 
+Nå kan du bare slippe deg løs og legge på FX overalt for nye, fantastiske lyder!
