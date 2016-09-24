@@ -5,21 +5,21 @@ lang: no
 layout: exercise
 ---
 
-Remember `chord`? The chord function gives you the notes of a certain chord:
+Husker du `chord`? Chord funksjonen gir deg tonene i en gitt akkord:
 
 {% highlight ruby %}
 play (chord :c, :major).choose 
-# plays a random note of the C major chord (:c, :g r :f)
+# spiller en tilfeldig tone fra c-dur akkorder (:c, :g r :f)
 {% endhighlight %}
 
-There's also a function called `scale`. Scale returns all the notes in a _scale_, not just the ones in a chord:
+Det er også en funksjon som heter `scale`. Den gir deg alle notene i en _skala_, ikke bare de som er i en akkord:
 
 {% highlight ruby %}
 play (scale :c, :major).choose 
-# plays a random note of the C major scale (:c, :d, :e, :f, :g, :a or :b)
+# spiller en tilfeldig note fra C-dur skalaen (:c, :d, :e, :f, :g, :a or :b)
 {% endhighlight %}
 
-With `choose` you can get a random element from a list. If you want to go through the values in a more structured manner, Sonic PI has a very powerful function called `tick`:
+Med `choose` får du et tilfeldig element fra en liste. Hvis du vil gå igjennom alle verdiene i en liste på en mer strukturert måte har Sonic PI en veldig kraftig funksjon som heter `tick`:
 
 {% highlight ruby %}
 live_loop :arp do
@@ -28,7 +28,7 @@ live_loop :arp do
 end
 {% endhighlight %}
 
-Here, we’re just grabbing the scale E3 minor pentatonic and ticking through each element. This is done by adding .tick to the end of the scale declaration. This tick is local to the live loop, so each live loop can have its own independent tick: 
+Her bruker vi bare femtoneskalaen E3-moll og går igjennom hvert element. Det gjør vi ved å legge på .tick på slutten av skaladeklarasjonen. Ticken gjelder bare inne i live-loopen, så hver live loop kan ha sin egen, uavhengige tick: 
 
 {% highlight ruby %}
 live_loop :arp do
@@ -43,9 +43,9 @@ live_loop :arp2 do
 end 
 {% endhighlight %}
 
-## Rings
+## Ringer
 
-You can tick through anything that is a _ring_ (well, you can tick through lists also but it will stop when you get to the end). Ring is a special list, that starts over when you get to the end. Like in the previous example the scale started again from the beginning after reaching the last note. `scale` and `chord` both return a ring. Sometimes you'll want to create a list and turn that into a ring by calling `.ring` or using the `ring` creator:
+Du kan også ticke igjennom alt som er en _ring_ (eller, du kan ticke gjennom lister også, men de slutter når du kommer til slutten). En ring er en spesiell liste som starter på nytt når du kommer til slutten. Akkurat som i det forrige eksempelet der skalaen starter på nytt etter den har kommet til den siste tonen. `scale` og `chord` er begge ringer. Noen ganger vil man gjøre om en liste til en ring, det kan du gjøre ved å skrive `.ring` eller lage den direkte med `ring` som vist under:
 
 {% highlight ruby %}
 puts [1, 2, 3, 4].ring #=> (ring 1, 2, 3, 4)
@@ -59,7 +59,7 @@ live_loop :arp do
 end
 {% endhighlight %}
 
-Here's a bit more complex example. Here you have a list or chords that is turned into a ring and ticked through:
+Her er et litt mer sammensatt eksempel. Vi har en liste av akkorder som vi gjør igjennom til en ring og ticker igjennom:
 
 {% highlight ruby %}
 live_loop :keys do
@@ -69,7 +69,7 @@ live_loop :keys do
 end
 {% endhighlight %}
 
-And then top it off with a lead 'melody':
+Og til slutt kan vi legge på en melodi:
 
 {% highlight ruby %}
 live_loop :keys do
@@ -85,4 +85,4 @@ live_loop :lead do
 end
 {% endhighlight %}
 
-Start ticking, go wild! 
+Start med ticking, slipp deg løs!
