@@ -1,17 +1,18 @@
 ---
-chapter: Skru på lydene
+chapter: Juster lydene
 title: Muligheter
 lang: no
 layout: exercise
 ---
 
-So far you have used `attack`, `release`, and `cutoff` options after a play command. Options (or opts for short) are controls you pass to play which modify and control aspects of the sound you hear. Each synth has its own set of opts for finely tuning its sound. However, there are common sets of opts shared by many sounds. Now you'll get to know few options more to add more expression to your sounds.
+Så langt har du brukt `attack`, `release`, og `cutoff` egenskapene etter en play kommando. Options (or opts for short, engelsk for valgmuligheter) er justeringer du kan bruke for å styre egenskaper ved lydene du hører. Hver synth har sine egene valgmuligheter for å finjustere lyden sin. Det finnes likevel en del vanlige muligheter som de fleste har til felles. Nå skal vi ta en titt på noen av dem.
 
-Note that you can use some of the options with samples too!
+Husk at du kan bruke en del av disse på sampler også!
 
 ### `amp:`
 
-Amplitude is the loudness of a sound. 0 is silent (you’ll hear nothing), 1 is normal volume. You can crank up the amplitude to 2, 10 or 100. However, this can often make the sound muddy and strange. So try to use low amplitudes, i.e. in the range 0 to 0.5 to avoid compression. 
+Amp står for amplitutde og er hvor høy en lyd er, som volum. 0 er stille (du hører ingenting), 1 er normalt volum. Du kan justere opp til 2, 10 eller 100, men det vil ofte gjøres lyden gjørmete og rar. Prøv å bruke lave amplituder, rundt 0 til 0.5 for at det skal høres bra ut.
+
 
 {% highlight ruby %}
 play :c2, amp: 0.5
@@ -19,7 +20,7 @@ play :c2, amp: 0.5
 
 ### `pan:`
 
-Pan controls the panning of a sound in stereo. -1 means that you hear it out of the left speaker, 1 means you hear it out of your right speaker and 0 is center. You can use any value between -1 and 1. You could try using a random pan value for your hi-hats for some texture.
+Pan kontrollene bestemmer hvilke høytalere lyden kommer fra når man har to høytalere (stereo). -1 betyr at du hører det i venstre høyttaler, 1 betyr at du hører det i høyre høyttaler og 0 betyr i senter, altså like mye i begge høyttalerene. Du kan bruke en hvilken som helst verdi mellom -1 og 1, og gjerne prøv med tilfeldige tall.
 
 {% highlight ruby %}
 play :c2, amp: 0.5, pan: -1 #left speaker
@@ -31,28 +32,28 @@ sample :drum_cymbal_closed, pan: rrand(-0.7, 0.7)
 
 ### `cutoff:`
 
-Remove frequencies higher that the given value. Use values between 0-130.
+Fjerner frekvenser som er høyere enn en gitt verdi. Bruk verdier mellom 0-130.
 
 {% highlight ruby %}
 play :c2, cutoff: 80
 {% endhighlight %}
 
-### `attac:` and `release:`
+### `attack:` og `release:`
 
-Time in beats for attack and release.
+Tiden er gitt i taktslag for attack og release.
 
 {% highlight ruby %}
-play :c2, attack: 1, release: 1 #the note is two beats long
+play :c2, attack: 1, release: 1 # tonen er to taktslag lang
 {% endhighlight %}
 
 <img src="{{ "/assets/img/attackrelease.png" | prepend: site.baseurl }}">
 
-### `use_synth_defaults` and `use_sample_defaults`
+### `use_synth_defaults` og `use_sample_defaults`
 
-If you don't want to set your ops for each play or sample on your loop, you can use `use_synth_defaults` and `use_sample_defaults` to set the opts for all the next plays and samples in the loop:
+Hvis du ikke vil sette dine egne verdier hvor hvert eneste sample eller hver eneste play kommando, kan du bruke `use_synth_defaults` og `use_sample_defaults` for å sette valgene for alle de neste play eller sample kommandoene i løkken:
 
 {% highlight ruby %}
-live_loop :melody do
+live_loop :melodi do
   use_synth :mod_fm
   use_synth_defaults attack: 0.25, release: 0.5, pan: rrand(-0.5, 0.5), cutoff: 50
   play 72
@@ -64,9 +65,9 @@ live_loop :melody do
 end
 {% endhighlight %}
 
-### Bonus: `beat_stretch:` and `rate:`
+### Bonus: `beat_stretch:` og `rate:`
 
-These are too cool to skip. Try this out:
+Disse er litt for kule til å hoppe over. Prøv dette:
 
 {% highlight ruby %}
 live_loop :amen_break do
@@ -75,7 +76,7 @@ live_loop :amen_break do
 end 
 {% endhighlight %}
 
-There's an annoying gap in the end. The sample is 1.753310657596372 beats long, which isn't that handy when you want to play it with all the other stuff we have going on. Luckily you can use `beat_stretch: 2` to stretch/shrink the sample to make it exactly 2 beats long:
+Det er en litt irriterende pause på slutten. Samplet er 1.753310657596372 takter lang, som ikke er så enkelt når du vil spille det sammen med alle de andre sporene. Heldigvis kan du bruke `beat_stretch: 2` for å strekke/mose samplet for å få det akkurat to takter langt:
 
 {% highlight ruby %}
 live_loop :amen_break do
@@ -84,7 +85,7 @@ live_loop :amen_break do
 end
 {% endhighlight %}
 
-Nice! Now to the `rate` option. Rate controls how fast a sample is played. 1 is in original speed, 0.5 is in half speed and 2 is in double speed. The sample also sounds higher and lower pitched when you change the rate. And (drumroll...) you can have even negative values! Negative values play the samples _backwards_. Try playing this loop and changing the rate and sleep value:
+Supert! Nå kan vi se på `rate`. Rate styrer hvor fort et sample blir spilt. 1 er orginal fart, 0.5 er halv fart og 2 er dobbel fart. Samplet høres også lysere ut når det blir spilt fort og mørkere når det blir spilt sakte. Og (trommevirvel...) - du kan til og med ha negative verdier! Negative verdier spiller samplet _baklengs_. Forsøk og spille denne løkken og endre på rate og sleep verdiene:
 
 {% highlight ruby %}
 live_loop :amen_break do
