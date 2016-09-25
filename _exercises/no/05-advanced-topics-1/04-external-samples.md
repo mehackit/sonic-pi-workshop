@@ -5,27 +5,27 @@ lang: no
 layout: exercise
 ---
 
-Sonic Pi comes with approximately 73 samples that you can freely use and play around with, but it also fully supports using external samples. For example, maybe you would like to record something (like your own voice or guitar) and have it in Sonic Pi to use in your song.
+Sonic Pi kommer med rundt 73 sampler som du kan bruke fritt og leke med, men det støtter også fullt ut å bruke egne sampler. For eksempel, kanskje har du lyst til å ta opp noe (som din egen stemme eller gitar) og bruke det i Sonic Pi i sangen din.
 
-First, you'll have to have some audio samples in WAV format placed in a folder on your hard drive. In the following examples, we're using a free sample pack by *Mehackit*. It is called *Solenoid Samples 1* and you can download it from <a href="{{ "/assets/files/solenoid_samples_1.zip" | prepend: site.baseurl }}">here</a>. It contains 14 one-shot and looping samples that were recorded from a kinetic sound installation we created in a workshop in early 2016.
+Først trenger du noen lydsampler i WAV formatet som du legger i en mappe på maskinen din. I eksempelet her så bruker vi en gratis samling med sampler fra *Mehackit*. Den heter *Solenoid Samples 1* og du kan laste det ned <a href="{{ "/assets/files/solenoid_samples_1.zip" | prepend: site.baseurl }}">her</a>. Den inneholder 14 "one-shot" og gjentagende sampler som ble tatt opp fra en kinetisk lydinstallasjon laget i en workshop tidlig i 2016.
 
-Once you have downloaded the pack and extracted the files to a folder, you'll have to check the full path to that folder. For example, if you extracted the files to a folder called 'Samples' on your Desktop the path is most likely following:
+Når du har lastet ned samlingen og pakket ut filene i en mapp må du finne hele navnet til mappen. For eksempel, hvis du pakket det ut til en mappe som heter 'Sampler' på skrivebordet ditt er mappenavnet sannsynligvis noe som::
 
-* Windows: "C:/Users/sam/Desktop/Samples" 
-* Raspberry Pi, Linux and Mac: "/Users/sam/Desktop/Samples" 
+* Windows: "C:/Users/sam/Desktop/Sampler" 
+* Raspberry Pi, Linux and Mac: "/Users/sam/Desktop/Sampler" 
 
-Just remember to use your own username instead of 'sam'. The sample pack contains following files: `hit_1.wav` to `hit_7.wav` (percussive hits) and `loop_1.wav` to `loop_7.wav` (looping beats that are recommended to be played with the sampler opt `beat_stretch`).
+Bare husk å bytt ut brukernavnet ditt med 'sam'. Pakken inneholder følgende filer: `hit_1.wav` til `hit_7.wav` (perkusjon) og `loop_1.wav` til `loop_7.wav` (Gjentagende rytmer som det er anbefalt å spille med sampler justeringen `beat_stretch`).
 
-Now you can play them directly with the `sample` command by using the right file path:
+Nå kan du spille dem direkte med `sample` kommandoen ved å bruke filnavnet:
 
 {% highlight ruby %}
-sample "/Users/sam/Desktop/Samples/loop_1.wav", amp: 1.5
+sample "/Users/sam/Desktop/Sampler/loop_1.wav", amp: 1.5
 {% endhighlight %}
 
-If the path was set correctly for the `sample` command you should now hear the sound `loop_1.wav`. Just remember to use your own file path instead of the one shown in these examples! That is pretty straightforward way to access and play samples. However, you would probably like to write the folder path only once in the code and play the samples by only referring to their filenames. You can declare a variable for the file path and use that in conjunction with the `sample` command. After `sample` you can enter the variable name containing the file path and then the name of the sample. We'll declare a variable for the sample folder file path called solenoids in the example below. When you run it, the sample `loop_4.wav` should start playing and looping:
+Hvis du brukt riktig filnavn kommer du til å høre lyden `loop_1.wav`. Bare husk å bruk ditt eget filnavn istedenfor det som er vist i disse eksemplene! Dette er en ganske enkel måte å få til å spille sampler på. Men, du har sikkert lyst til å bare skrive mappenavnet en gang i koden og referere til samplene bare med filnavnet. Du kan lage en variabel for filnavnet og bruke det sammen med `sample` kommandoen. Etter `sample` kan du skrive inn variabelnavnet som inneholder mappenavnet og så navnet på samplet. I eksempelet under lager vi en variabel for mappenavnet som vi kaller solenoids. Når du kjører eksepelet skal samplet `loop_4.wav` starte å spille en løkke:
 
 {% highlight ruby %}
-solenoids = "/Users/sam/Desktop/Samples/"
+solenoids = "/Users/sam/Desktop/Sampler/"
 use_bpm 110
 
 live_loop :solenoid1 do
@@ -34,7 +34,7 @@ live_loop :solenoid1 do
 end
 {% endhighlight %}
 
-Now you're able to use external samples and samples from Sonic Pi's own library in your productions. Try playing the example below that uses four different instances of `live_loop` to play external and Sonic Pi's own samples. Please note that in the live_loop `:solenoid2` we're using a variable `samplename` to randomly select one of the samples from `hit_1.wav` to `hit_7.wav`.
+Nå er du i stand til å bruke eksterne sampler og sampler fra Sonic Pi's eget bibliotek i sangene dine. Prøv å spille eksempelet under som bruker fire forskjellige `live_loop`er for å spille eksterne og Sonic Pi's egne sampler. Legg merke til at i løkken  `:solenoid2` bruker vi en variabel `samplenavn` for å velge et tilfeldig sample fra `hit_1.wav` til `hit_7.wav`.
 
 {% highlight ruby %}
 solenoids = "/Users/sam/Desktop/Samples/"
@@ -51,9 +51,9 @@ live_loop :kick do
 end
 
 live_loop :solenoid2 do
-  samplename = ["hit_1", "hit_2", "hit_3", "hit_4", "hit_5", "hit_6", "hit_7"].choose
+  samplenavn = ["hit_1", "hit_2", "hit_3", "hit_4", "hit_5", "hit_6", "hit_7"].choose
   time = [0.25, 0.5, 0.75].choose
-  sample solenoids, samplename, amp: 1.5, rate: 2, pan: rrand(-0.8, 0.8)
+  sample solenoids, samplenavn, amp: 1.5, rate: 2, pan: rrand(-0.8, 0.8)
   sleep time
 end
 
