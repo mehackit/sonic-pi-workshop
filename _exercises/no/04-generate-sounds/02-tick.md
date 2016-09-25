@@ -1,6 +1,6 @@
 ---
 chapter: Lag lyder
-title: Tick på norsk
+title: Tick
 lang: no
 layout: exercise
 ---
