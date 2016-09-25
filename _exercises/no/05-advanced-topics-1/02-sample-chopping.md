@@ -48,7 +48,7 @@ end
 {% endhighlight %}
 
 Videoen (laget ved hjelp av Simpler)
-The video below (created with the help of Simpler i Ableton Live) visualiserer deler av løkken `loop_amen` samplet som blir spilt i hver gjennomkjøring av `live_loop`:
+Videoen under (laget ved hjelp av Simpler i Ableton Live) visualiserer deler av løkken `loop_amen` samplet som blir spilt i hver gjennomkjøring av `live_loop`:
 
 {% include videoplayer.html filepath="/assets/video/amen_slicing" %}
 
