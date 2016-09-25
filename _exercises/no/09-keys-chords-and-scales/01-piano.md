@@ -5,13 +5,14 @@ lang: no
 layout: exercise
 ---
 
-Sometimes composing a melody with Sonic Pi can be tricky, if you don't immediately know what `62` or `:c3` sounds like. To help with that, here's a browser keyboard for trying out your ideas. If you want, you can select a scale from the drop menu to see what keys might sound nice in a certain key. 
+Noen ganger kan det være vanskelig å lage en melodi med Sonic Pi hvis du ikke vet hvordan `62` eller `:c3` høres ut. For å hjelpe til med det har vi et keyboard der du kan prøve ut ideene dine. Hvis du vil kan du velge en skala fra menyen for å se hva som kan høres bra ut. 
+
 
 <div class="keyboard-options">
   <select ID="sound">
     <option value="0" selected>Keyboard</option>
-    <option value="1">Organ</option>
-    <option value="2">Acoustic Guitar</option>
+    <option value="1">Orgel</option>
+    <option value="2">Akustisk gitar</option>
     <option value="3">EDM, bro!</option>
   </select>
   Select scale: 
@@ -47,21 +48,22 @@ Sometimes composing a melody with Sonic Pi can be tricky, if you don't immediate
     Range [C<span ID="OCTAVE_LOWER">3</span>-B<span ID="OCTAVE_UPPER">5</span>]
     <input type="button" ID="-_OCTAVE" value="-" />
     <input type="button" ID="+_OCTAVE" value="+" /><br />
-    <i>(Use left/right arrows to adjust with keyboard)</i>
-    <p>Audio Synthesizer, created by <a href="http://www.keithwhor.com/">Keith William Horwood</a></p>
+    <i>(bruk venstre/høyre pilene for å justere)</i>
+    <p>Audio Synthesizer, laget av <a href="http://www.keithwhor.com/">Keith William Horwood</a></p>
     </small>
   </div>
 </div>
 
-## What chords and notes to play?
+## Hvilke akkorder og noter skal jeg spille?
 
-Obviously you can play whatever notes and chords you like to. There's no right or wrong. Music doesn't have to sound harmonic and some dissonance or noise belongs to a track as much as the artist wants it to belong. However there's some rules you can try out if you wish.
+Selvfølgelig kan du spille vilke noter og akkorder du vil. Det finnes ikke nor riktig eller galt. Musikk trenger ikke å være harmonisk, og noe dissonans og støy hører til et spor akkurat så mye som artisten vil at det skal høre til. Likevel finnes det noen regler du kan prøve hvis du har lyst.
 
-If your composition is in a certain key, let's say C major for an example, you have certain chords that probably sound nice on the track. Here's a table with some jazzy chords that should play along with each other quite nicely. If you want you can look more in to chord progressions here: <a href="http://www.lotusmusic.com/chord-progression-map.html">lotusmusic.com/chord-progression-map.html</a>
 
-Common chord progressions in major  |  I - IV - V   |   I - VI - IV - V   |   II - V - I
+Hvis komposisjonen din er i en gitt nøkkel, la oss si C dur for eksempel, er det noen akkorder som sannsynligvis høres bra ut. Her er en tabell med noen akkorder som burde høres bra ut sammen. Hvis du vil kan se på akkordprogresjoner her: <a href="http://www.lotusmusic.com/chord-progression-map.html">lotusmusic.com/chord-progression-map.html</a>
 
-|Major key| I | II | III | IV | V | VI |
+Vanlige akkordprogresjoner i dur  |  I - IV - V   |   I - VI - IV - V   |   II - V - I
+
+|Toneart| I | II | III | IV | V | VI |
 |---|---|---|---|---|---|---|
 |C|chord(:C, :major7)|chord(:D, :minor7)|chord(:E, :minor7)|chord(:F, :major7)|chord(:G, &quot;7&quot;)|chord(:A, :minor7)|
 |Db|chord(:Db, :major7)|chord(:Eb, :minor7)|chord(:F, :minor7)|chord(:Gb, :major7)|chord(:Ab, &quot;7&quot;)|chord(:Bb, :minor7)|
@@ -76,9 +78,9 @@ Common chord progressions in major  |  I - IV - V   |   I - VI - IV - V   |   II
 |Bb|chord(:Bb, :major7)|chord(:C, :minor7)|chord(:D, :minor7)|chord(:Eb, :major7)|chord(:F, &quot;7&quot;)|chord(:G, :minor7)|
 |B|chord(:B, :major7)|chord(:Db, :minor7)|chord(:Eb, :minor7)|chord(:E, :major7)|chord(:Gb, &quot;7&quot;)|chord(:Ab, :minor7)|
 
-Common chord progressions in natural minor  |  I - VI - VII  |   I - IV - VII  |   I - IV - V  |   I - VI - III - VII  |   II - V - I
+Vanlige akkordprogresjoner i moll |  I - VI - VII  |   I - IV - VII  |   I - IV - V  |   I - VI - III - VII  |   II - V - I
 
-|Minor key| I | II | III | IV | V | VI | VII |
+|Toneart|| I | II | III | IV | V | VI | VII |
 |---|---|---|---|---|---|---|
 |Cm|chord(:C, :minor7)|chord(:D, &quot;m7-5&quot;)|chord(:Eb, :major7)|chord(:F, :minor7)|chord(:G, :minor7)|chord(:Ab, :major7)|chord(:Bb, &quot;7&quot;)|
 |Ddm|chord(:Dd, :minor7)|chord(:Eb, &quot;m7-5&quot;)|chord(:E, :major7)|chord(:Gb, :minor7)|chord(:Ab, :minor7)|chord(:A, :major7)|chord(:B, &quot;7&quot;)|
