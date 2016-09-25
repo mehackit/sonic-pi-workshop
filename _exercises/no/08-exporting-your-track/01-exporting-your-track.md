@@ -5,77 +5,77 @@ lang: no
 layout: exercise
 ---
 
-When you're happy with your track you might want to save the track as an audio file and share it with your friends online (for example, on your <a href="http://www.soundcloud.com/mehackit">SoundCloud</a> page). First, you'll need to record your song by using the record function in Sonic Pi. 
+Når du er fornøyd med det første sporet ditt vil du kanskje lagre sporet som en lydfil og dele det med vennene dine online (for eksempel på din egen <a href="http://www.soundcloud.com/mehackit">SoundCloud</a> side). Først må du ta opp sangen din ved å bruke 'record' funksjonen i Sonic Pi. 
 
-The recording process is simply following: 
+Stegene for å ta opp er som følger:
 
-* Click the **Rec** button and it should highlight
-* Now that record is toggled on start your song by clicking **Run**
-* Once your song is finished (or you've played enough of your live_loops) click **Stop**
-* Finally, click **Rec** again to stop the recording
-* Save your audio file in the dialog window (for example, with a name *MySong.wav*)
+* Klikk på **Rec** knappen
+* Når du ser at Rec er trykket inn kan du starte sangen din ved å trykke på **Run**
+* Når sangen er ferdig eller du har spilt mange nok ganger gjennom live-løkkene dine trykk på **Stop**
+* Til slutt trykker på du **Rec** igjen for å stoppe opptaket
+* Lagre lydfilen din i diaologvinduet som spretter opp (for eksempel med navnet *MinSang.wav*)
 
 {% include videoplayer.html filepath="/assets/video/record_audio" %}
 
-Once you have your audio file saved you are ready to play and share it. However, we recommend you to process your audio file a little bit to make it sound more professional and louder. For this, we are going to use *Audacity* which is a free, open-source software for recording and Editing sounds. You can download *Audacity* (for Windows, Linux and OS X) from here: <a href="http://www.audacityteam.org/download/">http://www.audacityteam.org/download/</a>. 
+Når du har lagret lydfilen din er du klr for å spille og dele den. Vi anbefaler at du fikser litt på lyden for å få den til og høres proffere og høyere ut først. For å gjøre dette bruker vi *Audacity* som er gratis og åpen kildekode programvare for å ta opp og redigere lyd. Du kan laste ned *Audacity* (for Windows, Linux og OS X) her: <a href="http://www.audacityteam.org/download/">http://www.audacityteam.org/download/</a>. 
 
-## Audacity: Removing Silence
+## Audacity: Fjerne pauser
 
-Usually when you record audio with Sonic Pi there will be some extra silence in the beginning and the end of the song. If you want, you can remove this unwanted silence with few simple steps. First, open your audio file in Audacity from the menu "File / Open". Once you have opened the file you should see a view like the one below. 
+Vanligvis når du tar opp lydfiler med Sonic Pi er det noe ekstra pauser (stillhet) på starten og slutten av sangen din. Hvis du vil kan du fjerne dette med noen enkle steg. Først må du åpne lydfilen din i Audacity med "File / Open". Når du har åpnet filen ser du et vindu som ser slikt ut:
 
 <img src="{{ "/assets/img/audio_tutorial_04.jpg" | prepend: site.baseurl }}" width="100%">
 
-Now navigate to the "Effect" menu and select "Truncate Silence".
+Gå til "Effekter/Effect" menyen og velg "Truncate Silence".
 
 <img src="{{ "/assets/img/audio_tutorial_05.jpg" | prepend: site.baseurl }}" width="100%">
 
-Use the following values in the "Truncate Silence" window: 
+Bruk disse verdiene i "Truncate Silence" vinduet: 
 
 * Level: -60 dB
 * Duration: 0.5 seconds 
 * Truncate to: 0.1 seconds
 
-Next, click "Ok".
+Så kan du trykke på "Ok".
 
 <img src="{{ "/assets/img/audio_tutorial_06.jpg" | prepend: site.baseurl }}" width="100%">
 
-Now you should see the silent parts of the audio removed from the waveform.
+Nå skal du se at pausene i lydfilen er tatt bort fra sangen.
 
-## Audacity: Normalizing loudness
+## Audacity: Fikse volument
 
 <img src="{{ "/assets/img/audio_tutorial_07.jpg" | prepend: site.baseurl }}" width="100%">
 
-Next, let's make the audio as loud as possible without compressing or doing any damage to the audio itself. If you feel like your music is more beat-driven and should overall be louder, then this next step is for you. On the other hand, if your material is more subtle (like ambient music) and should remain like that, then we don't necessarily recommend you to take the following steps for normalizing the audio. Anyway, here's how you do it: Go to the "Effect" menu and select "Normalize".
+Nå kan vi forsøke å lage lyden så høy som mulig uten å komprimere eller ødelegge selve lyden. Hvis du tenker at musikken din er mest drevet av rytmen og skal være høyere jevnt over, er dette steget for deg. Om du derimot lager mer forsiktig musikk (som bakgrunnsmusikk) og du vil at den skal være sånn, er kanskje ikke dette steget for deg. Uansett, sånn gjør du det: Gå til "Effect" menyen og velg "Normalize".
 
 <img src="{{ "/assets/img/audio_tutorial_08.jpg" | prepend: site.baseurl }}" width="100%">
 
-Set the following value in the "Normalize" window:  
+Bruk de følgende verdiene i "Normalize" vinduet:  
 
-* Normalize maximum amplitude" to -0.1 dB
+* Normalize maximum amplitude" til -0.1 dB
 
-Check the two topmost checkboxes and click "Ok".
+Merk/kryss av de øverste sjekkboksene og trykk "Ok".
 
 <img src="{{ "/assets/img/audio_tutorial_09.jpg" | prepend: site.baseurl }}" width="100%">
 
-Now you should see that the spikes in the waveform are taller which means that the resulting audio is louder as well. 
+Nå skal du se at toppene i lyden er høyere, som betyr at volumet er høyere.
 
 <img src="{{ "/assets/img/audio_tutorial_10.jpg" | prepend: site.baseurl }}" width="100%">
 
-## Audacity: Saving an MP3 file
+## Audacity: Lagre en MP3 fil
 
-Now you'll just need to save the audio file. For example, if you want to save your track as an MP3 file, open the "File" menu and select "Export Audio".
+Nå må du bare lagre lydfilen. For eksempel, hvis du vil lage en MP3 fil kan du trykke på "File" og "Export Audio".
 
 <img src="{{ "/assets/img/audio_tutorial_11.jpg" | prepend: site.baseurl }}" width="100%">
 
-In the Export Audio window you should see a pull-down menu somewhere around the file browser. Select "MP3 Files" from that menu. You can use one of the of standard presets in the Format Options for the MP3 file. For example, the following Format Options should always work decently: 
+I Export Audio vinduet skal du se en nedtrekksmeny et sted i nærheten av filvelgeren. Velg "MP3 Files" fra den menyen. Du kan velge en av standardinnstillingene i Format Options for MP3 filen. Disse verdiene pleier alltid å virke fint:
 
 * Bit Rate Mode: Preset 
 * Quality: Standard, 170-210 kbps 
 * Variable Speed: Fast 
 * Channel Mode: Joint Stereo 
 
-Next you'll need to enter the filename to the field "Name" and click "Save". That should do the trick! Now you have the MP3 file of your track, which you can easily send to your friends, post on SoundCloud or upload to your mobile phone. 
+Deretter må du legge inn filnavnet i feltet "Name" og trykke på "Save". Det burde funke fint! Nå har du en MP3 fil av lydsporet ditt, som du lett kan sende til vennene dine, legge ut på SoundCloud eller legge inn på telefonen din.
 
 <img src="{{ "/assets/img/audio_tutorial_12.jpg" | prepend: site.baseurl }}" width="100%">
 
-We hope you'll have fun creating and publishing tracks with Sonic Pi!
+Vi håper du har hatt det morsomt med å lage og publisere musikk med Sonic Pi!
