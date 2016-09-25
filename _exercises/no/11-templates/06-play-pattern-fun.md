@@ -7,7 +7,7 @@ layout: exercise
 
 {% include player.html filepath="/assets/audio/play-pattern-fun.mp3" %}
 
-Load the code as a <a href="{{ "/assets/files/play-pattern-fun.txt" | prepend: site.baseurl }}">text file</a>
+Last inn koden som <a href="{{ "/assets/files/play-pattern-fun.txt" | prepend: site.baseurl }}">tekstfil</a>
 
 {% highlight ruby %}
 # Having Fun with the Play Pattern Timed command

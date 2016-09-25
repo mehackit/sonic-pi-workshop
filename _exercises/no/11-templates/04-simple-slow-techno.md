@@ -7,7 +7,7 @@ layout: exercise
 
 {% include player.html filepath="/assets/audio/simple-slow-techno.mp3" %}
 
-Load the code as a <a href="{{ "/assets/files/simple-slow-techno.txt" | prepend: site.baseurl }}">text file</a>
+Last inn koden som <a href="{{ "/assets/files/simple-slow-techno.txt" | prepend: site.baseurl }}">tekstfil</a>
 
 {% highlight ruby %}
 # Simple Slow Techno

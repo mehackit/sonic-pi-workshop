@@ -7,7 +7,7 @@ layout: exercise
 
 {% include player.html filepath="/assets/audio/dubstep-at-loop.mp3" %}
 
-Load the code as a <a href="{{ "/assets/files/dubstep-at-loop.txt" | prepend: site.baseurl }}">text file</a>
+Last inn koden som <a href="{{ "/assets/files/dubstep-at-loop.txt" | prepend: site.baseurl }}">tekstfil</a>
 
 {% highlight ruby %}
 # Dubstep bass and beat programming with the "at" command 

@@ -7,7 +7,7 @@ layout: exercise
 
 {% include player.html filepath="/assets/audio/band-example-2.mp3" %}
 
-Load the code as a <a href="{{ "/assets/files/band-example-2.txt" | prepend: site.baseurl }}">text file</a>
+Last inn koden som <a href="{{ "/assets/files/band-example-2.txt" | prepend: site.baseurl }}">tekstfil</a>
 
 {% highlight ruby %}
 # Band Example 2

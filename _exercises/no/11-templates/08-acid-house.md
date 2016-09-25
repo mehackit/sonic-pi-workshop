@@ -7,7 +7,7 @@ layout: exercise
 
 {% include player.html filepath="/assets/audio/acid-house-with-master-effects.mp3" %}
 
-Load the code as a <a href="{{ "/assets/files/acid-house-with-master-effects.txt" | prepend: site.baseurl }}">text file</a>
+Last inn koden som <a href="{{ "/assets/files/acid-house-with-master-effects.txt" | prepend: site.baseurl }}">tekstfil</a>
 
 {% highlight ruby %}
 # Acid House with some boosting effects in the master bus

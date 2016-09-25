@@ -7,7 +7,7 @@ layout: exercise
 
 {% include player.html filepath="/assets/audio/laidback-breakbeat.mp3" %}
 
-Load the code as a <a href="{{ "/assets/files/laidback-breakbeat.txt" | prepend: site.baseurl }}">text file</a>
+Last inn koden som <a href="{{ "/assets/files/laidback-breakbeat.txt" | prepend: site.baseurl }}">tekstfil</a>
 
 {% highlight ruby %}
 # Laidback breakbeat with live_loop delays and intro part
