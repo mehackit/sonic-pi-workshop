@@ -1,11 +1,11 @@
 ---
 chapter: Avanserte tema 1
-title: Slicer på norsk
+title: Slicer
 lang: no
 layout: exercise
 ---
 
-In addition to the sample slicing presented in the previous topic, you can also use the audio effect `:slicer` to add some "rhythmic and chops" to your music. It basically alters the volume of the sound over time (and this effect is often called amplitude modulation). Now let's start our experiment with this effect by creating a new `live_loop` in an empty buffer and use the sample `:loop_breakbeat` as our building block: 
+I tillegg til samplesplittingen i det forrige kapittelet kan du også bruke effekten `:slicer` for å legge på litt "rhythmic & chops" til musikken din. Det den gjør er å endre volumet av samplet over tid (dette kalles også amplititudemodifikasjon). La oss begynne å eksperimente med denne effekten ved å lage en ny `live_loop` i et tomt mellomlager og bruke samplet `:loop_breakbeat` som byggekloss: 
 
 {% highlight ruby %}
 use_bpm 120
@@ -16,11 +16,11 @@ live_loop :breakbeat do
 end
 {% endhighlight %}
 
-The loop should now sound the same as in the video below. We are using the red color to indicate the volume of the sound and in this example it should be at maximum.  
+Nå skal sangen din høres ut som i videoen under. Vi bruker rød farge for å vise volumet til lyden, og i eksempelet her skal det være på max hele tiden.
 
 {% include videoplayer.html filepath="/assets/video/breakbeat_dry" %}
 
-Now let's add the slicer effect to the `live_loop` by using the familiar `with_fx` command. If you don't remember or know how the effects are used in Sonic Pi, you can read more about them in the previous chapter called  <a href="{{ "/exercises/en/03-tweak-the-sounds/03-effects.html" | prepend: site.baseurl }}">Effects</a>.
+La oss legge til en slicer effekt til `live_loop`en vår ved å bruke `with_fx` kommandoen. Hvis du ikke husker eller vet hvordan man bruker effekter i Sonic Pi, kan du lese mer om dem i det forrige kapittelet som heter <a href="{{ "/exercises/no/03-tweak-the-sounds/03-effects.html" | prepend: site.baseurl }}">effekter</a>.
 
 {% highlight ruby %}
 use_bpm 120
@@ -35,13 +35,14 @@ end
 
 {% include player.html filepath="/assets/audio/breakbeat_slicer.mp3" %}
 
-Now the newly added slicer effect sounds too harsh and we'll need to tune it a little bit. The main options of the slicer effect are `phase`, `wave` and `mix`. You can use them to control the amplitude modulation. The option `phase` is the frequency how fast or slow the amplitude modulation occurs. The default value for `phase`is `0.25` which means that the effect occurs every 1/16th note. Because of this the previous example sounded rather hectic. 
 
-Slicer effect can modulate the amplitude by using four different waveforms: `0`(saw), `1` (pulse), `2` (triangle) and `3`(sinewave). By default, `wave` is set to `1` which means that is uses pulse (also known as square) wave to modulate the amplitude. The pictures below illustrate what the waveforms look like and how they increase or decrease the amplitude (area marked with red color) over time. 
+Den effekten høres litt hard ut og vi må justere litt på den. De viktigste justeringsmulighetene i slicer effekten er `phase`, `wave` of `mix`. Du kan bruke dem for å styre amplitudemoduleringen. `phase` er frekvensen som sier hvor fort eller raskt amplitudemoduleringen foregår. Standardveriden for `phase` er `0.25` som betyr at effekten skjer hver 1/16 dels note. På grunn av dette høres det forrige eksempelet litt masete ut. 
+
+Slicer effekten kan endre lyden med fire forskjellige bølgeformer: `0`(sagtann), `1` (puls), `2` (trekant) and `3`(sinusbølge). Som standard er `wave` satt til `1` som som betyr at det er en firkantpuls for å endre volumet (amplituden). Bildet under viesr hvordan bølgeformene ser ut og hvordan de senker og øker volumet (amplituden, det røde området) over tid.
 
 <img src="{{ "/assets/img/slicer_waveforms.png" | prepend: site.baseurl }}" width="100%">
 
-Now let's try to change the waveform to the saw (`wave: 0`). This should make the effect a little bit smoother and less abrupt. 
+Nå kan du prøve å endre bølgeformen til en sagtann (`wave: 0`). Det burde gjøre effekten litt mykere og ikke så brå.
 
 {% highlight ruby %}
 use_bpm 120
@@ -56,17 +57,17 @@ end
 
 {% include videoplayer.html filepath="/assets/video/fx_slicer_wave_0" %}
 
-Let's double the duration of the phase (`phase: 0.5`) and switch the waveform to pulse (`wave: 1`):
+La oss senke frekvensen ved å øke phase (`phase: 0.5`) og bytte bølgeformen til en firkantpuls (`wave: 1`):
 
 {% include videoplayer.html filepath="/assets/video/fx_slicer_wave_1" %}
 
-Now what happens if we use the following options (`phase: 0.5, wave: 1`) with the effect:
+Hva skjer om vi bruker disse verdiene på effekten? (`phase: 0.5, wave: 1`):
 
 {% include videoplayer.html filepath="/assets/video/fx_slicer_wave_2" %}
 
-This way it's quite easy to add some rhythm, variance and dynamics to the drum loops. Remember that you can also use this with the synthesizers in Sonic Pi! 
+På denne måten er det ganske lett å legge på rytme, variasjon og dynamikk til trommesporet. Husk at du også kan bruke dette på synthesizerene i Sonic Pi!
 
-Here is the last slicer effect example that uses longer phase times with the slicer effect:
+Her er et siste slicer effekt eksempel som bruker lenger fasetider (phase) med slicer effekten:
 
 {% highlight ruby %}
 use_bpm 120
