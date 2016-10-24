@@ -12,9 +12,14 @@
 
       <div class="lang">
         {% if page.lang == "fi" %}
-          <a href="{{ "/index.html" | prepend: site.baseurl }}">in english</a>
+          <a href="{{ "/index.html" | prepend: site.baseurl }}">in english</a> 
+          <a href="{{ "/index_no.html" | prepend: site.baseurl }}">norsk</a>
+        {% elsif page.lang == "en" %}
+          <a href="{{ "/index_fi.html" | prepend: site.baseurl }}">suomeksi</a> 
+          <a href="{{ "/index_no.html" | prepend: site.baseurl }}">norsk</a> 
         {% else %}
-          <a href="{{ "/index_fi.html" | prepend: site.baseurl }}">suomeksi</a>
+          <a href="{{ "/index.html" | prepend: site.baseurl }}">in english</a> 
+          <a href="{{ "/index_fi.html" | prepend: site.baseurl }}">suomeksi</a>               
         {% endif %}
       </div>
 

@@ -1,9 +1,9 @@
 <div class="sidebar">
   <div class="sidebar-about">
-    <h1>{% if page.lang == "fi" %} <a href="{{ "/index_fi.html" | prepend: site.baseurl }}">  {% else %} <a href="{{ "/" | prepend: site.baseurl }}"> {% endif %}
+    <h1>{% if page.lang == "fi" %} <a href="{{ "/index_fi.html" | prepend: site.baseurl }}">  {% elsif page.lang == "en" %} <a href="{{ "/" | prepend: site.baseurl }}"> {% else %} <a href="{{ "/index_no.html" | prepend: site.baseurl }}"> {% endif %}
       <img alt="logo" src="{{ "/assets/img/mehackit_logo_white.png" | prepend: site.baseurl }}" />
     </a></h1>
-    <p id="sidebar_lead" class="lead">{% if page.lang == "fi" %} {{ site.description_fi }} {% elsif page.lang == "no" %} {{ site.description_no }} {% else %} {{site.description }} {% endif %}</p>
+    <p id="sidebar_lead" class="lead">{% if page.lang == "fi" %} {{ site.description_fi }} {% elsif page.lang == "en" %} {{ site.description }} {% else %} {{site.description_no }} {% endif %}</p>
     <div class="line"></div>
     <a aria-hidden="false" class="nav-toggle" id="toggle" href="#">Menu</a>
   </div>
