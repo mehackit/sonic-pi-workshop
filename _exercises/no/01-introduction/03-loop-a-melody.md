@@ -1,7 +1,7 @@
 ---
 chapter: Introduksjon
 title: Gjenta en melodi
-lang: en
+lang: no
 layout: exercise
 ---
 
