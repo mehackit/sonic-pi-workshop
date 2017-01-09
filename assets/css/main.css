@@ -662,3 +662,13 @@ table > tbody {
   font-size: 24px;
   content:"x";
 }
+
+.fa-angle-left {
+  position: fixed;
+  top: 50%;
+}
+
+.fa-angle-right {
+  position: fixed;
+  top: 50%;
+}
