@@ -5,7 +5,7 @@ lang: no
 layout: exercise
 ---
 
-Legg til en ny live_loop for bassen. Komponener en stødig og enkel bass. Hvis det hjelper kan du bruke <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> i browseren for å finne toner som du liker. Her er et eksempel:
+Legg til en ny live_loop for bassen. Komponener en stødig og enkel bass. Hvis det hjelper kan du bruke <a href="{{ "/exercises/no/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> i browseren for å finne toner som du liker. Her er et eksempel:
 
 {% highlight ruby %}
 live_loop :bass do
