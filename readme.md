@@ -30,6 +30,9 @@ cd <path to your folder>
 ```
 git checkout -b your_branch_name
 ```
+
+Be wary of encoding issues, use UTF-8 without BOM (Byte Order Marks), many editors can silently include BOM and cause issues.
+
 - Do your changes and commit:
 ```
 git commit -am "commit message"
