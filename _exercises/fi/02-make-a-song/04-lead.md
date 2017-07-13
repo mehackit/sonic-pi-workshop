@@ -30,7 +30,7 @@ Ensimmäinen lista `[:c2, :d2, :e2, :d2]` on joukko säveliä ja toinen lista `[
 
 ## Melodia
 
-Tee uusi `live_loop` nimeltä `melodia`, johon voimme kirjoittaa kappaleen päämelodian. Jos se tuntuu helpommalta, käytä `play_pattern_timed` komentoa melodian kirjoittamiseen. Voit myös halutessasi käyttää selaimessa toimivaa <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">pianoa</a> päämelodian tavailua varten. Alla on esimerkki melodiasta:
+Tee uusi `live_loop` nimeltä `melodia`, johon voimme kirjoittaa kappaleen päämelodian. Jos se tuntuu helpommalta, käytä `play_pattern_timed` komentoa melodian kirjoittamiseen. Voit myös halutessasi käyttää selaimessa toimivaa <a href="{{ "/exercises/fi/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">pianoa</a> päämelodian tavailua varten. Alla on esimerkki melodiasta:
 
 {% highlight ruby %}
 live_loop :melodia do
