@@ -30,7 +30,7 @@ Den første listen `[:c2, :d2, :e2, :d2]` er en gruppe av noter, og den andre li
 
 ## Melodi
 
-Lag en ny `live_loop` som heter `:melodi` og lag en melodi til sangen din. Hvis du synes det er enklere kan du bruke `play_pattern_timed` funksjonen for å skrive melodien. Du kan også bruke <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> hvis det hjelper. Her er et eksempel:
+Lag en ny `live_loop` som heter `:melodi` og lag en melodi til sangen din. Hvis du synes det er enklere kan du bruke `play_pattern_timed` funksjonen for å skrive melodien. Du kan også bruke <a href="{{ "/exercises/no/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> hvis det hjelper. Her er et eksempel:
 
 {% highlight ruby %}
 live_loop :melodi do

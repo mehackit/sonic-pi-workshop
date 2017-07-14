@@ -30,7 +30,7 @@ The first list `[:c2, :d2, :e2, :d2]` is a group of notes and the second list `[
 
 ## Melody
 
-Create a new `live_loop` called `:melody` create a lead theme for your song. If it feel easier, use the `play_pattern_timed` function to write the melody. You can use the <a href="{{ "/exercises/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> also if it helps. Here's an example:
+Create a new `live_loop` called `:melody` create a lead theme for your song. If it feel easier, use the `play_pattern_timed` function to write the melody. You can use the <a href="{{ "/exercises/en/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> also if it helps. Here's an example:
 
 {% highlight ruby %}
 live_loop :melody do
