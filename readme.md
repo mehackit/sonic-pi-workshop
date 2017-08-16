@@ -1,4 +1,4 @@
-# Website for mehackit media-art workshops with Processing
+# Website for Mehackit creative programming workshops with Sonic Pi
 
 ## Setting up
 
