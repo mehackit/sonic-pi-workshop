@@ -9,7 +9,7 @@ Muistathan komennon `chord`, joka palauttaa listana jonkin soinnun sävelet?
 
 {% highlight ruby %}
 play chord(:c, :major).choose 
-# soittaa satunnaisesti C-duurisoinnun säveliä (:c, :e or :g)
+# soittaa satunnaisesti C-duurisoinnun säveliä (:c, :e tai :g)
 {% endhighlight %}
 
 Sonic Pi:ssä on myös komento nimeltä `scale`, joka palauttaa kaikki määriteltyyn sävellajiin kuuluvat sävelet: 

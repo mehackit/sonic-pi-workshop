@@ -9,7 +9,7 @@ Remember `chord`? The chord function gives you the notes of a certain chord:
 
 {% highlight ruby %}
 play (chord :c, :major).choose 
-# plays a random note of the C major chord (:c, :g r :f)
+# plays a random note of the C major chord (:c, :e or :g)
 {% endhighlight %}
 
 There's also a function called `scale`. Scale returns all the notes in a _scale_, not just the ones in a chord:

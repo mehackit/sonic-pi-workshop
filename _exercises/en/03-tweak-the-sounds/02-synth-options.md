@@ -37,7 +37,7 @@ Remove frequencies higher that the given value. Use values between 0-130.
 play :c2, cutoff: 80
 {% endhighlight %}
 
-### `attac:` and `release:`
+### `attack:` and `release:`
 
 Time in beats for attack and release.
 
@@ -49,7 +49,7 @@ play :c2, attack: 1, release: 1 #the note is two beats long
 
 ### `use_synth_defaults` and `use_sample_defaults`
 
-If you don't want to set your ops for each play or sample on your loop, you can use `use_synth_defaults` and `use_sample_defaults` to set the opts for all the next plays and samples in the loop:
+If you don't want to set your opts for each play or sample in your loop, you can use `use_synth_defaults` and `use_sample_defaults` to set the opts for all the next plays and samples in the loop:
 
 {% highlight ruby %}
 live_loop :melody do

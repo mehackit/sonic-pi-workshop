@@ -21,7 +21,7 @@ live_loop :effects do
 end
 {% endhighlight %}
 
-Sounds bigger, doesn't it? Just like synths and samples, effects also have options. `mix:`is an option that sets how much the effect and the original sound is heard. `mix: 0` plays only the original sound, `mix: 1` plays only the FX. Reverb has a `:room` option also. Try different room sizes with values between 0-1. If you open the 'Fx' tab on the help menu you can find what options are available for which FX.
+Sounds bigger, doesn't it? Just like synths and samples, effects also have options. `mix:`is an option that sets how much the effect and the original sound is heard. `mix: 0` plays only the original sound, `mix: 1` plays only the FX. Reverb has a `room` option also. Try different room sizes with values between 0-1. If you open the 'Fx' tab on the help menu you can find what options are available for which FX.
 
 {% highlight ruby %}
 live_loop :effects do
@@ -35,7 +35,7 @@ live_loop :effects do
 end
 {% endhighlight %}
 
-There are so many FX to choose from. And you don't even have to settle for one: you can nest them! (At some point you computer can run out of resources but worry about that then.)
+There are so many FX to choose from. And you don't even have to settle for one: you can nest them! (At some point your computer can run out of resources but don't worry about that now.)
 
 {% highlight ruby %}
 live_loop :effects do

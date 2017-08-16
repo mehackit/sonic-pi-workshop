@@ -4,6 +4,7 @@ email: hello@mehackit.org
 description: Creative programming workshop with Sonic Pi
 description_fi: Musiikkiohjelmointia Sonic Pi -ohjelmalla
 description_no: Kreativ programmeringsworkshop med Sonic Pi
+description_kr: Sonic Pi와 함께하는 음악 프로그래밍
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://sonic-pi.mehackit.org" # the base hostname & protocol for your site
 # url : "http://127.0.0.1:4000"

@@ -81,7 +81,7 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-Grrreat! Remember to explore and try out different things. As a recap, here's an example about what you cold have going on at this point:
+Grrreat! Remember to explore and try out different things. As a recap, here's an example about what you could have going on at this point:
 
 {% highlight ruby %}
 use_bpm 120

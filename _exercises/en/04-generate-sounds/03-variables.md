@@ -16,7 +16,7 @@ live_loop :melody do
 end
 {% endhighlight %}
 
-There's a variable `r` that gets a certain value each time the loop is played and that value is being used as the release option for play and as the sleep length. A variable is a bit like a box where you can store things and take things out. Using a variable is as simple as `valiable_name = variable_value`. Now the variable_value is stored in variable_name. You can get the value just by typing variable_name.
+There's a variable `r` that gets a certain value each time the loop is played and that value is being used as the release option for play and as the sleep length. A variable is a bit like a box where you can store things and take things out. Using a variable is as simple as `variable_name = variable_value`. Now the variable_value is stored in variable_name. You can get the value just by typing variable_name.
 
 Let's add a synth and bass to the example to try out variables. The `:keys` loop is simple, nothing new happening, but the `:bass` loop is a bit tricky:
 

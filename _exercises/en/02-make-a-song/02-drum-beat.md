@@ -64,7 +64,7 @@ live_loop :hihat do
 end
 {% endhighlight %}
 
-The polyrhythmic hi-hat pattern was fist a "mistake". The loop is 1.25 beats long instead of the supposed 1. But it sounds cool! So remember to make a lot of mistakes to find something you weren't even looking for.
+The polyrhythmic hi-hat pattern was first a "mistake". The loop is 1.25 beats long instead of the supposed 1. But it sounds cool! So remember to make a lot of mistakes to find something you weren't even looking for.
 
 Now the song looks something like this:
 

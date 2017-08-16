@@ -16,7 +16,7 @@ live_loop :melodi do
 end
 {% endhighlight %}
 
-Det er en variabel `r` som får en gitt verdi hver gang man spiller løkken og den verdien brukes som release for play og som sleep lengde. En variabel er litt som en boks der du kan lagre ting og ta ting ut igjen. For å bruke en variabel trenger du bare å skrive `valiable_navn = variable_verdi`. Nå har du lagret variable_verdi i variable_navn. Du kan få ut verdien igjen bare ved å skrive variable_navn.
+Det er en variabel `r` som får en gitt verdi hver gang man spiller løkken og den verdien brukes som release for play og som sleep lengde. En variabel er litt som en boks der du kan lagre ting og ta ting ut igjen. For å bruke en variabel trenger du bare å skrive `variable_navn = variable_verdi`. Nå har du lagret variable_verdi i variable_navn. Du kan få ut verdien igjen bare ved å skrive variable_navn.
 
 La oss legge til en synth og bass til eksemepelet og prøve variablene. `:keys` løkken er enkel, ikke noe nytt som skjer der, men i `:bass` løkken er det en del triks:
 

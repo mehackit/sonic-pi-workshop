@@ -9,7 +9,7 @@ Husker du `chord`? Chord funksjonen gir deg tonene i en gitt akkord:
 
 {% highlight ruby %}
 play (chord :c, :major).choose 
-# spiller en tilfeldig tone fra c-dur akkorder (:c, :g r :f)
+# spiller en tilfeldig tone fra c-dur akkorder (:c, :e eller :g)
 {% endhighlight %}
 
 Det er også en funksjon som heter `scale`. Den gir deg alle notene i en _skala_, ikke bare de som er i en akkord:

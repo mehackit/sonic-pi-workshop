@@ -1,3 +1,5 @@
 _site/
 build-tmp/
 content.txt
+.DS_Store
+

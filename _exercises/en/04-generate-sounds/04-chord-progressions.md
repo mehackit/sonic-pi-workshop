@@ -11,7 +11,7 @@ The previous example was playing only in C minor. Here's an example that uses a 
 {% highlight ruby %}
 chords = [(chord :C, :minor7), (chord :Ab, :major7), (chord :Eb, :major7), (chord :Bb, "7")].ring
 c = chords[0] # take the first chord of the ring and save it to a variable
-# this is going to be used in all the live_loops. I will be ticked by the :bass loop
+# this is going to be used in all the live_loops. It will be ticked by the :bass loop
 
 live_loop :melody do
   use_synth :blade

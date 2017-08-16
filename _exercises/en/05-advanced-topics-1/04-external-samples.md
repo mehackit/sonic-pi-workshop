@@ -14,7 +14,7 @@ Once you have downloaded the pack and extracted the files to a folder, you'll ha
 * Windows: "C:/Users/sam/Desktop/Samples" 
 * Raspberry Pi, Linux and Mac: "/Users/sam/Desktop/Samples" 
 
-Just remember to use your own username instead of 'sam'. The sample pack contains following files: `hit_1.wav` to `hit_7.wav` (percussive hits) and `loop_1.wav` to `loop_7.wav` (looping beats that are recommended to be played with the sampler opt `beat_stretch`).
+Just remember to use your own username instead of 'sam'. The sample pack contains following files: `hit_1.wav` to `hit_7.wav` (percussive hits) and `loop_1.wav` to `loop_7.wav` (looping beats are recommended to be played with the sampler opt `beat_stretch`).
 
 Now you can play them directly with the `sample` command by using the right file path:
 
