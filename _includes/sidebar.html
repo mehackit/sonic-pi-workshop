@@ -1,9 +1,9 @@
 <div class="sidebar">
   <div class="sidebar-about">
-    <h1>{% if page.lang == "fi" %} <a href="{{ "/index_fi.html" | prepend: site.baseurl }}">  {% elsif page.lang == "en" %} <a href="{{ "/" | prepend: site.baseurl }}"> {% elsif page.lang == "kr" %} <a href="{{ "/index_kr.html" | prepend: site.baseurl }}"> {% else %} <a href="{{ "/index_no.html" | prepend: site.baseurl }}"> {% endif %}
+    <h1>{% if page.lang == "fi" %} <a href="{{ "/index_fi.html" | prepend: site.baseurl }}">  {% elsif page.lang == "en" %} <a href="{{ "/" | prepend: site.baseurl }}"> {% elsif page.lang == "kr" %} <a href="{{ "/index_kr.html" | prepend: site.baseurl }}"> {% elsif page.lang == "fr" %} <a href="{{ "/index_fr.html" | prepend: site.baseurl }}"> {% else %} <a href="{{ "/index_no.html" | prepend: site.baseurl }}"> {% endif %}
       <img alt="logo" src="{{ "/assets/img/mehackit_logo_white.png" | prepend: site.baseurl }}" />
     </a></h1>
-    <p id="sidebar_lead" class="lead">{% if page.lang == "fi" %} {{ site.description_fi }} {% elsif page.lang == "en" %} {{ site.description }} {% elsif page.lang == "kr" %} {{ site.description_kr }} {% else %} {{site.description_no }} {% endif %}</p>
+    <p id="sidebar_lead" class="lead">{% if page.lang == "fi" %} {{ site.description_fi }} {% elsif page.lang == "en" %} {{ site.description }} {% elsif page.lang == "kr" %} {{ site.description_kr }} {% elsif page.lang == "fr" %} {{ site.description_fr }} {% else %} {{site.description_no }} {% endif %}</p>
     <div class="line"></div>
     <a aria-hidden="false" class="nav-toggle" id="toggle" href="#">Menu</a>
   </div>
@@ -41,13 +41,15 @@
         {% endfor %}
       </ul>
     </nav>
-    
+
     <p id="sidebar_lead" class="lead">Mehackit {{ site.time | date: '%Y' }} &#10084; <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img id="licence" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
-    
+
     {% if page.lang == "fi" %}
     <p id="licence_text">Lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen -lisenssillä</a>. Perustuu <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> -järjestön <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">"Getting started with Sonic Pi"</a> ja Stuart Brettin <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a> -oppaisiin.</p>
     {% elsif page.lang == "kr" %}
     <p id="licence_text"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Creative Commons ShareAlike 4.0 International License</a>에 저작권 등록이 되어 있으며, <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> 과 Stuart Brett의 <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a>를 바탕으로 제작 되었습니다.</p>
+    {% elsif page.lang == "fr" %}
+    <p id="licence_text">Cette oeuvre est publiée sous licence <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution - Partage dans les mêmes conditions 4.0 International</a>. Basé sur <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> par la <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> et <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a> par Stuart Brett.</p>
     {% else %}
     <p id="licence_text">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Based on <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> by <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> and <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">An introduction to Sonic Pi</a> by Stuart Brett.</p>
     {% endif %}
