@@ -16,13 +16,16 @@
           <a href="{{ '/index_se.html' | prepend: site.baseurl }}">svenska</a>
           <a href="{{ '/index_no.html' | prepend: site.baseurl }}">norsk</a>
           <a href="{{ '/index_kr.html' | prepend: site.baseurl }}">korean</a>
+          <a href="{{ '/index_fr.html' | prepend: site.baseurl }}">français</a>
         {% elsif page.lang == "en" %}
           <a href="{{ '/index_fi.html' | prepend: site.baseurl }}">suomeksi</a> 
           <a href="{{ '/index_se.html' | prepend: site.baseurl }}">svenska</a>
           <a href="{{ '/index_no.html' | prepend: site.baseurl }}">norsk</a>
           <a href="{{ '/index_kr.html' | prepend: site.baseurl }}">korean</a>
+          <a href="{{ '/index_fr.html' | prepend: site.baseurl }}">français</a>
         {% elsif page.lang == "kr" %}
           <a href="{{ '/index.html' | prepend: site.baseurl }}">in english</a>
+          <a href="{{ '/index_no.html' | prepend: site.baseurl }}">norsk</a>
           <a href="{{ '/index_fi.html' | prepend: site.baseurl }}">suomeksi</a>
           <a href="{{ '/index_se.html' | prepend: site.baseurl }}">svenska</a>
           <a href="{{ '/index_no.html' | prepend: site.baseurl }}">norsk</a>
@@ -30,17 +33,25 @@
           <a href="{{ '/index_fi.html' | prepend: site.baseurl }}">suomeksi</a>
           <a href="{{ '/index_no.html' | prepend: site.baseurl }}">norsk</a>
           <a href="{{ '/index.html' | prepend: site.baseurl }}">in english</a>
+          <a href="{{ '/index_fr.html' | prepend: site.baseurl }}">français</a>
+          <a href="{{ '/index_kr.html' | prepend: site.baseurl }}">korean</a>          
+        {% elsif page.lang == "fr" %}
+          <a href="{{ '/index.html' | prepend: site.baseurl }}">in english</a>
+          <a href="{{ '/index_fi.html' | prepend: site.baseurl }}">suomeksi</a>
+          <a href="{{ '/index_no.html' | prepend: site.baseurl }}">norsk</a>
+          <a href="{{ '/index_se.html' | prepend: site.baseurl }}">svenska</a>          
           <a href="{{ '/index_kr.html' | prepend: site.baseurl }}">korean</a>
         {% else %}
           <a href="{{ '/index.html' | prepend: site.baseurl }}">in english</a> 
           <a href="{{ '/index_fi.html' | prepend: site.baseurl }}">suomeksi</a>
           <a href="{{ '/index_se.html' | prepend: site.baseurl }}">svenska</a>
           <a href="{{ '/index_kr.html' | prepend: site.baseurl }}">korean</a>
+          <a href="{{ '/index_fr.html' | prepend: site.baseurl }}">français</a>
         {% endif %}
       </div>
 
       {{ content }}
-      
+
     </div>
 
     {% include scripts.html %}
