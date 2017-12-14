@@ -9,7 +9,7 @@ Tills nu har du använt parametrarna `attack`, `release` och `cutoff` i samband 
 
 ### `amp:`
 
-Amplitud betyder ljudstyrka. När du ger parametern värdet 0, hörs ljudet inte alls och med värdet 1 spelas ljudet med normal volym. Du kan öka ljudstyrkan med t.ex värdena 1.5 eller 2, me oftast lönar sig det inte eftersom det ibland försämrar ljudkvaliteten. Du kan spela ljudet med lägre volym än normalt med värden under 1 (t.ex 0.5, då ljudstyrkan är hälften av det normala)
+Amplitud betyder ljudstyrka. När du ger parametern värdet 0, hörs ljudet inte alls och med värdet 1 spelas ljudet med normal volym. Du kan öka ljudstyrkan med t.ex värdena 1.5 eller 2, men oftast lönar sig det inte eftersom det ibland försämrar ljudkvaliteten. Du kan spela ljudet med lägre volym än normalt med värden under 1 (t.ex 0.5, då ljudstyrkan är hälften av det normala)
 
 {% highlight ruby %}
 play :c2, amp: 0.5
@@ -53,7 +53,7 @@ sample :drum_cymbal_open, cutoff: 60
 play :c2, attack: 1, release: 1 # kaksi iskua pitkä nuotti
 {% endhighlight %}
 
-<img src="{{ "/assets/img/attackrelease_fi.png" | prepend: site.baseurl }}">
+<img src="{{ "/assets/img/attackrelease_se.png" | prepend: site.baseurl }}">
 
 ### `use_synth_defaults` ja `use_sample_defaults`
 

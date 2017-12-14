@@ -25,7 +25,7 @@ Nu kan du starta Sonic Pi och ta ett titt på hur den ser ut!
 
 Här är användargränssnittet för Sonic Pi som består av tre huvudfönster. Det största är för att skriva din kod i, vi kallar det för programmeringsfönstret. Till höger om programmeringsfönstret finns en loggpanel, som visar information om ditt program när det körs. När du klickar på hjälp-knappen i längst upp till höger får du fram den tredje fönstret som visar dokumentationen längst ner på skärmen. Där hittar du användbara programmeringsexempel och information om olika ljud, samples och mycket mer!
  
-<img src="{{ "/assets/img/interface_fi.png" | prepend: site.baseurl}}">
+<img src="{{ "/assets/img/interface_se.png" | prepend: site.baseurl}}">
 <p class="center"><small><i>Sonic Pi interface</i></small></p>
 
 ## Spela en ton

@@ -48,7 +48,7 @@ Ibland vill du kanske spela noter av olika längd. Det kan du göra genom att ti
 
 Såhär ser det ut. Nu är tonen 4 slag lång: ljudet blir starkare det första slaget och tystnar under de tre sista. 
 
-<img src="{{ "/assets/img/attackrelease_fi.png" | prepend: site.baseurl }}"> 
+<img src="{{ "/assets/img/attackrelease_se.png" | prepend: site.baseurl }}"> 
 
 {% highlight ruby %}
 play 60, attack: 1, release: 3

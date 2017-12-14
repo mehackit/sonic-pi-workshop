@@ -25,14 +25,14 @@ play 69
 
 Kommandot `sleep 1` berättar för programmet att vänta ett helt slag innan nästa kommando utförs. Till näst kan du prova att använda olika värden istället för värdet 1. Desto mindre värdet är, desto kortare tid väntar programmet före nästa kommando (och tvärtom). Om du känner till vanlig musiknotation, berättar nästa bild hur olika pauser och tonlängder fungerar i Sonic Pi: 
 
-<img src="{{ "/assets/img/Notes_FI.png" | prepend: site.baseurl }}"> 
-<img src="{{ "/assets/img/Rests_fi.png" | prepend: site.baseurl }}">
+<img src="{{ "/assets/img/Notes_SE.png" | prepend: site.baseurl }}"> 
+<img src="{{ "/assets/img/Rests_se.png" | prepend: site.baseurl }}">
 
 Noterna efter `play`-kommandot kan man skriva antingen som så kallade MIDI - värden, (nummer mellan 0 och 127, t.ex. 67, 80, 22) eller som noter (:G4, :Ab5, :Bb). Det beror helt och hållet på dig vilken notation du vill använda. 
 
 Här är en översikt över noter och deras MIDI - värden. 
 
-<img src="{{ "/assets/img/midi_notes_fi.png" | prepend: site.baseurl }}">
+<img src="{{ "/assets/img/midi_notes_se.png" | prepend: site.baseurl }}">
 
 ## Prova dig fram
 

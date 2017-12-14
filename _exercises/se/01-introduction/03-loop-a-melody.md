@@ -1,6 +1,6 @@
 ---
 chapter: Inledning
-title: Att upprepa en melodi
+title: Upprepa en melodi
 lang: se
 layout: exercise
 ---
