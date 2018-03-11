@@ -85,4 +85,4 @@ live_loop :melodie do
 end
 {% endhighlight %}
 
-Commence à itérer, vas-y&nbsp!
+Commence à itérer, vas-y&nbsp;!
