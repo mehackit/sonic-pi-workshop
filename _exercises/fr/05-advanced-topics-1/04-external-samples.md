@@ -14,7 +14,7 @@ Après avoir téléchargé le pack et extrait les fichiers dans un répertoire, 
 * Windows: "C:/Users/sam/Desktop/Samples"
 * Raspberry Pi, Linux et Mac: "/Users/sam/Desktop/Samples"
 
-Rappelle-toi juste de remplacer 'sam' par ton propre nom d'utilisateur. Le pack d'échantillons contient les fichiers suivants&nbsp;: de `hit_1.wav` à `hit_7.wav` (coups de percussion) et de `loop_1.wav` à `loop_7.wav` (boucle rythmiques qu'il est recommandé de jouer avec l'option `beat_stretch`).
+Rappelle-toi juste de remplacer 'sam' par ton propre nom d'utilisateur. Le pack d'échantillons contient les fichiers suivants&nbsp;: de `hit_1.wav` à `hit_7.wav` (coups de percussion) et de `loop_1.wav` à `loop_7.wav` (boucles rythmiques qu'il est recommandé de jouer avec l'option `beat_stretch`).
 
 Tu peux les jouer directement avec la commande `sample` en spécifiant le bon chemin&nbsp;:
 
@@ -34,7 +34,7 @@ live_loop :solenoid1 do
 end
 {% endhighlight %}
 
-Maintenant tu peux utiliser des samples externes et des samples internes à Soni Pi dans tes productions. Essaie de jouer l'exemple ci-dessous qui utilise quatre `live_loop` différentes pour jouer des samples externes et aussi un de Sonic Pi. Remarque aussi que dans la live_loop `:solenoid2` nous utilisons une variable `nomsample` pour choisir au hasard un des samples entre `hit_1.wav` et `hit_7.wav`.
+Maintenant tu peux utiliser des samples externes et des samples internes à Sonic Pi dans tes productions. Essaie de jouer l'exemple ci-dessous qui utilise quatre `live_loop` différentes pour jouer des samples externes et aussi un de Sonic Pi. Remarque aussi que dans la live_loop `:solenoid2` nous utilisons une variable `nomsample` pour choisir au hasard un des samples entre `hit_1.wav` et `hit_7.wav`.
 
 {% highlight ruby %}
 solenoids = "/Users/sam/Desktop/Samples/"
