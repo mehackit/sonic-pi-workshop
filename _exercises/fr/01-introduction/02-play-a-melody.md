@@ -32,7 +32,7 @@ play 69
 
 Comme déjà indiqué, tu peux écrire les notes en MIDI, c'est à dire en nombres compris entre 0 et 127 (`67`, `80`, `22`) ou en notation musicale anglaise (`:G4`, `:Ab5`, `:Bb`), c'est comme tu veux. Voici un tableau indiquant pour chaque note la valeur MIDI correspondante&nbsp;:
 
-<img src="{{ "/assets/img/midi_notes.png" | prepend: site.baseurl }}">
+<img src="{{ "/assets/img/midi_notes_fr.png" | prepend: site.baseurl }}">
 
 ## Essayons
 
