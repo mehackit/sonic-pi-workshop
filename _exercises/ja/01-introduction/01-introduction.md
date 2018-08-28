@@ -5,45 +5,43 @@ lang: ja
 layout: exercise
 ---
 
-Sonic Pi is an open-source programming environment, designed to explore and teach programming concepts through the process of creating new sounds. It's a free live coding synth for everyone created by Sam Aaron at the University of Cambridge Computer Laboratory. You can use Sonic Pi to program, compose and perform in classical and contemporary styles ranging from Canons to Dubstep.
+Sonic Piはオープンソースのプログラミング環境で、音を作りながらプログラミングの概念を教えたり探索したりするようにデザインされたものです。それは、ケンブリッジ大学のコンピューター・ラボラトリーのSam Aaronによって作られた、誰でも使える無料のライブコーディング・シンセです。Sonic Piを使って、カノンのようなクラシックからダブステップのような現代的なスタイルまで幅広い音楽をプログラミングして作曲することができます。
 
-This tutorial guides you through the basics and more of Sonic Pi. At the end of this tutorial you'll be able to create something like this:
+このチュートリアルは、Sonic Piの基本的な内容とより深い内容について紹介します。このチュートリアルを終えると、次のようなものを作れるようになるでしょう:
 
 {% include player.html filepath="/assets/audio/groove.mp3" %}
 
-Or something like this:
+または、次のようなものです:
 
 {% include player.html filepath="/assets/audio/amen.mp3" %}
 
-Sonic Pi is all about exploring. There are no mistakes, there are only discoveries. And most of all, it's about having fun. So remember this: have fun, explore and hack away!
+Sonic Piは探索そのものです。そこに間違いは無く、発見だけがあるのです。そしてそれはとりわけ楽しいものです。次のことを覚えておいてください。楽しんで、探索してハックしてください！
 
-## Open Sonic Pi
+## Sonic Piを開く
 
-If you don't have Sonic Pi installed, go to <a href="http://sonic-pi.net/">sonic-pi.net</a>, download and install Sonic Pi. It is available for Windows, OS X and Linux operating systems.
+Sonic Piがインストールされていない場合は, <a href="http://sonic-pi.net/">sonic-pi.net</a>に行き、Sonic Piをダウンロードしてインストールしてください。Windows版、macOS版、Linux版があります.
 
-Next, fire up Sonic Pi! Let's see how it looks like.
+次にSonic Piを起動して、どんな感じか見てみましょう！
 
-This is the Sonic Pi interface; it has three main windows. The largest one is for writing your code, and we call it the Programming Panel. There is also an log panel that displays information about your program as it runs. When you click on the help button at the top of the window, the third panel appears along the bottom displaying help documentation. This contains information about the language for programming Sonic Pi as well as different synth sounds, samples, and much more. There are also plenty of ready-to-go examples that you can try and use!
+下の図が、Sonic Piのインターフェースです。大きく分けて3つのウィンドウがあります。一番大きいウィンドウはコードを書くためのもので、プログラミング・パネルと呼んでいます。また、ログ・パネルは、プログラム実行時の情報を表示します。上のほうにあるヘルプボタンをクリックすると、3つめのパネルが下のほうに出てきて、ヘルプ・ドキュメントを表示します。このヘルプでは、Sonic Piのプログラム言語に関する情報の他、シンセサイザー音源、サンプリング音源などに関する情報が含まれています。そして、たくさんのサンプルプログラムが用意されていて、すぐに試すことができるのです！
 
 <img src="{{ "/assets/img/interface.png" | prepend: site.baseurl}}">
 <p class="center"><small><i>Sonic Pi interface</i></small></p>
 
-## Play a note
+## 音を鳴らす
 
-Let’s start with programming Sonic Pi to play a note. Select the `Buffer 0` tab and type:
+Sonic Piで音を鳴らすためのプログラミングを始めましょう。`Buffer 0`タブを選択して次のコードをタイプしましょう:
 
 {% highlight ruby %}
 play 60
 {% endhighlight %}
 
-Press **Run** from the upper left corner. Can you hear a beep?
+左上の **Run** を押してみましょう。ビープ音を聞くことができましたか？
 
-Try different values. Write for example `play 50` or `play 70`. How does the sound change?
+違う値を試してみましょう。例えば、`play 50`や`play 70`と書いてみましょう。音はどのように変わったでしょうか？
 
-Now try to write `pley 60` and click run. What happens?
+今度は`pley 60`と入力して、Runをクリックしてみましょう。何が起こりましたか？
 
-> This is an example of a bug in your code. In later activities, if the error panel displays text you will know that you have a bug that you need to fix. It could be that you have misspelt a word like `play`.
+> これはコードの中のバグの例です。後でエラーパネルがテキストを表示したら、修正する必要のあるバグがあることを知るでしょう。そしてそれは`play`のような単語のスペルを間違えたというものでしょう。
 
-The numbers you used are _MIDI notes_. MIDI is a useful way to compose and is a useful tool for quickly
-testing your notes and adjusting them by lowering their value (making your note lower) or increasing it, (making
-the pitch higher). Sonic Pi is familiar with both MIDI note numbers (values between `0` and `127`) and traditional musical notation (such as `:C4`, `:Eb3` or `:G5`).
+ここで使われた数字は、_MIDIノート番号_ です。MIDIノート番号は作曲に便利で、その値を小さくしたり（音を低くなります）大きくしたり（音は高くなります）して、素早く音を試したり、調整したりできます。Sonic Piでは、MIDIノート番号（`0`から`127`の値）も、伝統的な音名表記（`:C4`、`:Eb3`や`:G5`といったもの）のどちらも利用可能です。
