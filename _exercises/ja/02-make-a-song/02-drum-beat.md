@@ -1,7 +1,7 @@
 ---
 chapter: Make a song
 title: Drum beat
-lang: en
+lang: ja
 layout: exercise
 ---
 
@@ -16,7 +16,7 @@ live_loop :drums do
 end
 {% endhighlight %}
 
-Hit **Run** to hear your first `live_loop` playing a nice kick drum every beat. 
+Hit **Run** to hear your first `live_loop` playing a nice kick drum every beat.
 
 Let's do a simple backbeat with kick drum on 1 and 3, snare on 2 and 4. Instead of playing notes, you will be triggering samples. It's as simple as writing `sample :sample_name`. Here's an example drumbeat:
 

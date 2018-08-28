@@ -1,7 +1,7 @@
 ---
 chapter: Make a song
 title: Bass track
-lang: en
+lang: ja
 layout: exercise
 ---
 

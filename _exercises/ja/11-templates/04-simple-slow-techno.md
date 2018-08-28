@@ -1,7 +1,7 @@
 ---
 chapter: Templates
 title: Simple Slow Techno
-lang: en
+lang: ja
 layout: exercise
 ---
 

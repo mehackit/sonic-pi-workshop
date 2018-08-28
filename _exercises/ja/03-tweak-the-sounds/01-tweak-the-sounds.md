@@ -1,7 +1,7 @@
 ---
 chapter: Tweak the sounds
 title: Tweak the sounds
-lang: en
+lang: ja
 layout: exercise
 ---
 

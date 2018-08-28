@@ -1,7 +1,7 @@
 ---
 chapter: Introduction
-title: Introduction
-lang: en
+title: イントロダクション
+lang: ja
 layout: exercise
 ---
 

@@ -1,11 +1,11 @@
 ---
 chapter: Keys, chords and scales
 title: Keys, chords and scales
-lang: en
+lang: ja
 layout: exercise
 ---
 
-Sometimes composing a melody with Sonic Pi can be tricky, if you don't immediately know what `62` or `:c3` sounds like. To help with that, here's a browser keyboard for trying out your ideas. If you want, you can select a scale from the drop menu to see what keys might sound nice in a certain key. 
+Sometimes composing a melody with Sonic Pi can be tricky, if you don't immediately know what `62` or `:c3` sounds like. To help with that, here's a browser keyboard for trying out your ideas. If you want, you can select a scale from the drop menu to see what keys might sound nice in a certain key.
 
 <div class="keyboard-options">
   <select ID="sound">
@@ -14,7 +14,7 @@ Sometimes composing a melody with Sonic Pi can be tricky, if you don't immediate
     <option value="2">Acoustic Guitar</option>
     <option value="3">EDM, bro!</option>
   </select>
-  Select scale: 
+  Select scale:
   <select ID="scale">
     <option value="C">C Major</option>
     <option value="Db">Db Major</option>

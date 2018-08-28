@@ -1,7 +1,7 @@
 ---
 chapter: Generate sounds
 title: Variables
-lang: en
+lang: ja
 layout: exercise
 ---
 

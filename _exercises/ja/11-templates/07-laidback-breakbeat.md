@@ -1,7 +1,7 @@
 ---
 chapter: Templates
 title: Laidback Breakbeat
-lang: en
+lang: ja
 layout: exercise
 ---
 

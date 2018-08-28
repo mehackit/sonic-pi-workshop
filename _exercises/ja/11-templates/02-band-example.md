@@ -1,7 +1,7 @@
 ---
 chapter: Templates
 title: Band Template 1
-lang: en
+lang: ja
 layout: exercise
 ---
 

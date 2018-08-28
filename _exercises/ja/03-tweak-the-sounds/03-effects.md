@@ -1,11 +1,11 @@
 ---
 chapter: Tweak the sounds
 title: Effects
-lang: en
+lang: ja
 layout: exercise
 ---
 
-We've been holding this off for too long now, so here it comes: `with_fx`! 
+We've been holding this off for too long now, so here it comes: `with_fx`!
 
 That's a powerful tool for adding different effects to your composition. Let's start with `:reverb`. Pretty much everything sounds nice with a reverb. Start with surrounding your code with a `with_fx :reverb do` and `end` blocks:
 
@@ -53,4 +53,4 @@ live_loop :effects do
 end
 {% endhighlight %}
 
-Now go crazy and add FX everywhere for some amazing new sounds! 
+Now go crazy and add FX everywhere for some amazing new sounds!

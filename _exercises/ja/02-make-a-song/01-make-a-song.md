@@ -1,7 +1,7 @@
 ---
 chapter: Make a song
 title: Make a song
-lang: en
+lang: ja
 layout: exercise
 ---
 

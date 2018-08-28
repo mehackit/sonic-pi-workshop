@@ -1,7 +1,7 @@
 ---
 chapter: Cheatsheet
 title: Cheatsheet
-lang: en
+lang: ja
 layout: exercise
 ---
 
@@ -53,7 +53,7 @@ play :c, attack 1, decay: 0, sustain: 0, release: 1, amp: 0.5, pan: rrand(-0.5,0
 {% highlight ruby %}
 sample :bd_haus, amp: 0.5
 sleep 1
-sample :drum_cymbal_open, attack: 0.01, sustain: 0, release: 0.1 
+sample :drum_cymbal_open, attack: 0.01, sustain: 0, release: 0.1
 sleep 1
 live_loop :amen_break do
   sample :loop_amen, beat_stretch:2, rate: -1

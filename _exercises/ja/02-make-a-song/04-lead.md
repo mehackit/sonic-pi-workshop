@@ -1,7 +1,7 @@
 ---
 chapter: Make a song
 title: Lead track
-lang: en
+lang: ja
 layout: exercise
 ---
 
@@ -78,4 +78,4 @@ live_loop :melody do
 end
 {% endhighlight %}
 
-Yay, that's a great start! Now go and explore with different melodies, synths and `attack:` and `release:` values. 
+Yay, that's a great start! Now go and explore with different melodies, synths and `attack:` and `release:` values.

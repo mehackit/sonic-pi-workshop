@@ -1,7 +1,7 @@
 ---
 chapter: Templates
 title: Acid House with master FX
-lang: en
+lang: ja
 layout: exercise
 ---
 

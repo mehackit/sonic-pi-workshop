@@ -1,7 +1,7 @@
 ---
 chapter: Templates
 title: Hip Hop Beat
-lang: en
+lang: ja
 layout: exercise
 ---
 

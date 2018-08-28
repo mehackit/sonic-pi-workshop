@@ -1,21 +1,21 @@
 ---
 chapter: Generate sounds
 title: Tick
-lang: en
+lang: ja
 layout: exercise
 ---
 
 Remember `chord`? The chord function gives you the notes of a certain chord:
 
 {% highlight ruby %}
-play (chord :c, :major).choose 
+play (chord :c, :major).choose
 # plays a random note of the C major chord (:c, :e or :g)
 {% endhighlight %}
 
 There's also a function called `scale`. Scale returns all the notes in a _scale_, not just the ones in a chord:
 
 {% highlight ruby %}
-play (scale :c, :major).choose 
+play (scale :c, :major).choose
 # plays a random note of the C major scale (:c, :d, :e, :f, :g, :a or :b)
 {% endhighlight %}
 
@@ -28,7 +28,7 @@ live_loop :arp do
 end
 {% endhighlight %}
 
-Here, we’re just grabbing the scale E3 minor pentatonic and ticking through each element. This is done by adding .tick to the end of the scale declaration. This tick is local to the live loop, so each live loop can have its own independent tick: 
+Here, we’re just grabbing the scale E3 minor pentatonic and ticking through each element. This is done by adding .tick to the end of the scale declaration. This tick is local to the live loop, so each live loop can have its own independent tick:
 
 {% highlight ruby %}
 live_loop :arp do
@@ -40,7 +40,7 @@ live_loop :arp2 do
   use_synth :dsaw
   play (scale :e2, :minor_pentatonic, num_octaves: 3).tick, release: 0.25
   sleep 0.25
-end 
+end
 {% endhighlight %}
 
 ## Rings
@@ -85,4 +85,4 @@ live_loop :lead do
 end
 {% endhighlight %}
 
-Start ticking, go wild! 
+Start ticking, go wild!

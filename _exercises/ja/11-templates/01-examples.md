@@ -1,11 +1,11 @@
 ---
 chapter: Templates
 title: Templates
-lang: en
+lang: ja
 layout: exercise
 ---
 
-Here you can find some examples from various music genres. You're free to use them as you like, just copy and paste the code to an empty buffer page in Sonic Pi. 
+Here you can find some examples from various music genres. You're free to use them as you like, just copy and paste the code to an empty buffer page in Sonic Pi.
 
 Templates / Examples:
 

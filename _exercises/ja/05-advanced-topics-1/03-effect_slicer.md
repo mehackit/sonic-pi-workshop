@@ -1,7 +1,7 @@
 ---
 chapter: Advanced Topics 1
 title: Slicer
-lang: en
+lang: ja
 layout: exercise
 ---
 

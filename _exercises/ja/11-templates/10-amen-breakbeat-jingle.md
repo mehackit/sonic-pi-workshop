@@ -1,7 +1,7 @@
 ---
 chapter: Templates
 title: Amen Breakbeat Jingle
-lang: en
+lang: ja
 layout: exercise
 ---
 

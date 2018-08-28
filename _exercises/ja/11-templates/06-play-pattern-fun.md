@@ -1,7 +1,7 @@
 ---
 chapter: Templates
 title: Play Pattern Fun
-lang: en
+lang: ja
 layout: exercise
 ---
 

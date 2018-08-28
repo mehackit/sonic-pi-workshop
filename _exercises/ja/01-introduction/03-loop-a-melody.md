@@ -1,7 +1,7 @@
 ---
 chapter: Introduction
 title: Repeating a melody
-lang: en
+lang: ja
 layout: exercise
 ---
 

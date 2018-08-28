@@ -1,7 +1,7 @@
 ---
 chapter: Tweak the sounds
 title: Options
-lang: en
+lang: ja
 layout: exercise
 ---
 
@@ -11,7 +11,7 @@ Note that you can use some of the options with samples too!
 
 ### `amp:`
 
-Amplitude is the loudness of a sound. 0 is silent (you’ll hear nothing), 1 is normal volume. You can crank up the amplitude to 2, 10 or 100. However, this can often make the sound muddy and strange. So try to use low amplitudes, i.e. in the range 0 to 0.5 to avoid compression. 
+Amplitude is the loudness of a sound. 0 is silent (you’ll hear nothing), 1 is normal volume. You can crank up the amplitude to 2, 10 or 100. However, this can often make the sound muddy and strange. So try to use low amplitudes, i.e. in the range 0 to 0.5 to avoid compression.
 
 {% highlight ruby %}
 play :c2, amp: 0.5
@@ -72,7 +72,7 @@ These are too cool to skip. Try this out:
 live_loop :amen_break do
   sample :loop_amen
   sleep 2
-end 
+end
 {% endhighlight %}
 
 There's an annoying gap in the end. The sample is 1.753310657596372 beats long, which isn't that handy when you want to play it with all the other stuff we have going on. Luckily you can use `beat_stretch: 2` to stretch/shrink the sample to make it exactly 2 beats long:
@@ -92,4 +92,3 @@ live_loop :amen_break do
   sleep 2
 end
 {% endhighlight %}
-

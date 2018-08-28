@@ -1,7 +1,7 @@
 ---
 chapter: Generate sounds
 title: Generate sounds
-lang: en
+lang: ja
 layout: exercise
 ---
 

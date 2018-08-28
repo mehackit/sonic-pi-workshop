@@ -1,7 +1,7 @@
 ---
 chapter: Advanced Topics 1
 title: External Samples
-lang: en
+lang: ja
 layout: exercise
 ---
 
@@ -11,8 +11,8 @@ First, you'll have to have some audio samples in WAV format placed in a folder o
 
 Once you have downloaded the pack and extracted the files to a folder, you'll have to check the full path to that folder. For example, if you extracted the files to a folder called 'Samples' on your Desktop the path is most likely following:
 
-* Windows: "C:/Users/sam/Desktop/Samples" 
-* Raspberry Pi, Linux and Mac: "/Users/sam/Desktop/Samples" 
+* Windows: "C:/Users/sam/Desktop/Samples"
+* Raspberry Pi, Linux and Mac: "/Users/sam/Desktop/Samples"
 
 Just remember to use your own username instead of 'sam'. The sample pack contains following files: `hit_1.wav` to `hit_7.wav` (percussive hits) and `loop_1.wav` to `loop_7.wav` (looping beats are recommended to be played with the sampler opt `beat_stretch`).
 

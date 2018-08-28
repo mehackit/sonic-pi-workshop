@@ -1,7 +1,7 @@
 ---
 chapter: Advanced Topics 1
 title: Sample Slicing
-lang: en
+lang: ja
 layout: exercise
 ---
 
@@ -51,7 +51,7 @@ The video below (created with the help of Simpler in Ableton Live) visualizes wh
 
 {% include videoplayer.html filepath="/assets/video/amen_slicing" %}
 
-Now isn't it fun to play different parts of the sample in a completely different order? Try experimenting with options for the command `sample`. For example, adding an option `rate: -1` to one of the `loop_amen` hits makes it play backwards. 
+Now isn't it fun to play different parts of the sample in a completely different order? Try experimenting with options for the command `sample`. For example, adding an option `rate: -1` to one of the `loop_amen` hits makes it play backwards.
 
 One sample can be sculpted into almost anything once you start experimenting with the `sample` options (such as `rate`, `pan`, `amp`, `attack`, `release`, `start` and `finish`). The following example uses these options with randomized values to play unique microsounds from two samples:
 
@@ -81,4 +81,4 @@ end
 
 {% include player.html filepath="/assets/audio/granular_1.mp3" %}
 
-This technique is also widely used in <a href="https://en.wikipedia.org/wiki/Granular_synthesis">granular samplers and synthesizers</a>. 
+This technique is also widely used in <a href="https://en.wikipedia.org/wiki/Granular_synthesis">granular samplers and synthesizers</a>.

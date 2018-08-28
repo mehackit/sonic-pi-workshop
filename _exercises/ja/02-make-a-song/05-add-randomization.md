@@ -1,7 +1,7 @@
 ---
 chapter: Make a song
 title: Add randomization
-lang: en
+lang: ja
 layout: exercise
 ---
 
