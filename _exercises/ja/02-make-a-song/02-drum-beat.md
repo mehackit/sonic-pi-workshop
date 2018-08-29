@@ -1,13 +1,13 @@
 ---
 chapter: Make a song
-title: Drum beat
+title: ドラムビート
 lang: ja
 layout: exercise
 ---
 
-Let’s look at how to create a simple drum beat, consisting of a kick drum, snare and hi-hat. You'll get to know two new things: `live_loop` and `sample`.
+キックドラム、スネアドラム、ハイハットで構成される簡単なドラムビートを作る方法を見ていきましょう。ここでは2つの新しい事柄、`live_loop`と`sample`について知ることになります。
 
-Start with a empty buffer and create a `live_loop` called `:drums`. It could be named anything, the names is just for quickly identifying what the loop does. `live_loop` is an endless repeating loop that can be synchronised with other live_loops (a `live_loop` has to have at least one sleep):
+空のBufferから始めて、`:drums`と名前を付けた`live_loop`を作ってみましょう。名前は、そのループが何であるかすぐに識別されるためのものなので、どんなものでも構いません。`live_loop`は、無限に繰り返すループで、他のlive_loopと同期可能です(そしてそれは少なくとも1つのsleepを持っている必要があります):
 
 {% highlight ruby %}
 live_loop :drums do
@@ -16,9 +16,9 @@ live_loop :drums do
 end
 {% endhighlight %}
 
-Hit **Run** to hear your first `live_loop` playing a nice kick drum every beat.
+**Run** を押して、はじめての`live_loop`が良い感じのキックドラムを1拍ごとに鳴らすのを聞いてみてください。
 
-Let's do a simple backbeat with kick drum on 1 and 3, snare on 2 and 4. Instead of playing notes, you will be triggering samples. It's as simple as writing `sample :sample_name`. Here's an example drumbeat:
+1、3拍でキックドラム、2、4拍でスネアドラムを鳴らして簡単なバックビートを作ってみましょう。playを使って音を鳴らすかわりに、サンプルをトリガーしてみます。それは`sample :sample_name`と書くだけです。次は、ドラムビートのサンプルプログラムです:
 
 {% highlight ruby %}
 
@@ -36,15 +36,15 @@ live_loop :drums do
 end
 {% endhighlight %}
 
-That's a steady backbeat. The `:drums` loop starts with a kick, plays snare on the two, kick on three, then a snare on the four. Then the loop starts again:
+着実なバックビートですね。`:drums`ループはキックで始まり、スネアが2拍目、キックが3拍目、スネアが4拍目で鳴り、そこでループが再び始まります:
 
 <img src="{{ "/assets/img/live_loop.png" | prepend: site.baseurl}}">
 
-Now, try changing the tempo (the number after `use_bpm`) and play with the samples. When you start writing the sample name, you can browse different samples with the auto-complete feature. Try different samples and check out what they sound like. Notice that you don't have to hit stop to change the sound - just change the code and re-hit **Run** - the sounds will change automatically on the next loop without losing a beat!
+では、テンポ（`use_bpm`の後の数字）を変えたり、サンプルで遊んでみましょう。サンプルの名前を入力しようとすると、オートコンプリートの機能により異なるサンプルの一覧をブラウズできるでしょう。異なるサンプルを試して、どんな音がするか聞いてみてください。このときに、Stopボタンを押す必要がないことに注意してください。Sonic Piでは、コードを変更して再度 **Run** を押せば、ビートが途切れること無く次のループで自動的に音が変更されるのです！
 
-## Add hi-hat
+## ハイハットを追加する
 
-Now add a hi-hat. Create another live loop called `:hihat` and add your hi-hat samples. You could do for example straight 8th or 16th notes like this (this is 16th notes):
+では、ハイハットを追加してみましょう。`:hihat`という名前の別なlive_loopを作って、ハイハットのサンプルを追加してみてください。ストレートな8分音符、16分音符は同じように作れます（次の例は16分音符です）:
 
 {% highlight ruby %}
 live_loop :hihat do
@@ -53,7 +53,7 @@ live_loop :hihat do
 end
 {% endhighlight %}
 
-But it doesn't have to be so square. You could also go for a bit more funky like this:
+しかし、あまり固い感じにする必要はありません。次のように、もう少しファンキーな感じにもできます:
 
 {% highlight ruby %}
 live_loop :hihat do
@@ -64,9 +64,9 @@ live_loop :hihat do
 end
 {% endhighlight %}
 
-The polyrhythmic hi-hat pattern was first a "mistake". The loop is 1.25 beats long instead of the supposed 1. But it sounds cool! So remember to make a lot of mistakes to find something you weren't even looking for.
+このポリリズミックなハイハットのパターンは最初は"間違え"でした。このループの長さは、想定していた1拍ではなく1.25拍です。しかし、とてもかっこよく聞こえますね！たくさん間違えることで、あなたが全く探していなかった何かを発見することができることは、覚えておくと良いでしょう。
 
-Now the song looks something like this:
+ここまでで曲は次のようになったでしょう:
 
 {% highlight ruby %}
 use_bpm 100
@@ -90,8 +90,8 @@ live_loop :hihat do
 end
 {% endhighlight %}
 
-You might be wondering how the live_loops would translate to music sequences in popular music-making apps? The following video might help you to understand their relation.
+ここで、皆さんはlive_loopが一般的な音楽制作アプリケーションでどのようなシーケンスになるか疑問に思うかもしれません。次のビデオがその関係を理解するのに役立つかもしれません。
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/iFMNOb33_KM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
-Now play around with different samples and rhythms. You could also add a third `live_loop` for percussions or other effects. Next you'll create a bass track for your composition.
+では、異なるサンプルやリズムで遊んでみましょう。また、パーカッションや他のエフェクトのための3つめの`live_loop`を追加することもできます。次の節では、ベーストラックを作成することになります。
