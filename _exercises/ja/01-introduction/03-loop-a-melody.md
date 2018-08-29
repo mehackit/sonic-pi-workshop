@@ -1,13 +1,13 @@
 ---
 chapter: Introduction
-title: Repeating a melody
+title: メロディーを繰り返す
 lang: ja
 layout: exercise
 ---
 
-Okay, so you wrote a nice melody. What if you want to repeat it, or parts of it, a few times. You could copy and paste the melody but that gets a bit tiring after a while. Luckily you can use **repetition**! The fancy computer science term for this is iteration which just means doing things more than once.
+さて、前の節でメロディーを書けたことでしょう。では、メロディー全体あるいはその一部分を何回か繰り返そうとした場合、どうしたら良いでしょう？メロディーをコピー・ペーストすることは可能ですが、何度かやると疲れてきます。幸運にも **繰り返し** を使うことができます！これに対応するコンピューターサイエンスの用語はイテレーションで、1回より多くの回数何かを実行する という意味です。
 
-Write `2.times do` to the beginning of your melody and `end` to the end of your melody (the notes are in musical notation just for example, you can use MIDI notes if you wish):
+メロディーの始まりに`2.times do`を、終わりに`end`を書いてみましょう（以下では例としてそれぞれの音が音名で書かれていますが、MIDIノート番号を使うこともできます）。
 
 {% highlight ruby %}
 2.times do
@@ -22,9 +22,9 @@ Write `2.times do` to the beginning of your melody and `end` to the end of your 
 end
 {% endhighlight %}
 
-Instead of using `2.times do` you can choose how many times you want to repeat the notes. For example `4.times do` or `99.times do`.
+`2.times do`のかわりに、何回繰り返したいか指定することができます。例えば、`4.times do`や`99.times do`などです。
 
-You can also use repetitions inside repetitions if you wish:
+また、繰り返しの中に繰り返しを使うこともできます:
 
 {% highlight ruby %}
 4.times do

@@ -1,23 +1,23 @@
 ---
 chapter: Make a song
-title: Make a song
+title: 曲を作る
 lang: ja
 layout: exercise
 ---
 
-Let's dig deeper into Sonic Pi by composing a song. Now you have a rough idea about how to play notes of different lengths with Sonic Pi. That's cool but we can do so much more!
+曲を作ってSonic Piをより深く掘り下げていきましょう。前章までで、異なる長さの音を鳴らす方法について、あなたはラフなアイデアを持っています。それはクールですが、我々はもっと出来るはずです！
 
-## This chapter
+## この章では
 
-You'll start with creating a drum beat and getting to know the `live_loop`. Then you will add a bass track and finish the song by adding a melody!
+ドラム・ビートを作って`live_loop`について知ることから始めます。そして、ベーストラックを追加し、メロディーを追加して曲を完成させます！
 
-## Tweak the sounds
+## 音をいじる
 
-If you want to explore more with Sonic Pi you can continue to tweak the sounds. In the second chapter you'll learn how to use effects and tweak different options to create a richer soundscape.
+Sonic Piを更に探求したい場合には、継続して音をいじることができます。次の章ではエフェクトの使い方とオプションの微調整の仕方を学んで、豊かなサウンドスケープを作ります。
 
-## Last chapter
+## 最後の章では
 
-And there's even more. In the third chapter you can create a generative piece out of you composition. You can create algorithms to generatively create parts of your track.
+さらに多くのことがあります。最後の章では、あなたの作曲によってジェネラティブな作品を作ります。曲の一部をジェネラティブ生成するアルゴリズムを作れるようになります。
 
 
-Sounds pretty sweet! Let's get started with the beat then!
+とても魅力的に聞こえるでしょう！ではビートから始めてみましょう！
