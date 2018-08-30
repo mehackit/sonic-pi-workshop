@@ -1,11 +1,11 @@
 ---
 chapter: Make a song
-title: Bass track
+title: ベーストラック
 lang: ja
 layout: exercise
 ---
 
-Add another live loop for your bass. Compose a solid and simple bass groove. If it helps, you can use the <a href="{{ "/exercises/en/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> on your browser to choose notes that you like. Here's an example:
+ベースのためのlive_loopを1つ追加しましょう。シンプルで着実なベースを作ってみましょう。ブラウザ上で好きな音を選択するのに、<a href="{{ "/exercises/en/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">ピアノ</a>を使えるので、助けになるかもしれません。次が追加するlive_loopの例です:
 
 {% highlight ruby %}
 live_loop :bass do
@@ -20,11 +20,11 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-## Change the synth
+## シンセを変更する
 
-It's time to make your tune sound more interesting! We can do this by changing the synthesizer sounds it is using. The default Sonic Pi synth is called `beep`. To use a different synth, you need to add the code `use_synth :name_of_synth` above the sequence of code you want to use it in.
+では曲をより面白いものにする時が来ました！それはこの曲が使っているシンセサイザーの音を変更することで実現されます。デフォルトでは、Sonic Piで使用するシンセは`beep`と呼ばれているものです。他のシンセを使うには、そのシンセを使いたいコードの前に`use_synth :name_of_synth`というコードを追加する必要があります。
 
-In this example, fm is the name of the synth:
+次の例では、fmがシンセの名前です:
 
 {% highlight ruby %}
 live_loop :bass do
@@ -40,29 +40,29 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-There are lots of cool-sounding synths included with Sonic Pi. To find the names of them, click on the help icon at the top of the screen so that the help documents window appears. Then select Synths from the tabs along the left hand side of the help window. Click on any of the synth names to get more information on how to use it.
+Sonic Piにはかっこいい音のシンセがたくさんあります。シンセの名前を探すには、画面上部のヘルプアイコンをクリックし、ヘルプドキュメントのウィンドウを表示します。次にヘルプウィンドウの左側にあるタブからシンセを選択します。シンセの名前をクリックすると、更にそのシンセの使い方に関する情報を得ることができます。
 
-## Change the length of notes
+## 音の長さを変更する
 
-On occasion, you might like to make sounds play for a longer time or at a different rate. This can be achieved by modifying the optional parameters of the code you are using. `attack` and `release` control the amplitude of a note over time:
+場合によっては、長い時間や異なるレートで音を再生したいことがあるかもしれません。そんなときは、コードのオプションパラメータを変更すると実現できます。`attack`と`release`は、時間にそって音量を制御します:
 
 <img src="{{ "/assets/img/attackrelease.png" | prepend: site.baseurl }}">
 
-Using attack and release looks like the following. Now the note would be 4 beats long.
+attackとreleaseを使うと以下のようになります。音は4拍の長さになりました。
 
 {% highlight ruby %}
 play 60, attack: 1, release: 3
 {% endhighlight %}
 
-You could make a short staccato note by setting attack to zero and release to a very short value:
+attackを0にし、releaseをとても短い値にすると短いスタッカートの音を作ることができます:
 
 {% highlight ruby %}
 play :c4, attack: 0, release: 0.2
 {% endhighlight %}
 
-Explore different synths and note lengths and get your bass track rolling.
+シンセや音の長さを探索して、ベーストラックを広げていきましょう。
 
-Now the song could be something like this:
+ここまでで曲は次のようになっているでしょう:
 
 {% highlight ruby %}
 use_bpm 100
