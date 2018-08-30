@@ -1,8 +1,8 @@
 ---
 chapter: Tweak the sounds
-title: Tweak the sounds
+title: 音を調整する
 lang: ja
 layout: exercise
 ---
 
-Now you have quite an impressive composition ready. Next you can look into synth options, sample options and effects to get your piece even further.
+ここまでの章で、あなたは既にとても興味深い作品を手にしたと思います。次に、シンセのオプション、サンプルのオプション、エフェクトについて見て行き、作品をさらに先に進めましょう。
