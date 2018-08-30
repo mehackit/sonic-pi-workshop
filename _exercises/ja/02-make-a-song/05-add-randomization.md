@@ -1,15 +1,15 @@
 ---
 chapter: Make a song
-title: Add randomization
+title: ランダム化を追加する
 lang: ja
 layout: exercise
 ---
 
-Great! Now you got your song running nicely with a steady beat and a bass with the melody hook on the top. Now we're going to do something really cool and unleash the true potential of Sonic Pi. Let's add some generative elements to the track and program the computer to compose for us!
+すごい！ここまでで、あなたの曲は着実なビートとベースの上にメロディーが乗って、良い感じにできたのではないでしょうか。では次に、とてもクールなことをやって、Sonic Piの真の潜在能力を解放していきたいと思います。トラックにジェネラティブな要素を追加して、我々のために作曲してもらうようにコンピューターにプログラムしてみましょう。
 
-## Throw a dice and transpose the melody
+## ダイスを振ってメロディーをトランスポーズする
 
-Transposing means changing the pitch up or down. We could randomly transpose the melody a bit every now and then to add some spice to the track. You can throw a dice to decide when to shift the pitch up for the melody. Here's an example:
+トランスポーズとは、ピッチを上げたり下げたりして変更することです。所々でランダムにメロディーを少しトランスポーズすると、トラックに変化を加えられそうです。あなたは、ダイスを振ってメロディーのピッチを上げるかを決定することができるでしょう。以下が例です:
 
 {% highlight ruby %}
 live_loop :melody do
@@ -22,15 +22,15 @@ live_loop :melody do
 end
 {% endhighlight %}
 
-## Create a random acid bass track
+## ランダムなアシッドベースのトラックを作る
 
-Let's do something interesting for the bass loop. `.choose` is a handy method that randomly picks out an element from a list. Like this:
+ベースのループで何か面白いことをしましょう。`.choose`は、あるリストからその要素を1つランダムに選択する手軽なメソッドです。こんな感じです:
 
 {% highlight ruby %}
 play [:c, :e, :g].choose
 {% endhighlight %}
 
-`[:c, :e, :g]` is a list of notes (in this case the notes of the C major chord). `.choose` picks out one of those notes at random. Instead of notes you could have anything in the list. Like sleep values for example:
+`[:c, :e, :g]`は、音のリストです（この例ではCメジャーの和音です）。`.choose`はそれらの音からランダムに1つを選択します。音でなく何でもリストに入れることができます。例えば、sleepの値です:
 
 {% highlight ruby %}
 loop do
@@ -40,7 +40,7 @@ loop do
 end
 {% endhighlight %}
 
-You don't even have to remember what notes are in what chords. Sonic Pi can handle that for you. Instead of writing `[:c, :e, :g]`, you can just use `(chord :C, :major)`. That creates a list of right notes for you automatically. Here's an example:
+あなたは、どの和音にどの音が含まれているか覚えている必要はありません。Sonic Piがあなたに代わって何とかしてくれます。`[:c, :e, :g]`と書くかわりに、`(chord :C, :major)`を使うことができます。この記述が適切な音のリストを自動的に作ってくれます。次が例です:
 
 {% highlight ruby %}
 loop do
@@ -49,7 +49,7 @@ loop do
 end
 {% endhighlight %}
 
-Let's use this sorcery for a bubbling bass track. Save your work and copy your current `:bass` loop to another buffer, in case you want to come back to it. Then make room for our new bass track and delete the content of the loop. Let's use the classic `:tb303` synth and play random 16th notes from C major chord:
+この魔法を使って、バブルなベーストラックを作ってみましょう。あなたの書いた`:bass`ループは、後で使いたくなるときのために、別のBufferにコピーしましょう。そして次の`:bass`ループのために現在のループの内容を削除しましょう。次の例のように、クラシックな`:tb303`シンセを使って、Cメジャーの和音からランダムな16分音符の音を鳴らしましょう:
 
 {% highlight ruby %}
 live_loop :bass do
@@ -59,7 +59,7 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-Ough! Not quite right. Add `, release: 0.125` parameter in the end of the play command, like this:
+うーん！そうではないですね。次のように、`, release: 0.125`をplayコマンドの末尾に追加してみましょう:
 
 {% highlight ruby %}
 live_loop :bass do
@@ -69,9 +69,9 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-That's better, but there's still a bit polishing to do. So far you have used the `attack:` and `release:` parameters for a play command. Depending on the synth you are using, there's a lot lot more parameters to use. For example the tb303 synth has 45 different options to tweak. Let's use a parameter called `cutoff` for the bass. Cutoff removes all frequencies above the cutoff frequency. You can use values between 0-130.
+良くなりました。でもまだ良くできそうです。これまでに、あなたはplayコマンドの`attack:`と`release:`パラメータを使っているはずです。使用するシンセによりますが、利用可能なパラメータは非常にたくさんあります。例としてtb303シンセの場合は、45の異なるオプションを調整可能です。ここでは、`cutoff`というパラメータを使ってみましょう。カットオフはカットオフ周波数より上の周波数をすべて削除します。0から130までの数字を指定可能です。
 
-But don't just use a fixed cutoff value when you can have a random value! With `rrand(min, max)` you can generate random numbers in a given range. Try that out:
+せっかくランダムな値を使えるようになったので、固定のカットオフを使わずにやってみましょう！`rrand(min, max)`を使えば、範囲内のランダムな数を生成できます。試してみましょう:
 
 {% highlight ruby %}
 live_loop :bass do
@@ -81,7 +81,7 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-Grrreat! Remember to explore and try out different things. As a recap, here's an example about what you could have going on at this point:
+すごいね！いろんなことを試したり探索したりすることを忘れないでください。ここまでにやってきたことを総括した例が以下です:
 
 {% highlight ruby %}
 use_bpm 120
