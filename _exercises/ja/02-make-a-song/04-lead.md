@@ -1,13 +1,13 @@
 ---
 chapter: Make a song
-title: Lead track
+title: リードトラック
 lang: ja
 layout: exercise
 ---
 
-Now is the time for melody. Instead of writing a big bunch of `play` and `sleep` commands over and over again, we're going to use a shortcut: `play_pattern_timed`.
+さて、メロディーを書く時間になりました。膨大な`play`と`sleep`を書くかわりに、`play_pattern_timed`というショートカットを使っていきます。
 
-Instead of writing:
+以下のように書くかわりに:
 
 {% highlight ruby %}
 play :c2
@@ -20,17 +20,17 @@ play :d2
 sleep 0.5
 {% endhighlight %}
 
-you can write:
+次のように書くことができます:
 
 {% highlight ruby %}
 play_pattern_timed [:c2, :d2, :e2, :d2], [0.5, 0.25, 0.75, 0.5]
 {% endhighlight %}
 
-The first list `[:c2, :d2, :e2, :d2]` is a group of notes and the second list `[0.5, 0.25, 0.75, 0.5]` is a group of breaks in between the notes.
+最初の`[:c2, :d2, :e2, :d2]`というリストは、音のグループで、2つめの`[0.5, 0.25, 0.75, 0.5]`は音と音の間の休みのグループです。
 
-## Melody
+## メロディー
 
-Create a new `live_loop` called `:melody` create a lead theme for your song. If it feel easier, use the `play_pattern_timed` function to write the melody. You can use the <a href="{{ "/exercises/en/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">piano</a> also if it helps. Here's an example:
+`:melody`という名前の`live_loop`を作って、曲のリードテーマを作りましょう。簡単に思えたら、`play_pattern_timed`関数を使ってみましょう。また、ブラウザ上で好きな音を選択するのに、<a href="{{ "/exercises/en/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">ピアノ</a>が使えます。次が追加するlive_loopの例です:
 
 {% highlight ruby %}
 live_loop :melody do
@@ -38,7 +38,7 @@ live_loop :melody do
 end
 {% endhighlight %}
 
-Now the whole song could be something like this:
+ここまでで曲の全体は以下のようになっているでしょう:
 
 {% highlight ruby %}
 use_bpm 120
@@ -78,4 +78,4 @@ live_loop :melody do
 end
 {% endhighlight %}
 
-Yay, that's a great start! Now go and explore with different melodies, synths and `attack:` and `release:` values.
+やりましたね、良いスタートです！メロディー、シンセ、`attack:`と`release:`の値を変更して探索してみましょう。
