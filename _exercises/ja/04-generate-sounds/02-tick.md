@@ -5,21 +5,21 @@ lang: ja
 layout: exercise
 ---
 
-Remember `chord`? The chord function gives you the notes of a certain chord:
+`chord`を覚えているでしょうか？chord関数は、ある和音の音を返します:
 
 {% highlight ruby %}
 play (chord :c, :major).choose
-# plays a random note of the C major chord (:c, :e or :g)
+# Cメジャーの和音(:c, :e, :g)のいずれかをランダムに鳴らします
 {% endhighlight %}
 
-There's also a function called `scale`. Scale returns all the notes in a _scale_, not just the ones in a chord:
+また、`scale`という関数もあります。scaleは、和音の音だけでなく、_スケール_ 内の全ての音を返します:
 
 {% highlight ruby %}
 play (scale :c, :major).choose
-# plays a random note of the C major scale (:c, :d, :e, :f, :g, :a or :b)
+# Cメジャーのスケール(:c, :d, :e, :f, :g, :a, :b)のいずれかをランダムに鳴らします
 {% endhighlight %}
 
-With `choose` you can get a random element from a list. If you want to go through the values in a more structured manner, Sonic PI has a very powerful function called `tick`:
+`choose`を使うとリストからランダムに要素を1つ取得することができます。よりリストの構造に沿って要素を取得していきたい場合、Sonic Piには`tick`と呼ばれる非常に強力な関数があります:
 
 {% highlight ruby %}
 live_loop :arp do
@@ -28,7 +28,7 @@ live_loop :arp do
 end
 {% endhighlight %}
 
-Here, we’re just grabbing the scale E3 minor pentatonic and ticking through each element. This is done by adding .tick to the end of the scale declaration. This tick is local to the live loop, so each live loop can have its own independent tick:
+ここでは、E3マイナーペンタトニックスケールを取得して順に要素を取得しています。これはscaleの宣言の末尾に.tickを追加することで実現されています。tickはlive_loop内でローカルなので、複数のlive_loopがそれぞれ独立したtickを持つことができます。
 
 {% highlight ruby %}
 live_loop :arp do
@@ -43,9 +43,9 @@ live_loop :arp2 do
 end
 {% endhighlight %}
 
-## Rings
+## リング
 
-You can tick through anything that is a _ring_ (well, you can tick through lists also but it will stop when you get to the end). Ring is a special list, that starts over when you get to the end. Like in the previous example the scale started again from the beginning after reaching the last note. `scale` and `chord` both return a ring. Sometimes you'll want to create a list and turn that into a ring by calling `.ring` or using the `ring` creator:
+何かをtickしたとき、それは _リング_ と呼ばれるものです（ええ、もちろんリストもtickできますが、その場合末尾で止まってしまいます）。リングは特殊なリストで、末尾に到達すると先頭に戻ってきます。先程の例では、スケールは末尾の音まで到達したところで先頭に戻って、再び順に要素を見ていっています。`scale`と`chord`はどちらもリングを返します。リストを作成してその後リングが欲しくなった場合には、`.ring`をつけるか`ring`関数を呼ぶとリングに変更できます:
 
 {% highlight ruby %}
 puts [1, 2, 3, 4].ring #=> (ring 1, 2, 3, 4)
@@ -59,7 +59,7 @@ live_loop :arp do
 end
 {% endhighlight %}
 
-Here's a bit more complex example. Here you have a list or chords that is turned into a ring and ticked through:
+次の例は、少し複雑なものです。ここではchordのリストがリングになり、順にtickされていきます:
 
 {% highlight ruby %}
 live_loop :keys do
@@ -69,7 +69,7 @@ live_loop :keys do
 end
 {% endhighlight %}
 
-And then top it off with a lead 'melody':
+そして、次にそれをリード'メロディー'に引き上げましょう:
 
 {% highlight ruby %}
 live_loop :keys do
@@ -85,4 +85,4 @@ live_loop :lead do
 end
 {% endhighlight %}
 
-Start ticking, go wild!
+tickして、ワイルドに行ってみよう！
