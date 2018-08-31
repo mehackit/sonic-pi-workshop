@@ -1,17 +1,17 @@
 ---
 chapter: Tweak the sounds
-title: Options
+title: オプション
 lang: ja
 layout: exercise
 ---
 
-So far you have used `attack`, `release`, and `cutoff` options after a play command. Options (or opts for short) are controls you pass to play which modify and control aspects of the sound you hear. Each synth has its own set of opts for finely tuning its sound. However, there are common sets of opts shared by many sounds. Now you'll get to know few options more to add more expression to your sounds.
+ここまでで、playコマンドの`attack`, `release`, `cutoff`オプションを使ってきました。playコマンドに渡すオプション(options, 短くoptsと書くこともあります)は、あなたが聴く音の様々な面を変更・コントロールします。シンセは、その音を適切に調整するために、それぞれ独自のオプションのセットを持っています。その一方で、多くの音で共通のオプションも存在します。ここでは、あなたの音をより表現豊かにするために、いくつかのオプションについて知識を深めていくことにします。
 
-Note that you can use some of the options with samples too!
+これらのオプションのいくつかは、sampleコマンドでも利用できることに注意してください！
 
 ### `amp:`
 
-Amplitude is the loudness of a sound. 0 is silent (you’ll hear nothing), 1 is normal volume. You can crank up the amplitude to 2, 10 or 100. However, this can often make the sound muddy and strange. So try to use low amplitudes, i.e. in the range 0 to 0.5 to avoid compression.
+振幅(amplitude)は、音の大きさです。0は無音（何も聞こえません）で、1は正常な音量です。振幅は2や10, 100に上げることもできますが、これによりしばしば奇妙な音や歪んだ音になったりするでしょう。したがって、例えば0から0.5といった低い値を使って音の圧縮を避けるようにしましょう。
 
 {% highlight ruby %}
 play :c2, amp: 0.5
@@ -19,7 +19,7 @@ play :c2, amp: 0.5
 
 ### `pan:`
 
-Pan controls the panning of a sound in stereo. -1 means that you hear it out of the left speaker, 1 means you hear it out of your right speaker and 0 is center. You can use any value between -1 and 1. You could try using a random pan value for your hi-hats for some texture.
+パン(pan)は、ステレオサウンドにおける左右の定位をコントロールします。-1は、左側のスピーカーから音が聞こえることを意味し、1は右側のスピーカー、0は真ん中を意味しています。-1から1の値を使うことができます。ランダムなパンの値をハイハットに使って、何らかのテキスチャーを表現できるでしょう。
 
 {% highlight ruby %}
 play :c2, amp: 0.5, pan: -1 #left speaker
@@ -31,15 +31,15 @@ sample :drum_cymbal_closed, pan: rrand(-0.7, 0.7)
 
 ### `cutoff:`
 
-Remove frequencies higher that the given value. Use values between 0-130.
+指定された値より高い周波数を取り除きます。0から130の値を使ってください。
 
 {% highlight ruby %}
 play :c2, cutoff: 80
 {% endhighlight %}
 
-### `attack:` and `release:`
+### `attack:`と`release:`
 
-Time in beats for attack and release.
+attackとreleaseを拍で指定します。
 
 {% highlight ruby %}
 play :c2, attack: 1, release: 1 #the note is two beats long
@@ -47,9 +47,9 @@ play :c2, attack: 1, release: 1 #the note is two beats long
 
 <img src="{{ "/assets/img/attackrelease.png" | prepend: site.baseurl }}">
 
-### `use_synth_defaults` and `use_sample_defaults`
+### `use_synth_defaults`と`use_sample_defaults`
 
-If you don't want to set your opts for each play or sample in your loop, you can use `use_synth_defaults` and `use_sample_defaults` to set the opts for all the next plays and samples in the loop:
+個々のplayコマンドやsampleコマンドで毎回オプションを設定したくない場合は、`use_synth_defaults`や`use_sample_defaults`を使うでその設定内容が次のplayやsampleで反映させることができます:
 
 {% highlight ruby %}
 live_loop :melody do
@@ -64,9 +64,9 @@ live_loop :melody do
 end
 {% endhighlight %}
 
-### Bonus: `beat_stretch:` and `rate:`
+### おまけ: `beat_stretch:`と`rate:`
 
-These are too cool to skip. Try this out:
+とてもかっこよくて見逃せないですよ。試してみてください:
 
 {% highlight ruby %}
 live_loop :amen_break do
@@ -75,7 +75,7 @@ live_loop :amen_break do
 end
 {% endhighlight %}
 
-There's an annoying gap in the end. The sample is 1.753310657596372 beats long, which isn't that handy when you want to play it with all the other stuff we have going on. Luckily you can use `beat_stretch: 2` to stretch/shrink the sample to make it exactly 2 beats long:
+サンプルループの終わりに厄介な空白時間があります。このサンプルは、1.753310657596372拍の長さで、他のものと一緒に鳴らそうとすると便利ではありません。幸運にも`beat_stretch: 2`を使うと、サンプルの長さがちょうど2拍になるように伸縮してくれるのです:
 
 {% highlight ruby %}
 live_loop :amen_break do
@@ -84,7 +84,7 @@ live_loop :amen_break do
 end
 {% endhighlight %}
 
-Nice! Now to the `rate` option. Rate controls how fast a sample is played. 1 is in original speed, 0.5 is in half speed and 2 is in double speed. The sample also sounds higher and lower pitched when you change the rate. And (drumroll...) you can have even negative values! Negative values play the samples _backwards_. Try playing this loop and changing the rate and sleep value:
+できましたね！次は`rate`オプションです。rateはサンプル音源の再生レート（どれだけ早く再生するか）をコントロールします。1はオリジナルのスピードで、0.5は半分のスピード、2は倍のスピードです。また、rateを変更すると、サンプルの音が高くなったり低くなったりするのが聞き取れたと思います。そして、（ドラムロール...）rateはマイナスの値も取ることができるのです！マイナスの値の場合、_逆回転で_ サンプルが再生されます。rateとsleepの値を変更して遊んでみましょう:
 
 {% highlight ruby %}
 live_loop :amen_break do
