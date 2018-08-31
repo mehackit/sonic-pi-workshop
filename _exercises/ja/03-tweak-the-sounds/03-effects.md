@@ -1,13 +1,13 @@
 ---
 chapter: Tweak the sounds
-title: Effects
+title: エフェクト
 lang: ja
 layout: exercise
 ---
 
-We've been holding this off for too long now, so here it comes: `with_fx`!
+長い間ずっとしまっておきましたが、やっとここで紹介します: `with_fx`です！
 
-That's a powerful tool for adding different effects to your composition. Let's start with `:reverb`. Pretty much everything sounds nice with a reverb. Start with surrounding your code with a `with_fx :reverb do` and `end` blocks:
+これは様々なエフェクトをあなたの作品に追加する強力なツールです。`:reverb`から始めましょう。リバーブによってすべての音がとても良く聞こえるのではないでしょうか。コードを`with_fx :reverb do`と`end`のブロックで囲ってみましょう:
 
 {% highlight ruby %}
 live_loop :effects do
@@ -21,7 +21,7 @@ live_loop :effects do
 end
 {% endhighlight %}
 
-Sounds bigger, doesn't it? Just like synths and samples, effects also have options. `mix:`is an option that sets how much the effect and the original sound is heard. `mix: 0` plays only the original sound, `mix: 1` plays only the FX. Reverb has a `room` option also. Try different room sizes with values between 0-1. If you open the 'Fx' tab on the help menu you can find what options are available for which FX.
+音が大きく聞こえたのではないでしょうか？シンセやサンプルと同じように、エフェクトにもオプションがあります。`mix:`はエフェクトの音とオリジナルの音がどれだけ聞こえるか設定するオプションです。`mix: 0`だとオリジナルの音だけ、`mix: 1`だとエフェクトの音だけ鳴ります。また、リバーブには`room`オプションがあります。0から1の色々な値のroomを試してみましょう。ヘルプメニューの'エフェクト'タブを開くと、どのエフェクトにどのオプションが利用できるか探すことができるでしょう。
 
 {% highlight ruby %}
 live_loop :effects do
@@ -35,7 +35,7 @@ live_loop :effects do
 end
 {% endhighlight %}
 
-There are so many FX to choose from. And you don't even have to settle for one: you can nest them! (At some point your computer can run out of resources but don't worry about that now.)
+エフェクトはたくさんありすぎて1つを選べないかもしれません。エフェクトは1つだけ使う必要はありません。それはネストすることができるのです！（ネストしすぎるとコンピューターのリソースを使い切ってしまうかもしれませんが、当面はそれを心配しないでください）
 
 {% highlight ruby %}
 live_loop :effects do
@@ -53,4 +53,4 @@ live_loop :effects do
 end
 {% endhighlight %}
 
-Now go crazy and add FX everywhere for some amazing new sounds!
+では、エフェクトをいろんなところで使って、驚くような新しい音を作ってみましょう！
