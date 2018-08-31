@@ -1,8 +1,8 @@
 ---
 chapter: Generate sounds
-title: Generate sounds
+title: 音を生成する
 lang: ja
 layout: exercise
 ---
 
-You have a lot covered already. In this chapter you'll learn a bit more about how to use `chord` and `scale`, iterate through lists and use variables. The aim is to take the composition into a more generative direction, where parts of the song are generated based on parameters that you can modify on the fly.
+ここまでで、あなたは既にたくさん学んだことでしょう。この章では、`chord`と`scale`の使い方と、リストのイテレートの方法、そして変数の使い方について、もう少し学ぶことになります。この目的は、作曲をよりジェネラティブな方向へ導こうというもので、オンザフライで変更可能な変数を元に曲の一部分を生成します。
