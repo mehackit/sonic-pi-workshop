@@ -1,11 +1,11 @@
 ---
 chapter: Generate sounds
-title: Variables
+title: 変数
 lang: ja
 layout: exercise
 ---
 
-Take a look at the example below. What's going on?
+下の例を見てください。何が起きているでしょう？
 
 {% highlight ruby %}
 live_loop :melody do
@@ -16,9 +16,9 @@ live_loop :melody do
 end
 {% endhighlight %}
 
-There's a variable `r` that gets a certain value each time the loop is played and that value is being used as the release option for play and as the sleep length. A variable is a bit like a box where you can store things and take things out. Using a variable is as simple as `variable_name = variable_value`. Now the variable_value is stored in variable_name. You can get the value just by typing variable_name.
+`r`という変数があって、ループが再生される度に特定の値を受け取り、playコマンドのreleaseオプションの値として使われ、またsleepの長さの値として使われています。変数は箱に少し似ていて、そこに何か入れたり出したりできます。変数の使い方は簡単で、`variable_name = variable_value`とするだけです。これで、variable_valueがvariable_nameに格納されます。値を取得するには、variable_nameとタイプするだけです。
 
-Let's add a synth and bass to the example to try out variables. The `:keys` loop is simple, nothing new happening, but the `:bass` loop is a bit tricky:
+先程の例にシンセとベースを追加して変数を試してみましょう。`:keys`のループはシンプルで何も新しいことは起こりませんが、`:bass`ループは少しトリッキーです:
 
 {% highlight ruby %}
 live_loop :melody do
@@ -48,4 +48,4 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-`n = (chord :c2, :minor).tick` takes a note from a C minor chord and saves it to a variable named `n`. `.tick` always moves forward to the next value after it's called. `play n` plays the saved note. Then `.tick` is called again to get the next note from the chord. When the loop starts again, `.tick` continues from where it was.
+`n = (chord :c2, :minor).tick`は、Cマイナーの和音から音を1つ取得して、`n`という名前の変数に格納します。`.tick`は、それが呼ばれた後に次の値に進みます。`play n`は、nに格納された音を鳴らします。続いて、ループの頭に戻ったとき、`.tick`は前に居た位置から再開されます。
