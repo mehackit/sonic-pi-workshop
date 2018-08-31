@@ -1,17 +1,16 @@
 ---
 chapter: Generate sounds
-title: Chord progressions
+title: コード進行
 lang: ja
 layout: exercise
 ---
 
-
-The previous example was playing only in C minor. Here's an example that uses a ring of chords that all the loops use. All the loops will play around the same chord and one loop is changing the chord for all. It's getting quite complex, but check it out for inspiration if you wish. You can use the <a href="{{ "/exercises/en/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">chord progression charts</a> for choosing nice chords if you wish.
+先程の例は、Cマイナーのみを使っていました。次の例は、和音のリングを全てのループで使用する例です。全てのlive_loopは同じ和音を使い、1つのlive_loopで和音が変更されています。かなり複雑になっていますが、インスピレーションのためにチェックしてみてください。もしお望みであれば、良い和音を選択するために<a href="{{ "/exercises/en/09-keys-chords-and-scales/01-piano.html" | prepend: site.baseurl }}">コード進行の表</a>を使ってみてください。
 
 {% highlight ruby %}
 chords = [(chord :C, :minor7), (chord :Ab, :major7), (chord :Eb, :major7), (chord :Bb, "7")].ring
-c = chords[0] # take the first chord of the ring and save it to a variable
-# this is going to be used in all the live_loops. It will be ticked by the :bass loop
+c = chords[0] # リング内の最初の和音を取得して変数に格納しています
+# これは全てのlive_loopで使われ、:bassのlive_loopでtickされます
 
 live_loop :melody do
   use_synth :blade
