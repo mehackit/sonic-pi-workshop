@@ -1,28 +1,28 @@
 ---
 chapter: Advanced Topics 1
-title: External Samples
+title: 外部サンプル音源
 lang: ja
 layout: exercise
 ---
 
-Sonic Pi comes with approximately 73 samples that you can freely use and play around with, but it also fully supports using external samples. For example, maybe you would like to record something (like your own voice or guitar) and have it in Sonic Pi to use in your song.
+Sonic Piは約73のサンプル音源があってそれで遊ぶことができますが、外部サンプル音源もサポートしています。例えば、あなたが何か（あなた自身の声やギターなど）を録音し、それをSonic Piで使いたいかもしれません。
 
-First, you'll have to have some audio samples in WAV format placed in a folder on your hard drive. In the following examples, we're using a free sample pack by *Mehackit*. It is called *Solenoid Samples 1* and you can download it from <a href="{{ "/assets/files/solenoid_samples_1.zip" | prepend: site.baseurl }}">here</a>. It contains 14 one-shot and looping samples that were recorded from a kinetic sound installation we created in a workshop in early 2016.
+最初に、サンプル音源をWAVフォーマットでハードディスクドライブのフォルダにいれておく必要があります。以下の例では、*Mehackit* による無料のサンプルパックを使います。それは、*Solenoid Samples 1* というもので、<a href="{{ "/assets/files/solenoid_samples_1.zip" | prepend: site.baseurl }}">ここ</a>からダウンロードできます。そこには、2016年初めのワークショップで作成したキネティックサウンドインスタレーションから録音された、14のワンショットもしくはループのサンプル音源が入っています。
 
-Once you have downloaded the pack and extracted the files to a folder, you'll have to check the full path to that folder. For example, if you extracted the files to a folder called 'Samples' on your Desktop the path is most likely following:
+サンプルパックをダウンロードしたら、それをどこかのフォルダに解凍してください。そのフォルダのフルパスを確認をする必要があります。例えば、もしあなたがファイルをデスクトップの'Samples'というフォルダに解凍した場合には、フルパスは以下のようなものになるでしょう:
 
 * Windows: "C:/Users/sam/Desktop/Samples"
-* Raspberry Pi, Linux and Mac: "/Users/sam/Desktop/Samples"
+* Raspberry Pi, Linux, Mac: "/Users/sam/Desktop/Samples"
 
-Just remember to use your own username instead of 'sam'. The sample pack contains following files: `hit_1.wav` to `hit_7.wav` (percussive hits) and `loop_1.wav` to `loop_7.wav` (looping beats are recommended to be played with the sampler opt `beat_stretch`).
+'sam'のかわりにあなたのユーザー名にするのを忘れないようにしてください。サンプルパックは以下のファイルがあります: `hit_1.wav`から`hit_7.wav`（パーカッシブなヒット)と`loop_1.wav`から`loop_7.wav`（`beat_stretch`オプションと一緒に使うループビート）。
 
-Now you can play them directly with the `sample` command by using the right file path:
+では、`sample`コマンドでファイルパスを直接指定して再生してみます:
 
 {% highlight ruby %}
 sample "/Users/sam/Desktop/Samples/loop_1.wav", amp: 1.5
 {% endhighlight %}
 
-If the path was set correctly for the `sample` command you should now hear the sound `loop_1.wav`. Just remember to use your own file path instead of the one shown in these examples! That is pretty straightforward way to access and play samples. However, you would probably like to write the folder path only once in the code and play the samples by only referring to their filenames. You can declare a variable for the file path and use that in conjunction with the `sample` command. After `sample` you can enter the variable name containing the file path and then the name of the sample. We'll declare a variable for the sample folder file path called solenoids in the example below. When you run it, the sample `loop_4.wav` should start playing and looping:
+`sample`コマンドに渡すパスが正確であれば、`loop_1.wav`の音が聞こえるはずです。ここで、この例のパスを別なものに変更したいと思ったとしましょう。先程の例は、サンプルにアクセスして再生するとてもストレートな方法でした。しかし、あなたはフォルダパスを1度だけ書いて、ファイル名だけを参照してサンプルを再生したいのではないでしょうか？フォルダパスの変数を定義してそれを組み合わせて`sample`コマンドで使用することができます。`sample`の後に、フォルダパスを格納した変数を渡し、その後にサンプル名を渡すことができます。以下の例では、solenoidsという名前の変数を宣言してサンプルフォルダのパスを格納しています。これを実行すると、`loop_4.wav`のサンプルが再生され、ループするはずです:
 
 {% highlight ruby %}
 solenoids = "/Users/sam/Desktop/Samples/"
@@ -34,7 +34,7 @@ live_loop :solenoid1 do
 end
 {% endhighlight %}
 
-Now you're able to use external samples and samples from Sonic Pi's own library in your productions. Try playing the example below that uses four different instances of `live_loop` to play external and Sonic Pi's own samples. Please note that in the live_loop `:solenoid2` we're using a variable `samplename` to randomly select one of the samples from `hit_1.wav` to `hit_7.wav`.
+ここまでで外部サンプル音源とSonic Piのサンプル音源の両方をあなたの作品に使うことができるようになりました。下の例では、4つの`live_loop`が外部サンプルとSonic Piのサンプルを再生しています。`:solenoid2`のlive_loopでは、`samplename`という変数を使って、`hit_1.wav`から`hit_7.wav`の1つをランダムに選択しています。
 
 {% highlight ruby %}
 solenoids = "/Users/sam/Desktop/Samples/"
