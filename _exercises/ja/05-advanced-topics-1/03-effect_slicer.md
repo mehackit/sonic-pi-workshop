@@ -1,11 +1,11 @@
 ---
 chapter: Advanced Topics 1
-title: Slicer
+title: スライサー
 lang: ja
 layout: exercise
 ---
 
-In addition to the sample slicing presented in the previous topic, you can also use the audio effect `:slicer` to add some "rhythmic and chops" to your music. It basically alters the volume of the sound over time (and this effect is often called amplitude modulation). Now let's start our experiment with this effect by creating a new `live_loop` in an empty buffer and use the sample `:loop_breakbeat` as our building block:
+前のトピックで紹介したサンプルスライスに加え、何か"リズミカルでチョップされた"ものを追加するのに、`:slicer`エフェクトを使うことができます。それは時間に沿って音量を変えます（それはしばしば振幅変調と呼ばれます）。では、空のBufferに新しい`live_loop`を作って、サンプルの`:loop_breakbeat`を構成要素として使い、このエフェクトを実験してみましょう。
 
 {% highlight ruby %}
 use_bpm 120
@@ -16,11 +16,11 @@ live_loop :breakbeat do
 end
 {% endhighlight %}
 
-The loop should now sound the same as in the video below. We are using the red color to indicate the volume of the sound and in this example it should be at maximum.  
+このループは下のビデオと同じような音がします。ここで赤い色は音量を示していて、この例では最大になっているはずです。
 
 {% include videoplayer.html filepath="/assets/video/breakbeat_dry" %}
 
-Now let's add the slicer effect to the `live_loop` by using the familiar `with_fx` command. If you don't remember or know how the effects are used in Sonic Pi, you can read more about them in the previous chapter called  <a href="{{ "/exercises/en/03-tweak-the-sounds/03-effects.html" | prepend: site.baseurl }}">Effects</a>.
+では、`with_fx`コマンドを使って、`live_loop`にスライサーエフェクトを追加してみましょう。もしSonic Piでのエフェクトの使い方を思い出せない場合は、前にある<a href="{{ "/exercises/en/03-tweak-the-sounds/03-effects.html" | prepend: site.baseurl }}">エフェクト</a>の章で、理解を深めることができます。
 
 {% highlight ruby %}
 use_bpm 120
@@ -35,13 +35,13 @@ end
 
 {% include player.html filepath="/assets/audio/breakbeat_slicer.mp3" %}
 
-Now the newly added slicer effect sounds too harsh and we'll need to tune it a little bit. The main options of the slicer effect are `phase`, `wave` and `mix`. You can use them to control the amplitude modulation. The option `phase` is the frequency how fast or slow the amplitude modulation occurs. The default value for `phase`is `0.25` which means that the effect occurs every 1/16th note. Because of this the previous example sounded rather hectic.
+新しく追加されたスライサーエフェクトは不快に聞こえるので、それを少し調整する必要があります。スライサーエフェクトの主なオプションは、`phase`、`wave`、`mix`です。`phase`はどれだけ速くもしくは遅く振幅変調が起こるかの頻度です。`phase`のデフォルト値は`0.25`で、これは16分音符ごとにこのエフェクトが起こることを意味しています。これにより、先程の例は目まぐるしく聞こえたのです。
 
-Slicer effect can modulate the amplitude by using four different waveforms: `0`(saw), `1` (pulse), `2` (triangle) and `3`(sinewave). By default, `wave` is set to `1` which means that is uses pulse (also known as square) wave to modulate the amplitude. The pictures below illustrate what the waveforms look like and how they increase or decrease the amplitude (area marked with red color) over time.
+スライサーエフェクトは、`0`(saw, ノコギリ波)、`1`(pulse, パルス波)、 `2`(triangle, 三角波)、 `3`(sine, サイン波)の4つの異なる波形を使って振幅を変調しています。デフォルトでは、`wave`オプションは`1`に設定され、これはパルス波（または矩形波としても知られています）を使って振幅を変調することを意味しています。下の図は、振幅（赤色でマークされた領域）が時間に沿ってどのように増減するか示しています。
 
 <img src="{{ "/assets/img/slicer_waveforms.png" | prepend: site.baseurl }}" width="100%">
 
-Now let's try to change the waveform to the saw (`wave: 0`). This should make the effect a little bit smoother and less abrupt.
+では、波形をノコギリ波(`wave: 0`)に変更してみましょう。これのより突発さを軽減し、このエフェクトを少しスムーズにするでしょう。
 
 {% highlight ruby %}
 use_bpm 120
@@ -56,17 +56,17 @@ end
 
 {% include videoplayer.html filepath="/assets/video/fx_slicer_wave_0" %}
 
-Let's double the duration of the phase (`phase: 0.5`) and switch the waveform to pulse (`wave: 1`):
+phaseの時間を倍(`phase: 0.5`)にして、波形をパルス波(`wave: 1`)にしてみましょう;
 
 {% include videoplayer.html filepath="/assets/video/fx_slicer_wave_1" %}
 
-Now what happens if we use the following options (`phase: 0.5, wave: 2`) with the effect:
+では、以下のように、`phase: 0.5, wave: 2`をオプションとして使用すると何が起こるでしょう？
 
 {% include videoplayer.html filepath="/assets/video/fx_slicer_wave_2" %}
 
-This way it's quite easy to add some rhythm, variance and dynamics to the drum loops. Remember that you can also use this with the synthesizers in Sonic Pi!
+こうして、極めて簡単にドラムループにリズムと変化とダイナミクスを追加することができました。そして、これはシンセサイザーにも同様に使用可能であることを覚えておいてください！
 
-Here is the last slicer effect example that uses longer phase times with the slicer effect:
+次のコードはスライサーエフェクトの最後の例で、長いphaseを使ったものです:
 
 {% highlight ruby %}
 use_bpm 120
