@@ -1,11 +1,11 @@
 ---
 chapter: Cheatsheet
-title: Cheatsheet
+title: チートシート
 lang: ja
 layout: exercise
 ---
 
-## Play a note
+## 音を鳴らす
 
 {% highlight ruby %}
 use_bpm 100
@@ -20,7 +20,7 @@ play_pattern_timed [:c2, :d2, :e2, :d2], [0.5, 0.25, 0.75, 0.5]
 <img src="{{ "/assets/img/midi_notes.png" | prepend: site.baseurl }}">
 
 
-## Loop
+## ループ
 
 {% highlight ruby %}
 live_loop :drums do
@@ -36,7 +36,7 @@ play :a4
 sleep 1
 {% endhighlight %}
 
-## Synths and options
+## シンセとオプション
 
 <img src="{{ "/assets/img/adsr.png" | prepend: site.baseurl }}">
 
@@ -48,7 +48,7 @@ use_octave 0
 play :c, attack 1, decay: 0, sustain: 0, release: 1, amp: 0.5, pan: rrand(-0.5,0.5)
 {% endhighlight %}
 
-## Samples and options
+## サンプルとオプション
 
 {% highlight ruby %}
 sample :bd_haus, amp: 0.5
@@ -61,7 +61,7 @@ live_loop :amen_break do
 end
 {% endhighlight %}
 
-## Randomization
+## ランダム化
 
 {% highlight ruby %}
 rrand(60, 110)
@@ -76,7 +76,7 @@ sleep [0, 1, 2].choose
 play [:c, :e, :g].choose
 {% endhighlight %}
 
-## FX
+## エフェクト
 
 {% highlight ruby %}
 with_fx :reverb, mix: 0.5 do
@@ -84,7 +84,7 @@ with_fx :reverb, mix: 0.5 do
 end
 {% endhighlight %}
 
-## Scales and chords
+## スケールと和音
 
 {% highlight r %}
 scale(:c2, :major) # ring of :c2, :d2, :e2, :f2, :g2, :a2, :b2
@@ -96,7 +96,7 @@ chord(:c2, :major, , num_octaves: 2) # ring of :c2, :e2, :g2 :c3, :e3, :g3
 <img src="{{ "/assets/img/play_scale_3_en.png" | prepend: site.baseurl }}">
 <img src="{{ "/assets/img/chords.png" | prepend: site.baseurl }}">
 
-## Tick, ring and variables
+## tick、リング、変数
 
 {% highlight ruby %}
 play scale(:e3, :minor_pentatonic).tick, release: 0.1
@@ -112,6 +112,6 @@ c = chords.tick # save next chord to a variable 'c'
 c[0] # get the first note of the chord
 {% endhighlight %}
 
-## Other
+## その他
 
-If your code is getting slow, try `use_debug false` in the beginning of your code. This reduces the log messages Sonic Pi generates and can speed up the code.
+実行しているコードが遅いと思ったら、`use_debug false`をコードの先頭に入れてみてください。これにより、Sonic Piのログメッセージが少なくなり、コードの実行速度を向上させるかもしれません。

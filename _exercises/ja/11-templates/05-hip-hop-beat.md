@@ -7,7 +7,7 @@ layout: exercise
 
 {% include player.html filepath="/assets/audio/hiphopbeat.mp3" %}
 
-Load the code as a <a href="{{ "/assets/files/hiphopbeat.txt" | prepend: site.baseurl }}">text file</a>
+<a href="{{ "/assets/files/hiphopbeat.txt" | prepend: site.baseurl }}">テキストファイル</a>としてコードをロードする
 
 {% highlight ruby %}
 # Hip Hop Beat

@@ -7,7 +7,7 @@ layout: exercise
 
 {% include player.html filepath="/assets/audio/simple-slow-techno.mp3" %}
 
-Load the code as a <a href="{{ "/assets/files/simple-slow-techno.txt" | prepend: site.baseurl }}">text file</a>
+<a href="{{ "/assets/files/simple-slow-techno.txt" | prepend: site.baseurl }}">テキストファイル</a>としてコードをロードする
 
 {% highlight ruby %}
 # Simple Slow Techno

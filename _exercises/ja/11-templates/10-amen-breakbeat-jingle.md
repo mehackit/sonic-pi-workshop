@@ -7,7 +7,7 @@ layout: exercise
 
 {% include player.html filepath="/assets/audio/amen-breakbeat-jingle.mp3" %}
 
-Load the code as a <a href="{{ "/assets/files/amen-breakbeat-jingle.txt" | prepend: site.baseurl }}">text file</a>
+<a href="{{ "/assets/files/amen-breakbeat-jingle.txt" | prepend: site.baseurl }}">テキストファイル</a>としてコードをロードする
 
 {% highlight ruby %}
 # Amen Breakbeat Jingle
