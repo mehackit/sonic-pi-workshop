@@ -1,11 +1,11 @@
 ---
 chapter: Keys, chords and scales
-title: Keys, chords and scales
+title: キー、コード、スケール
 lang: ja
 layout: exercise
 ---
 
-Sometimes composing a melody with Sonic Pi can be tricky, if you don't immediately know what `62` or `:c3` sounds like. To help with that, here's a browser keyboard for trying out your ideas. If you want, you can select a scale from the drop menu to see what keys might sound nice in a certain key.
+`62`や`:c3`がどんな音がするかすぐに分からないと、Sonic Piによるメロディーの作曲が難しく感じられるかもしれません。それを助けるために、ブラウザーキーボードを用意しました。ドロップメニューからスケールを選択し、特定のキーでどのキーが良く聞こえるか確認することができます。
 
 <div class="keyboard-options">
   <select ID="sound">
@@ -53,13 +53,13 @@ Sometimes composing a melody with Sonic Pi can be tricky, if you don't immediate
   </div>
 </div>
 
-## What chords and notes to play?
+## どの和音、どの音を演奏すべきか？
 
-Obviously you can play whatever notes and chords you like to. There's no right or wrong. Music doesn't have to sound harmonic and some dissonance or noise belongs to a track as much as the artist wants it to belong. However there's some rules you can try out if you wish.
+どの音でもどの和音でもあなたは好きなものを鳴らすことができ、そこに正しい・誤りの区別はありません。音楽は、ハーモニックな響きである必要もありませんし、不協和音やノイズはアーティストが望めばそれをトラックに含めることができます。しかし、いくつか試してみるルールも存在します。
 
-If your composition is in a certain key, let's say C major for an example, you have certain chords that probably sound nice on the track. Here's a table with some jazzy chords that should play along with each other quite nicely. If you want you can look more in to chord progressions here: <a href="http://www.lotusmusic.com/chord-progression-map.html">lotusmusic.com/chord-progression-map.html</a>
+もしあなたの曲が特定のキーである場合、例えばCメジャーの場合、そのトラックで良く聞こえるいくつかのコードが存在します。以下の表はジャズのコードで、一緒に鳴らすととても良く聞こえるはずです。コード進行についてもっと見てみたい場合には次を参照してください: <a href="http://www.lotusmusic.com/chord-progression-map.html">lotusmusic.com/chord-progression-map.html</a>
 
-Common chord progressions in major  |  I - IV - V   |   I - VI - IV - V   |   II - V - I
+メジャー・スケールにおける一般的なコード進行  |  I - IV - V   |   I - VI - IV - V   |   II - V - I
 
 |Major key| I | II | III | IV | V | VI |
 |---|---|---|---|---|---|---|
@@ -76,7 +76,7 @@ Common chord progressions in major  |  I - IV - V   |   I - VI - IV - V   |   II
 |Bb|chord(:Bb, :major7)|chord(:C, :minor7)|chord(:D, :minor7)|chord(:Eb, :major7)|chord(:F, &quot;7&quot;)|chord(:G, :minor7)|
 |B|chord(:B, :major7)|chord(:Db, :minor7)|chord(:Eb, :minor7)|chord(:E, :major7)|chord(:Gb, &quot;7&quot;)|chord(:Ab, :minor7)|
 
-Common chord progressions in natural minor  |  I - VI - VII  |   I - IV - VII  |   I - IV - V  |   I - VI - III - VII  |   II - V - I
+ナチュラル・マイナー・スケールにおける一般的なコード進行  |  I - VI - VII  |   I - IV - VII  |   I - IV - V  |   I - VI - III - VII  |   II - V - I
 
 |Minor key| I | II | III | IV | V | VI | VII |
 |---|---|---|---|---|---|---|
