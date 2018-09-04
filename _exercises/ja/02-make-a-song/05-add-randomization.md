@@ -1,6 +1,6 @@
 ---
 chapter: Make a song
-title: ランダム化を追加する
+title: ランダマイズを追加する
 lang: ja
 layout: exercise
 ---
@@ -59,7 +59,7 @@ live_loop :bass do
 end
 {% endhighlight %}
 
-うーん！そうではないですね。次のように、`, release: 0.125`をplayコマンドの末尾に追加してみましょう:
+うわっ！そうではないですね。次のように、`, release: 0.125`をplayコマンドの末尾に追加してみましょう:
 
 {% highlight ruby %}
 live_loop :bass do

@@ -61,7 +61,7 @@ live_loop :amen_break do
 end
 {% endhighlight %}
 
-## ランダム化
+## ランダマイズ
 
 {% highlight ruby %}
 rrand(60, 110)
