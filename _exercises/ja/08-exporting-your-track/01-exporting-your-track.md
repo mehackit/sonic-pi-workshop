@@ -17,7 +17,7 @@ layout: exercise
 
 {% include videoplayer.html filepath="/assets/video/record_audio" %}
 
-上記の手順で一度オーディオファイルを保存すれば、それを再生したり共有したりする準備はできています。しかし、それをよりプロフェッショナルかつラウドにするために、オーディオファイルを少し処理することをおすすめします。このために、これから *Audacity* を使っていきます。これは、音を編集・記録するためのオープンソースのソフトウェアです。*Audacity* (Windows版, Linux版 and macOS版)は、次のURLからダウンロードできます: <a href="http://www.audacityteam.org/download/">http://www.audacityteam.org/download/</a>
+上記の手順で一度オーディオファイルを保存すれば、それを再生したり共有したりする準備はできています。しかし、それをよりプロフェッショナルかつラウドにするために、オーディオファイルを少し処理することをおすすめします。このために、これから *Audacity* を使っていきます。これは、音を編集・記録するためのオープンソースのソフトウェアです。*Audacity*（Windows版、Linux版、macOS版）は、次のURLからダウンロードできます: <a href="http://www.audacityteam.org/download/">http://www.audacityteam.org/download/</a>
 
 ## Audacity: 無音を取り除く
 
@@ -51,7 +51,7 @@ Sonic Piで録音すると普通は曲の前と後ろに余計な無音が入っ
 
 "Normalize"ウィンドウでは以下の値を設定してください:
 
-* Normalize maximum amplitude" to -0.1 dB
+* "Normalize maximum amplitude" to -0.1 dB
 
 上の2つのチェックボックスにチェックを入れ、"Ok"をクリックしてください。
 

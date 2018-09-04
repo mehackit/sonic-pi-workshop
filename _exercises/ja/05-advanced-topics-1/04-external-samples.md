@@ -14,7 +14,7 @@ Sonic Piは約73のサンプル音源があってそれで遊ぶことができ�
 * Windows: "C:/Users/sam/Desktop/Samples"
 * Raspberry Pi, Linux, Mac: "/Users/sam/Desktop/Samples"
 
-'sam'のかわりにあなたのユーザー名にするのを忘れないようにしてください。サンプルパックは以下のファイルがあります: `hit_1.wav`から`hit_7.wav`（パーカッシブなヒット)と`loop_1.wav`から`loop_7.wav`（`beat_stretch`オプションと一緒に使うループビート）。
+'sam'のかわりにあなたのユーザ名にするのを忘れないようにしてください。サンプルパックは以下のファイルがあります: `hit_1.wav`から`hit_7.wav`（パーカッシブなヒット）と`loop_1.wav`から`loop_7.wav`（`beat_stretch`オプションと一緒に使うループビート）。
 
 では、`sample`コマンドでファイルパスを直接指定して再生してみます:
 

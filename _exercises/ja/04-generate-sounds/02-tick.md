@@ -1,6 +1,6 @@
 ---
 chapter: Generate sounds
-title: Tick
+title: tick
 lang: ja
 layout: exercise
 ---
@@ -9,14 +9,14 @@ layout: exercise
 
 {% highlight ruby %}
 play (chord :c, :major).choose
-# Cメジャーの和音(:c, :e, :g)のいずれかをランダムに鳴らします
+# Cメジャーの和音（:c, :e, :g）のいずれかをランダムに鳴らします
 {% endhighlight %}
 
 また、`scale`という関数もあります。scaleは、和音の音だけでなく、_スケール_ 内の全ての音を返します:
 
 {% highlight ruby %}
 play (scale :c, :major).choose
-# Cメジャーのスケール(:c, :d, :e, :f, :g, :a, :b)のいずれかをランダムに鳴らします
+# Cメジャーのスケール（:c, :d, :e, :f, :g, :a, :b）のいずれかをランダムに鳴らします
 {% endhighlight %}
 
 `choose`を使うとリストからランダムに要素を1つ取得することができます。よりリストの構造に沿って要素を取得していきたい場合、Sonic Piには`tick`と呼ばれる非常に強力な関数があります:
@@ -28,7 +28,7 @@ live_loop :arp do
 end
 {% endhighlight %}
 
-ここでは、E3マイナーペンタトニックスケールを取得して順に要素を取得しています。これはscaleの宣言の末尾に.tickを追加することで実現されています。tickはlive_loop内でローカルなので、複数のlive_loopがそれぞれ独立したtickを持つことができます。
+ここでは、E3マイナーペンタトニックスケールを取得して順に要素を取得しています。これはscaleの宣言の末尾に`.tick`を追加することで実現されています。tickはlive_loop内でローカルなので、複数のlive_loopがそれぞれ独立したtickを持つことができます。
 
 {% highlight ruby %}
 live_loop :arp do
