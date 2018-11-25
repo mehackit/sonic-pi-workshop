@@ -64,7 +64,7 @@ end
 {% endhighlight %}
 
 
-Rytmene i hi-hat mønsteret var først en "feil". Løkken er 1.25 takter lang istedenfor 1 som det skulle være, men det høres jo kult ut! Så husk og lage mange feil - det er da du kan finne det du ikke visste du lette etter.
+Rytmene i hi-hat mønsteret var først en "feil". Løkken er 1.25 takter lang istedenfor 1 som det skulle være, men det høres jo kult ut! Så ikke vær redd for å gjøre feil og prøve deg frem, for sånn kan du finne nye og stilige rytmer og melodier!
 
 Nå ser sangen ut omtrent som dette:
 
@@ -90,8 +90,8 @@ live_loop :hihat do
 end
 {% endhighlight %}
 
-Du lurer kanskje på hvoran live_loops ville sett ut som en musikksekvens i vanlige musikkprogrammer? Denne videoen kan kanksje hjelpe deg med å forstå sammenhengen:
+Du lurer kanskje på hvordan live_loops ville sett ut som en musikksekvens i vanlige musikkprogrammer? Denne videoen kan kanksje hjelpe deg med å forstå sammenhengen:
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/iFMNOb33_KM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
-Nå kan du prøve med forskjellige sampler og rytmer. Du kan også legge til en tredje `live_loop` for perkusjon eller andre effekter. Videre skal vi lage et basspor for komposisjonen din
+Nå kan du prøve med forskjellige sampler og rytmer. Du kan også legge til en tredje `live_loop` for perkusjon eller andre effekter. Videre skal vi lage et basspor for komposisjonen din.
