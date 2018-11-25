@@ -94,4 +94,4 @@ Du lurer kanskje på hvoran live_loops ville sett ut som en musikksekvens i vanl
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/iFMNOb33_KM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
-Nå kan du prøve med forskjellige sampler og rytmer. Du kan også legge til en tredje `live_loop` for perkusjon eller andre effekter. Videre skal vi lage et bassspor for komposisjonen din
+Nå kan du prøve med forskjellige sampler og rytmer. Du kan også legge til en tredje `live_loop` for perkusjon eller andre effekter. Videre skal vi lage et basspor for komposisjonen din

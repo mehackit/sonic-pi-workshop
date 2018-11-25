@@ -49,7 +49,7 @@ loop do
 end
 {% endhighlight %}
 
-La oss bruke trolldommen vi nettopp lærte for å lage et boblende bassspor. Lagre arbeidet ditt og kopier `:bass` løkken til et annet mellomlager (buffer) i tilfelle du vil bruke det siden. Slett det som er inni løkken så vi får plass til noe nyt. La oss bruke den klassiske `:tb303` synthen og spille tilfeldige noter fra C-dur akkorden:
+La oss bruke trolldommen vi nettopp lærte for å lage et boblende basspor. Lagre arbeidet ditt og kopier `:bass` løkken til et annet mellomlager (buffer) i tilfelle du vil bruke det siden. Slett det som er inni løkken så vi får plass til noe nyt. La oss bruke den klassiske `:tb303` synthen og spille tilfeldige noter fra C-dur akkorden:
 
 {% highlight ruby %}
 live_loop :bass do
