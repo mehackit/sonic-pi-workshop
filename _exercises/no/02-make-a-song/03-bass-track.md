@@ -1,6 +1,6 @@
 ---
 chapter: Lag en sang
-title: Bassspor
+title: Basspor
 lang: no
 layout: exercise
 ---
@@ -60,7 +60,7 @@ du kan lage korte, stakkato noter ved å sette attack til 0 og release til en ve
 play :c4, attack: 0, release: 0.2
 {% endhighlight %}
 
-Utforsk forskjellige synther og notelengder og lag et tøft bassspor.
+Utforsk forskjellige synther og notelengder og lag et tøft basspor.
 
 Nå høres sangen ut kanskje noe som det her:
 

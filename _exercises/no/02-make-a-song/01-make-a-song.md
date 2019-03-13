@@ -9,7 +9,7 @@ La oss gå litt dypere inn i Sonic Pi ved å lage en sang. Nå har du en ide om 
 
 ## Dette kapittelet
 
-Du begynner med å lage et trommespor og bli kjent med `live_loop`. Deretter lager du et bassspor og avslutter sangen med å legge på en melodi.
+Du begynner med å lage et trommespor og bli kjent med `live_loop`. Deretter lager du et basspor og avslutter sangen med å legge på en melodi.
 
 ## Skru på lydene
 
