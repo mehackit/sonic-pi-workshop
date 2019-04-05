@@ -5,7 +5,7 @@ lang: chs
 layout: exercise
 ---
 
-目前为止你已经在play指令里面用了`attack`, `release`, and `cutoff选项。选项（或英语简称opts）是传递的控件，用于修改和控制声音的各种属性。每个合成器都有自己的选项设置来更好地调音。不过也有很多合成器有着相同的选项设置。现在就可以多了解一下选项来给你的音频添加更多表现力。
+目前为止你已经在play指令里面用了`attack`, `release`, and `cutoff`选项。选项（或英语简称opts）是传递的控件，用于修改和控制声音的各种属性。每个合成器都有自己的选项设置来更好地调音。不过也有很多合成器有着相同的选项设置。现在就可以多了解一下选项来给你的音频添加更多表现力。
 
 记得你也可以修改采样的选项哦！
 
@@ -51,7 +51,7 @@ play :c2, attack: 1, release: 1 #這個音符時值是兩拍
 
 ### `use_synth_defaults` 和 `use_sample_defaults`
 
-如果你不想在循环里面每次演奏或采样都设置一次选项，你可以用`use_synth_defaults`和`use_sample_defaults来设置循环里面所有演奏和采样。
+如果你不想在循环里面每次演奏或采样都设置一次选项，你可以用`use_synth_defaults`和`use_sample_defaults`来设置循环里面所有演奏和采样。
 
 {% highlight ruby %}
 live_loop :melody do
