@@ -12,6 +12,7 @@ description_cat: Taller de programació creativa amb Sonic Pi
 description_ja: Sonic Piでクリエイティブ・プログラミング
 description_ch: Sonic Pi創意程式設計工作坊
 description_chs: Sonic Pi创意编程工作坊
+description_sme: Musihkkaprogrammeren Sonic Pi -prográmmain
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://sonic-pi.mehackit.org" # the base hostname & protocol for your site
 # url : "http://127.0.0.1:4000"
