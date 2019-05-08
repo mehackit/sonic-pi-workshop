@@ -13,7 +13,7 @@ play 67
 play 69
 {% endhighlight %}
 
-Sehän ei kuulostanut melodialta ollenkaan, vai kuulostiko? Ohjelma ei soittanutkaan säveliä peräkkäin vaan itse asiassa samaan aikaan. Lopputulos kuulosti soinnulta (ts. kahden tai useamman sävelen yhtäaikainen soiminen). Jotta Sonic Pi soittaa play-komennot peräkkäin koodiin pitää merkitä myös nuottien kestot taukoina. Tämä voidaan tehdä `sleep`-komennolla, jonka perään syötetään tauon pituus iskuina. Esimerkkinä:
+Sehän ei kuulostanut melodialta ollenkaan, vai kuulostiko? Ohjelma ei soittanutkaan säveliä peräkkäin vaan itse asiassa samaan aikaan. Lopputulos kuulosti soinnulta (ts. kolmen tai useamman sävelen yhtäaikainen soiminen). Jotta Sonic Pi soittaa play-komennot peräkkäin koodiin pitää merkitä myös nuottien kestot taukoina. Tämä voidaan tehdä `sleep`-komennolla, jonka perään syötetään tauon pituus iskuina. Esimerkkinä:
 
 {% highlight ruby %}
 play 60

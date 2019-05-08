@@ -1,7 +1,7 @@
 ---
 chapter: Mállet
 title: Dubstep – elektrovnnalaš dansamusihkka
-lang: en
+lang: sme
 layout: exercise
 ---
 
