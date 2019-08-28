@@ -5,7 +5,7 @@ lang: fr
 layout: exercise
 ---
 
-Sonic Pi vient avec approximativement 73 samples que tu peux utiliser librement, mais il sait aussi jouer des samples externes. Par exemple, tu pourrais enregistrer quelque chose (comme ta propre voix ou des accords de guitare) et l'intégrer dans Sonic Pi pour l'insérer à ton morceau.
+Sonic Pi vient avec approximativement 164 samples que tu peux utiliser librement, mais il sait aussi jouer des samples externes. Par exemple, tu pourrais enregistrer quelque chose (comme ta propre voix ou des accords de guitare) et l'intégrer dans Sonic Pi pour l'insérer à ton morceau.
 
 Premièrement, tu dois avoir des fichiers audio au format WAV placés dans un répertoire de ton disque dur. Dans les exemples suivants, nous utilisons un pack d'échantillons gratuits de *Mehackit*. Ce lot se nomme *Solenoid Samples 1* et tu peux le <a href="{{ "/assets/files/solenoid_samples_1.zip" | prepend: site.baseurl }}">télécharger ici</a>. Il contient 14 samples de sons et boucles qui ont été enregistrés à partir d'une installation sonore réalisée lors d'un atelier début 2016.
 

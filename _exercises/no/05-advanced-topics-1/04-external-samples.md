@@ -5,7 +5,7 @@ lang: no
 layout: exercise
 ---
 
-Sonic Pi kommer med rundt 73 sampler som du kan bruke fritt og leke med, men det støtter også fullt ut å bruke egne sampler. For eksempel, kanskje har du lyst til å ta opp noe (som din egen stemme eller gitar) og bruke det i Sonic Pi i sangen din.
+Sonic Pi kommer med rundt 164 sampler som du kan bruke fritt og leke med, men det støtter også fullt ut å bruke egne sampler. For eksempel, kanskje har du lyst til å ta opp noe (som din egen stemme eller gitar) og bruke det i Sonic Pi i sangen din.
 
 Først trenger du noen lydsampler i WAV formatet som du legger i en mappe på maskinen din. I eksempelet her så bruker vi en gratis samling med sampler fra *Mehackit*. Den heter *Solenoid Samples 1* og du kan laste det ned <a href="{{ "/assets/files/solenoid_samples_1.zip" | prepend: site.baseurl }}">her</a>. Den inneholder 14 "one-shot" og gjentagende sampler som ble tatt opp fra en kinetisk lydinstallasjon laget i en workshop tidlig i 2016.
 

@@ -5,7 +5,7 @@ lang: fi
 layout: exercise
 ---
 
-Sonic Pi:n mukana tulee noin 73 äänisamplea, joita voi käyttää vapaasti musiikin ja äänien tekemiseen, mutta se tukee myös ulkoisten (omien) samplejen käyttöä. Jos haluat esimerkiksi käyttää omaa kitara- tai laulunauhoitusta Sonic Pi:ssä, se on mahdollista tällä sivulla esitetyillä ohjeilla.
+Sonic Pi:n mukana tulee noin 164 äänisamplea, joita voi käyttää vapaasti musiikin ja äänien tekemiseen, mutta se tukee myös ulkoisten (omien) samplejen käyttöä. Jos haluat esimerkiksi käyttää omaa kitara- tai laulunauhoitusta Sonic Pi:ssä, se on mahdollista tällä sivulla esitetyillä ohjeilla.
 
 Ensiksi sinulla täytyy olla äänisamplet WAV-tiedostomuodossa jossain hakemistossa tietokoneesi kovalevyllä. Tämän sivun esimerkeissä käytetään ilmaista *Mehackitin* kokoamaa samplepakettia nimeltä *Solenoid Samples 1* ja sen voi ladata <a href="{{ "/assets/files/solenoid_samples_1.zip" | prepend: site.baseurl }}">täältä</a>. Se sisältää yhteensä 14 isku- ja luuppisamplea, jotka nauhoitettiin eräästä Mehackitin työpajassa syntyneestä ääni-installaatiosta keväällä 2016.
 

@@ -5,7 +5,7 @@ lang: cat
 layout: exercise
 ---
 
-Sonic Pi ve amb aproximadament 73 mostres sonores que podeu usar i reproduir lliurement, però també té suport per a usar samples externs. Per exemple, potser us agradaria gravar alguna cosa (com la pròpia veu o una guitarra) i tenir-ho en Sonic Pi per a usar-ho en la cançó.
+Sonic Pi ve amb aproximadament 164 mostres sonores que podeu usar i reproduir lliurement, però també té suport per a usar samples externs. Per exemple, potser us agradaria gravar alguna cosa (com la pròpia veu o una guitarra) i tenir-ho en Sonic Pi per a usar-ho en la cançó.
 
 Primer, haureu de tenir alguns samples d'àudio en format WAV localitzats en una carpeta en el disc dur. En els següents exemples, estem usant un paquet de samples lliures de *Mehackit*. Es diuen *Solenoid Samples 1* i podeu descarregar-ho <a href="{{ "/assets/files/solenoid_samples_1.zip" | prepend: site.baseurl }}">ací</a>. Conté 14 samples de reproducció única i bucles que van ser guardats d'una instal·lació de so cinètic que vam crear en un taller a principis de 2016.
 Una vegada que hageu descarregat i extret els arxius de la carpeta, haureu de comprovar la ruta d'aquest arxiu. Per exemple, si extraieu els arxius a una carpeta anomenada ‘Samples’ en l’Escriptori, la ruta d'arxiu serà segurament la següent:

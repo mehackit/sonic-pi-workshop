@@ -5,7 +5,7 @@ lang: se
 layout: exercise
 ---
 
-Sonic Pi kommer med ca 73 ljudsamples som du kan använda fritt i dina stycken, men du kan också använda dina egna. Så du kan till exempel speaĺa in gitarr - eller pianoinspelningar och använda dem i din låt om du följer de här instruktionerna. 
+Sonic Pi kommer med ca 164 ljudsamples som du kan använda fritt i dina stycken, men du kan också använda dina egna. Så du kan till exempel speaĺa in gitarr - eller pianoinspelningar och använda dem i din låt om du följer de här instruktionerna. 
 
 Först måste du ha dina inspelningar i WAV-format i en mapp på din dator. Exemplen vi använder nu är från ett paket Mehackit har samlat ihop som heter Solenoid Samples 1. Du kan ladda ner paketet <a href="{{ "/assets/files/solenoid_samples_1.zip" | prepend: site.baseurl }}">här</a>. Paketet innehåller sammanlagt 14 samples som spelades in under en workshop Mehackit arrangerade våren 2016.
 

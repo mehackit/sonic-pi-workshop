@@ -84,7 +84,7 @@ live_loop :amen_break do
 end
 {% endhighlight %}
 
-Nice! Now to the `rate` option. Rate controls how fast a sample is played. 1 is in original speed, 0.5 is in half speed and 2 is in double speed. The sample also sounds higher and lower pitched when you change the rate. And (drumroll...) you can have even negative values! Negative values play the samples _backwards_. Try playing this loop and changing the rate and sleep value:
+Nice! Now to the `rate` option. Rate controls how fast a sample is played. 1 is in original speed, 0.5 is half speed and 2 is in double speed. The sample also sounds higher and lower pitched when you change the rate. And (drumroll...) you can have even negative values! Negative values play the samples _backwards_. Try playing this loop and changing the rate and sleep value:
 
 {% highlight ruby %}
 live_loop :amen_break do

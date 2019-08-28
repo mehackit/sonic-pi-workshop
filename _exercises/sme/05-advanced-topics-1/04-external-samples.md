@@ -5,7 +5,7 @@ lang: sme
 layout: exercise
 ---
 
-Sonic Pi:a mielde bohtet 73 jietnačájánasa, maid sáhttá lupmosit geavahit nuohtaid bidjamii, musihka ja jienaid bargamii. Prográmmii lea vejolaš dahkat maid iežas čájánasaid. Sáhtát ovdamearkka dihte báddet iežat lávluma dahje čuojaheami ja geavahit daid iežat nuohtas. Sáhtát buktit čájánasaid mielčuovvu rávvagiid mielde. 
+Sonic Pi:a mielde bohtet 164 jietnačájánasa, maid sáhttá lupmosit geavahit nuohtaid bidjamii, musihka ja jienaid bargamii. Prográmmii lea vejolaš dahkat maid iežas čájánasaid. Sáhtát ovdamearkka dihte báddet iežat lávluma dahje čuojaheami ja geavahit daid iežat nuohtas. Sáhtát buktit čájánasaid mielčuovvu rávvagiid mielde. 
 
 Fiillat, mat buktojuvvoji Sonic Pi-prográmmii, galget leat vurkejuvvon .wav -fiilahápmái. Jietnaefeavttat galget leat vurkejuvvon du dihtora garraskerrui. Čuovvovaš ovdamearkkain mii geavahit *Mehackit* – sosiála fitnodaga čohkken nuvttá čájánasbáhka, man namma lea *Solenoid Samples 1* ja dan sáhttá luđet <a href="{{ "/assets/files/solenoid_samples_1.zip" | prepend: site.baseurl }}">dáppe</a>. Dat doallá sisttis oktiibuot 14 ovttain háviin vurkejuvvon loop-sample (luhppačájánasa), mat vurkejuvvojedje jagi 2016 álggus dollojuvvon bargobáji johtti jietnainstallašuvnnas. 
 

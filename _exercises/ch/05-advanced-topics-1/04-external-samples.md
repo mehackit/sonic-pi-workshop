@@ -5,7 +5,7 @@ lang: ch
 layout: exercise
 ---
 
-Sonic Pi附帶大約73個可以隨意使用和播放的采樣，此外它也完全支援使用外部采樣。 比如你想錄製的一些聲音（比如自己的聲音或吉他），然後在Sonic Pi中使用個人曲目。
+Sonic Pi附帶大約164個可以隨意使用和播放的采樣，此外它也完全支援使用外部采樣。 比如你想錄製的一些聲音（比如自己的聲音或吉他），然後在Sonic Pi中使用個人曲目。
 
 首先，你要把WAV格式的音訊樣本放置在硬碟上的資料夾中。 在下面的例子中，我們使用的是*Mehackit*提供的免費采樣包，名為Solenoid Samples 1，您可以從<a href="{{ "/assets/files/solenoid_samples_1.zip" | prepend: site.baseurl }}">這裡</a>下載。 它包含14個一次性采樣和循環采樣，這些采樣是我們用2016年初在工作坊製作的動力聲音裝置記錄的。
 
