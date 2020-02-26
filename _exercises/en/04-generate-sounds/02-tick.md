@@ -49,7 +49,7 @@ You can tick through anything that is a _ring_ (well, you can tick through lists
 
 {% highlight ruby %}
 puts [1, 2, 3, 4].ring #=> (ring 1, 2, 3, 4)
-puts (ring 1, 2, 3, 4) #=> (ring 2, 2, 3, 4)
+puts (ring 1, 2, 3, 4) #=> (ring 1, 2, 3, 4)
 {% endhighlight %}
 
 {% highlight ruby %}
