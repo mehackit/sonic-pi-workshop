@@ -79,7 +79,7 @@ There's an annoying gap in the end. The sample is 1.753310657596372 beats long, 
 
 {% highlight ruby %}
 live_loop :amen_break do
-  sample :loop_amen, beat_stretch:2
+  sample :loop_amen, beat_stretch: 2
   sleep 2
 end
 {% endhighlight %}
@@ -88,7 +88,7 @@ Nice! Now to the `rate` option. Rate controls how fast a sample is played. 1 is 
 
 {% highlight ruby %}
 live_loop :amen_break do
-  sample :loop_amen, beat_stretch:2, rate: -1
+  sample :loop_amen, beat_stretch: 2, rate: -1
   sleep 2
 end
 {% endhighlight %}

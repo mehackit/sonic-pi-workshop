@@ -45,7 +45,7 @@ use_synth :fm
 use_transpose 0
 use_octave 0
 
-play :c, attack 1, decay: 0, sustain: 0, release: 1, amp: 0.5, pan: rrand(-0.5,0.5)
+play :c, attack: 1, decay: 0, sustain: 0, release: 1, amp: 0.5, pan: rrand(-0.5,0.5)
 {% endhighlight %}
 
 ## Samples and options
@@ -56,7 +56,7 @@ sleep 1
 sample :drum_cymbal_open, attack: 0.01, sustain: 0, release: 0.1 
 sleep 1
 live_loop :amen_break do
-  sample :loop_amen, beat_stretch:2, rate: -1
+  sample :loop_amen, beat_stretch: 2, rate: -1
   sleep 2
 end
 {% endhighlight %}
