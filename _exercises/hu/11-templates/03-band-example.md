@@ -1,5 +1,5 @@
 ---
-chapter: TSablonok
+chapter: Sablonok
 title: Zenekar sablon 2
 lang: hu
 layout: exercise
