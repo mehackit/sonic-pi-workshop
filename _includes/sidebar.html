@@ -2,42 +2,63 @@
   <div class="sidebar-about">
     <h1>
       {% if page.lang == "fi" %}
-     <a href="{{ "/index_fi.html" | prepend: site.baseurl }}">  
+        <a href="{{ "/index_fi.html" | prepend: site.baseurl }}">
       {% elsif page.lang == "en" %}
-     <a href="{{ "/" | prepend: site.baseurl }}"> 
+        <a href="{{ "/" | prepend: site.baseurl }}">
       {% elsif page.lang == "kr" %}
-     <a href="{{ "/index_kr.html" | prepend: site.baseurl }}"> 
+        <a href="{{ "/index_kr.html" | prepend: site.baseurl }}">
       {% elsif page.lang == "fr" %}
-     <a href="{{ "/index_fr.html" | prepend: site.baseurl }}"> 
+        <a href="{{ "/index_fr.html" | prepend: site.baseurl }}">
       {% elsif page.lang == "es" %}
-     <a href="{{ "/index_es.html" | prepend: site.baseurl }}"> 
+        <a href="{{ "/index_es.html" | prepend: site.baseurl }}">
       {% elsif page.lang == "cat" %}
-     <a href="{{ "/index_cat.html" | prepend: site.baseurl }}"> 
+        <a href="{{ "/index_cat.html" | prepend: site.baseurl }}">
       {% elsif page.lang == "se" %}
-     <a href="{{ "/index_se.html" | prepend: site.baseurl }}"> 
+        <a href="{{ "/index_se.html" | prepend: site.baseurl }}">
       {% elsif page.lang == "ja" %}
-     <a href="{{ "/index_ja.html" | prepend: site.baseurl }}"> 
+        <a href="{{ "/index_ja.html" | prepend: site.baseurl }}">
       {% elsif page.lang == "ch" %}
-     <a href="{{ "/index_ch.html" | prepend: site.baseurl }}"> 
-      {% elsif page.lang == "chs" %} 
-     <a href="{{ "/index_chs.html" | prepend: site.baseurl }}"> 
+        <a href="{{ "/index_ch.html" | prepend: site.baseurl }}">
+      {% elsif page.lang == "chs" %}
+        <a href="{{ "/index_chs.html" | prepend: site.baseurl }}">
       {% elsif page.lang == "sme" %}
-     <a href="{{ "/index_sme.html" | prepend: site.baseurl }}"> 
+        <a href="{{ "/index_sme.html" | prepend: site.baseurl }}">
       {% elsif page.lang == "hi" %}
-      <a href="{{ "/index_hi.html" | prepend: site.baseurl }}">
+        <a href="{{ "/index_hi.html" | prepend: site.baseurl }}">
+      {% elsif page.lang == "no" %}
+        <a href="{{ "/index_hu.html" | prepend: site.baseurl }}">
+      {% elsif page.lang == "hu" %}
+        <a href="{{ "/index_no.html" | prepend: site.baseurl }}">
       {% else %}
-     <a href="{{ "/index_no.html" | prepend: site.baseurl }}"> 
+        <a href="{{ "/" | prepend: site.baseurl }}">
       {% endif %}
       <img alt="logo" src="{{ "/assets/img/mehackit_logo_white.png" | prepend: site.baseurl }}" />
     </a></h1>
-    <p id="sidebar_lead" class="lead">{% if page.lang == "fi" %} {{ site.description_fi }} {% elsif page.lang == "en" %} {{ site.description }} {% elsif page.lang == "kr" %} {{ site.description_kr }} {% elsif page.lang == "fr" %} {{ site.description_fr }} {% elsif page.lang == "es" %} {{ site.description_es }} {% elsif page.lang == "cat" %} {{ site_description_cat }} {% elsif page.lang == "se" %} {{ site.description_se }} {% elsif page.lang == "ja" %} {{ site.description_ja }} {% elsif page.lang == "ch" %} {{ site.description_ch }} {% elsif page.lang == "chs" %} {{ site.description_chs }} {% elsif page.lang == "sme" %} {{ site.description_sme }} {% elsif page.lang == "hi"%} {{site.description_hi}} {% else %} {{site.description_no }} {% endif %}</p>
+    <p id="sidebar_lead" class="lead">
+      {% if page.lang == "fi" %} {{ site.description_fi }}
+      {% elsif page.lang == "en" %} {{ site.description }}
+      {% elsif page.lang == "kr" %} {{ site.description_kr }}
+      {% elsif page.lang == "fr" %} {{ site.description_fr }}
+      {% elsif page.lang == "es" %} {{ site.description_es }}
+      {% elsif page.lang == "cat" %} {{ site_description_cat }}
+      {% elsif page.lang == "se" %} {{ site.description_se }}
+      {% elsif page.lang == "ja" %} {{ site.description_ja }}
+      {% elsif page.lang == "ch" %} {{ site.description_ch }}
+      {% elsif page.lang == "chs" %} {{ site.description_chs }}
+      {% elsif page.lang == "sme" %} {{ site.description_sme }}
+      {% elsif page.lang == "hi" %} {{site.description_hi}}
+      {% elsif page.lang == "no" %} {{site.description_no}}
+      {% elsif page.lang == "hu" %} {{site.description_hu}}
+      {% else %} {{site.description }}
+      {% endif %}
+    </p>
     <div class="line"></div>
     <a aria-hidden="false" class="nav-toggle" id="toggle" href="#">Menu</a>
   </div>
 
   <div class="nav-collapse">
     <nav class="sidebar-nav">
-      
+
       <ul>
         {% assign chapters = "" | split: ""  %}
         {% assign lang_exercises = site.exercises | where: "lang", page.lang %}
@@ -78,25 +99,45 @@
   Mehackit offers free online art and technology courses, professional development training in phenomenon-based teaching of creative technology, and participatory workshops for museums and events. </p>
 
     {% if page.lang == "fi" %}
-    <p id="licence_text">Lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen -lisenssillä</a>. Perustuu <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> -järjestön <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">"Getting started with Sonic Pi"</a> ja Stuart Brettin <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a> -oppaisiin.</p>
+      <p id="licence_text">
+        Lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen -lisenssillä</a>. Perustuu <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> -järjestön <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">"Getting started with Sonic Pi"</a> ja Stuart Brettin <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a> -oppaisiin.
+      </p>
+    {% elsif page.lang == "en" %}
+      <p id="licence_text">
+        This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Based on <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> by <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> and <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">An introduction to Sonic Pi</a> by Stuart Brett.
+      </p>
     {% elsif page.lang == "kr" %}
-    <p id="licence_text"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Creative Commons ShareAlike 4.0 International License</a>에 저작권 등록이 되어 있으며, <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> 과 Stuart Brett의 <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a>를 바탕으로 제작 되었습니다.</p>
+      <p id="licence_text">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Creative Commons ShareAlike 4.0 International License</a>에 저작권 등록이 되어 있으며, <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> 과 Stuart Brett의 <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a>를 바탕으로 제작 되었습니다.
+      </p>
     {% elsif page.lang == "fr" %}
-    <p id="licence_text">Cette oeuvre est publiée sous licence <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution - Partage dans les mêmes conditions 4.0 International</a>. Basé sur <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> par la <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> et <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a> par Stuart Brett.</p>
+      <p id="licence_text">
+        Cette oeuvre est publiée sous licence <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution - Partage dans les mêmes conditions 4.0 International</a>. Basé sur <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> par la <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> et <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a> par Stuart Brett.
+      </p>
     {% elsif page.lang == "se" %}
-    <p id="licence_text">Licenserad under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Erkännande-DelaLika 4.0 Internationell</a>. Materialet baserar sig på <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> skapad av <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> och <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a> av Stuart Brett.</p>
+      <p id="licence_text">
+        Licenserad under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Erkännande-DelaLika 4.0 Internationell</a>. Materialet baserar sig på <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> skapad av <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> och <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a> av Stuart Brett.
+      </p>
     {% elsif page.lang == "es" %}
-    <p id="licence_text">
-        Este trabajo está licenciado bajo la licencia <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Basado en <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> por la  <a href="https://www.raspberrypi.org/">Fundación Raspberry Pi </a> y <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a> por Stuart Brett.</p>
-        {% elsif page.lang == "cat" %}
-    <p id="licence_text">
-        Aquesta obra es troba sota una Llicència Internacional <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconeixement-CompartirIgual 4.0.</a>. Basada en <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> de la  <a href="https://www.raspberrypi.org/">Raspberry Pi foundation </a> y <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a> de Stuart Brett.</p>
-        {% elsif page.lang == "sme" %}
-    <p id="licence_text">Dát ofelaš lea lisensierejuvvon <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Juoge Seamma ládje 4.0 riikkaidgaskasaš liseanssain</a>. Vuođđuduvvá Raspberry Pi foundation -vuođđudusa <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a>  ja Stuart Bretta <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">An introduction to Sonic Pi</a>-ofelaččaide.</p>
+      <p id="licence_text">
+        Este trabajo está licenciado bajo la licencia <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Basado en <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> por la  <a href="https://www.raspberrypi.org/">Fundación Raspberry Pi </a> y <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a> por Stuart Brett.
+      </p>
+    {% elsif page.lang == "cat" %}
+      <p id="licence_text">
+        Aquesta obra es troba sota una Llicència Internacional <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconeixement-CompartirIgual 4.0.</a>. Basada en <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> de la  <a href="https://www.raspberrypi.org/">Raspberry Pi foundation </a> y <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">"An introduction to Sonic Pi"</a> de Stuart Brett.
+      </p>
+    {% elsif page.lang == "sme" %}
+      <p id="licence_text">
+        Dát ofelaš lea lisensierejuvvon <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Juoge Seamma ládje 4.0 riikkaidgaskasaš liseanssain</a>. Vuođđuduvvá Raspberry Pi foundation -vuođđudusa <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a>  ja Stuart Bretta <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">An introduction to Sonic Pi</a>-ofelaččaide.
+      </p>
     {% elsif page.lang == "hi" %}
-    <p id="licence_text">यह कार्य एक <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>  के तहत लाइसेंस प्राप्त है। यह <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Sonic Pi के साथ शुरू होने</a> पर आधारित है और <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">An introduction to Sonic Pi</a>, Stuart Brett द्वारा लिखा गया था।</p>
-      {% else %}
-    <p id="licence_text">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Based on <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> by <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> and <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">An introduction to Sonic Pi</a> by Stuart Brett.</p>
+      <p id="licence_text">
+        यह कार्य एक <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>  के तहत लाइसेंस प्राप्त है। यह <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Sonic Pi के साथ शुरू होने</a> पर आधारित है और <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">An introduction to Sonic Pi</a>, Stuart Brett द्वारा लिखा गया था।
+      </p>
+    {% else %}
+      <p id="licence_text">
+        This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Based on <a href="https://www.raspberrypi.org/learning/getting-started-with-sonic-pi/worksheet/">Getting started with Sonic Pi</a> by <a href="https://www.raspberrypi.org/">Raspberry Pi foundation</a> and <a href="http://thinking.is.ed.ac.uk/ada-lovelace-day/wp-content/uploads/sites/13/2015/10/Sonic_pi_workshop.pdf">An introduction to Sonic Pi</a> by Stuart Brett.
+      </p>
     {% endif %}
 
     <a target="_blank" href="https://kokoa.io/products/creative-music-programming-workshop-sonic-pi">
