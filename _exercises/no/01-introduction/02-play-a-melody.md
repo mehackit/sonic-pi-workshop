@@ -27,7 +27,7 @@ play 69
 
 `sleep 1` forteller Sonic PI å vente en takt. Du kan forsøke med større og mindre nummere. Jo mindre verdien etter sleep er, jo kortere er pausen. Hvis du kan noter, er det sånn forskjellige noter ser ut i Sonic Pi:
 
-<img src="{{ "/assets/img/Notes_EN.png" | prepend: site.baseurl }}"> 
+<img src="{{ "/assets/img/notes_en.png" | prepend: site.baseurl }}">
 <img src="{{ "/assets/img/Rests_en.png" | prepend: site.baseurl }}">
 
 Som nevnt før kan du skrive noter i MIDI, som er tall mellom og og 127 (`67`, `80`, `22`) eller som noter (`:G4`, `:Ab5`, `:Bb`), det er opp til deg. Her er en oversikt over noter og MIDI verdiene deres:

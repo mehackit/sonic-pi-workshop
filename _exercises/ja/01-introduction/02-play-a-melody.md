@@ -27,7 +27,7 @@ play 69
 
 `sleep 1`はSonic Piに1拍待つように指示しています。小さい値も大きい値も試すことができます。sleepの値を小さくすると、playコマンドの間の時間が短くなり、大きくするとその逆になります。もしあなたが記譜法に慣れていれば、音符や休符の違いがSonic Piで次のように記述されるのを理解できるでしょう。
 
-<img src="{{ "/assets/img/Notes_EN.png" | prepend: site.baseurl }}">
+<img src="{{ "/assets/img/notes_en.png" | prepend: site.baseurl }}">
 <img src="{{ "/assets/img/Rests_en.png" | prepend: site.baseurl }}">
 
 以前に紹介したとおり、音は0から127のMIDIノート番号（`67`、`80`、`22`など）でも、音名表記（`:G4`、`:Ab5`、`:Bb`など）でも記述可能で、どちらを使うかはあなた次第です。次の表は、音名と対応するMIDIノート番号を示しています:

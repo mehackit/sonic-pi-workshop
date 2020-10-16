@@ -27,7 +27,7 @@ play 69
 
 `sleep 1` dit à Sonic Pi d'attendre une pulsation. Tu peux essayer des nombres plus petits ou plus grands. Plus le nombre est petit, plus la durée entre les notes est courte et vice versa. Si vous connaissez la notation musicale, voici à quoi ressemblent différentes notes dans Sonic Pi&nbsp;:
 
-<img src="{{ "/assets/img/Notes_FR.png" | prepend: site.baseurl }}">
+<img src="{{ "/assets/img/notes_fr.png" | prepend: site.baseurl }}">
 <img src="{{ "/assets/img/Rests_fr.png" | prepend: site.baseurl }}">
 
 Comme déjà indiqué, tu peux écrire les notes en MIDI, c'est à dire en nombres compris entre 0 et 127 (`67`, `80`, `22`) ou en notation musicale anglaise (`:G4`, `:Ab5`, `:Bb`), c'est comme tu veux. Voici un tableau indiquant pour chaque note la valeur MIDI correspondante&nbsp;:

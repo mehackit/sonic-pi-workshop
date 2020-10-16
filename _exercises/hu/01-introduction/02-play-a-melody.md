@@ -27,7 +27,7 @@ play 69
 
 `sleep 1` azt jelenti a Sonic Pi-ban, hogy várjon egy ütemet. Kipróbálhatsz kisebb és nagyobb számokat. Minél kisebb a sleep érték, annál rövidebb idő telik el a lejátszási parancsok között és fordítva. Ha ismered a zenei jelöléseket, akkor így néznek ki a különböző hangok a Sonic Pi-ban:
 
-<img src="{{ '/assets/img/Notes_hu.png' | prepend: site.baseurl }}">
+<img src="{{ '/assets/img/notes_hu.png' | prepend: site.baseurl }}">
 <img src="{{ '/assets/img/Rests_hu.png' | prepend: site.baseurl }}">
 
 Mint korábban említésre került, a hangokat írhatod MIDI-ben, amelyek alapvetően 0 és 127 közötti számok  (`67`, `80`, `22`) vagy hangjegyekben  (`:G4`, `:Ab5`, `:Bb`), ), ez rajtad múlik. Az alábbiakban bemutatjuk a hangjegyeket és a megfelelő MIDI-értékeket mutató ábrát:

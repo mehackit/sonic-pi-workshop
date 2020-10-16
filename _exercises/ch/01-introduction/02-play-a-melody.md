@@ -27,7 +27,7 @@ play 69
 
 `sleep 1` 指令代表休止一拍。你可以自行改成其他數值，數值越低，音符間休止時長越短，反之亦然。以下是五線譜和Sonic Pi指令對照表：
 
-<img src="{{ "/assets/img/Notes_ch.png" | prepend: site.baseurl }}"> 
+<img src="{{ "/assets/img/notes_ch.png" | prepend: site.baseurl }}">
 <img src="{{ "/assets/img/Rests_ch.png" | prepend: site.baseurl }}">
 
 如前所述，MIDI可以用0到127 (`67`, `80`, `22`) 的自然數或者音符 (`:G4`, `:Ab5`, `:Bb`)來編曲。
@@ -38,7 +38,7 @@ play 69
 
 ## 小試牛刀
 
-用C大調音階(`72, 74, 76, 77, 79, 81, 83` 
+用C大調音階(`72, 74, 76, 77, 79, 81, 83`
 要么 `:C5 :D5 :E5 :F5 :G5 :A5 :B5`) 來譜寫一段旋律。用 `sleep` 指令配合不同數值來區別韻律。在代碼開端使用 `use_bpm` 指令可以界定節奏快慢。BPM是每分鐘節拍的縮寫。
 
 {% highlight ruby %}

@@ -27,7 +27,7 @@ play 69
 
 `sleep 1`은 Sonic Pi에게 한박자 쉬라고 말해주는 명령어입니다. 1보다 작거나 큰 값을 선택할 수 있어요. 1보다 작은 값의 sleep 값을 넣으면 쉬는 박자가 짧아지고 큰 값을 넣으면 쉬는 박자가 길어집니다. 악보를 그리는 방법을 알고 있다면 다음 악보들을 통해 Sonic Pi에서의 음계를 쉽게 이해할 수 있을 겁니다.
 
-<img src="{{ "/assets/img/Notes_KR.png" | prepend: site.baseurl }}"> 
+<img src="{{ "/assets/img/notes_kr.png" | prepend: site.baseurl }}">
 <img src="{{ "/assets/img/Rests_kr.png" | prepend: site.baseurl }}">
 
 아까 설명했다시피, MIDI 노트를 사용해도 됩니다. `0`부터 `127`까지의 값을 사용하는 MIDI 노트나 악보 코드 (`:G4`, `:Ab5`, `:Bb5`)를 이용해도 돼요. 음계에 맞는 MIDI 노트 값을 써 놓은 표를 참조해 보세요.

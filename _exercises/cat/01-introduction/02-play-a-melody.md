@@ -27,7 +27,7 @@ play 69
 
 `sleep 1` diu a Sonic Pi que espere un temps. Podeu provar amb nombres més grans o més menuts. Com més baix siga el valor de `sleep`, menor serà la durada entre les ordres play i al contrari. Si esteu familiaritzat amb les notes musicals, així són les diferents notes musicals en Sonic Pi:
 
-<img src="{{ "/assets/img/Notes_cat.png" | prepend: site.baseurl }}"> 
+<img src="{{ "/assets/img/notes_cat.png" | prepend: site.baseurl }}">
 <img src="{{ "/assets/img/Rests_cat.png" | prepend: site.baseurl }}">
 
 Com hem dit abans, podeu escriure les notes en MIDI, que són bàsicament nombres entre 0 i 127 (`67`, `80`, `22`) o com a notes musicals (`:G4`, `:AB5` , `:Bb`), com preferiu. ACí tenim un gràfic que mostra les notes i els seus corresponents valors en MIDI:

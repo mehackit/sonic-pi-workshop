@@ -13,9 +13,9 @@ play 67
 play 69
 {% endhighlight %}
 
-Dathan ii čuodjan melodiijan ollenge, vai čuojaigo? Prográmma ii čuojahan nuohtaid maŋŋálaga muhto iešalddes oktanaga. Dáinna lágiin don sáhtát prográmmeret šuoŋaid. Šuokŋa dárkkuha eanet, 2-3 nuohta čuojaheami oktanaga. 
+Dathan ii čuodjan melodiijan ollenge, vai čuojaigo? Prográmma ii čuojahan nuohtaid maŋŋálaga muhto iešalddes oktanaga. Dáinna lágiin don sáhtát prográmmeret šuoŋaid. Šuokŋa dárkkuha eanet, 2-3 nuohta čuojaheami oktanaga.
 
-Juos hálidat Sonic Pi:a čuojahit nuohtaid maŋŋálaga, nu kodii galgá merkejuvvot juohke nuohta maŋŋái botta. Čále `sleep 1` (oađe) juohke nuohta vulobeallái, dego dás: 
+Juos hálidat Sonic Pi:a čuojahit nuohtaid maŋŋálaga, nu kodii galgá merkejuvvot juohke nuohta maŋŋái botta. Čále `sleep 1` (oađe) juohke nuohta vulobeallái, dego dás:
 
 {% highlight ruby %}
 play 60
@@ -25,9 +25,9 @@ sleep 1
 play 69
 {% endhighlight %}
 
-`sleep 1` -gohččun (oađe) gohčču prográmma vuordit ovtta časkkástaga, ovdal go čuojaha čuovvovaš nuohta. Mađi unnit lea sleep (oađe) -doaimma árvu (lohku), dađi oanehit lea áigi sierra play-gohččumiid gaskkas. Ja seamma ládje mađi stuorit sleep (oađe) -doaimma árvu (lohku), dađi guhkit bodda lea sierra nuohtaid gaskkas. Juos dábálaš nuohtaid bidjan lea dutnje oahpis, vulobeal govas sáhtát oaidnit movt sierra nuohtat doibmet Sonic Pi:s. 
+`sleep 1` -gohččun (oađe) gohčču prográmma vuordit ovtta časkkástaga, ovdal go čuojaha čuovvovaš nuohta. Mađi unnit lea sleep (oađe) -doaimma árvu (lohku), dađi oanehit lea áigi sierra play-gohččumiid gaskkas. Ja seamma ládje mađi stuorit sleep (oađe) -doaimma árvu (lohku), dađi guhkit bodda lea sierra nuohtaid gaskkas. Juos dábálaš nuohtaid bidjan lea dutnje oahpis, vulobeal govas sáhtát oaidnit movt sierra nuohtat doibmet Sonic Pi:s.
 
-<img src="{{ "/assets/img/Notes_sme.png" | prepend: site.baseurl }}"> 
+<img src="{{ "/assets/img/notes_sme.png" | prepend: site.baseurl }}">
 <img src="{{ "/assets/img/Rests_sme.png" | prepend: site.baseurl }}">
 
 Play-gohččuma maŋis nuohtat sáhttet čállojuvvot MIDI-árvun, mat leat nummárat 0-127 gaskkas (omd. `67`, `80`, `22`) dahje nuohttan (`:G4`, `:Ab5`, `:Bb`). Don sáhtát ieš válljet goappá merkenvuogi hálidat geavahit.

@@ -27,7 +27,7 @@ play 69
 
 `sleep 1` 指令代表休止一拍。你可以自行改成其他数值，数值越低，音符间休止时长越短，反之亦然。以下是五线谱和Sonic Pi指令对照表：
 
-<img src="{{ "/assets/img/Notes_chs.png" | prepend: site.baseurl }}"> 
+<img src="{{ "/assets/img/notes_chs.png" | prepend: site.baseurl }}"> 
 <img src="{{ "/assets/img/Rests_chs.png" | prepend: site.baseurl }}">
 
 如前所述，MIDI可以用0到127(`67`, `80`, `22`) 的自然数或者音符 (`:G4`, `:Ab5`, `:Bb`)来编曲。

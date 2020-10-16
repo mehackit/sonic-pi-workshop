@@ -23,20 +23,20 @@ sleep 1
 play 69
 {% endhighlight %}
 
-`sleep 1`-komento käskee ohjelmaa odottamaan kokonaisen iskun ennen kuin suorittaa seuraavalla rivillä olevan komennon. Voit seuraavaksi kokeilla `sleep`-komentoa pienemmillä ja isommilla arvoilla. Mitä pienempää arvoa käytetään sleep-komennon kanssa, sitä lyhyempi on odotettava aika peräkkäisten komentojen välillä (ja päinvastoin). Jos tavanomainen nuotinnus on sinulle tuttua, alla oleva kuva kertoo miten eri tauot ja sävelpituudet toimivat Sonic Pi:ssä:  
+`sleep 1`-komento käskee ohjelmaa odottamaan kokonaisen iskun ennen kuin suorittaa seuraavalla rivillä olevan komennon. Voit seuraavaksi kokeilla `sleep`-komentoa pienemmillä ja isommilla arvoilla. Mitä pienempää arvoa käytetään sleep-komennon kanssa, sitä lyhyempi on odotettava aika peräkkäisten komentojen välillä (ja päinvastoin). Jos tavanomainen nuotinnus on sinulle tuttua, alla oleva kuva kertoo miten eri tauot ja sävelpituudet toimivat Sonic Pi:ssä:
 
-<img src="{{ "/assets/img/Notes_FI.png" | prepend: site.baseurl }}"> 
+<img src="{{ "/assets/img/notes_fi.png" | prepend: site.baseurl }}">
 <img src="{{ "/assets/img/Rests_fi.png" | prepend: site.baseurl }}">
 
-`play`-komennon perässä olevat nuotit voi kirjoittaa niin sanottuina MIDI-arvoina, jotka ovat numeroita väliltä 0-127 (esim. 67, 80, 22) tai nuotteina (:G4, :Ab5, :Bb). Se on täysin sinusta kiinni kumpaa merkintätapaa haluat käyttää. 
+`play`-komennon perässä olevat nuotit voi kirjoittaa niin sanottuina MIDI-arvoina, jotka ovat numeroita väliltä 0-127 (esim. 67, 80, 22) tai nuotteina (:G4, :Ab5, :Bb). Se on täysin sinusta kiinni kumpaa merkintätapaa haluat käyttää.
 
-Alla on kaavio, joka kertoo mitä nuottia kukin MIDI-arvo vastaa: 
+Alla on kaavio, joka kertoo mitä nuottia kukin MIDI-arvo vastaa:
 
 <img src="{{ "/assets/img/midi_notes_fi.png" | prepend: site.baseurl }}">
 
 ## Kokeile itse
 
-Käytä sävellaljin C-duuri nuotteja (`72, 74, 76, 77, 79, 81, 83` tai `:C5 :D5 :E5 :F5 :G5 :A5 :B5`) melodian luomiseen. Käytä `play`-komentojen välissä `sleep`-komentoa eri arvoilla muuttaaksesi musiikin rytmillistä kulkua. Koko kappaleen nopeutta (tempoa) voit käyttää komentoa `use_bpm` ohjelman alussa. BPM on lyhenne termistä *Beats Per Minute*, joka tarkoittaa numeroarvoa siitä kuinka monta iskua kappaleessa on minuutin aikana. Kokeile esimerkiksi seuraavaa: 
+Käytä sävellaljin C-duuri nuotteja (`72, 74, 76, 77, 79, 81, 83` tai `:C5 :D5 :E5 :F5 :G5 :A5 :B5`) melodian luomiseen. Käytä `play`-komentojen välissä `sleep`-komentoa eri arvoilla muuttaaksesi musiikin rytmillistä kulkua. Koko kappaleen nopeutta (tempoa) voit käyttää komentoa `use_bpm` ohjelman alussa. BPM on lyhenne termistä *Beats Per Minute*, joka tarkoittaa numeroarvoa siitä kuinka monta iskua kappaleessa on minuutin aikana. Kokeile esimerkiksi seuraavaa:
 
 {% highlight ruby %}
 use_bpm 120

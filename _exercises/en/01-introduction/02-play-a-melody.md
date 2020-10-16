@@ -27,7 +27,7 @@ play 69
 
 `sleep 1` tells Sonic Pi to wait for one beat. You can try smaller and bigger numbers. The smaller the sleep value, the shorter the duration is between the play commands and vice versa. If you're familiar with musical notation, this is what different notes look like in Sonic Pi:
 
-<img src="{{ "/assets/img/Notes_EN.png" | prepend: site.baseurl }}"> 
+<img src="{{ "/assets/img/notes_en.png" | prepend: site.baseurl }}">
 <img src="{{ "/assets/img/Rests_en.png" | prepend: site.baseurl }}">
 
 As mentioned before, you can write the notes in MIDI, which is basically numbers between 0 and 127 (`67`, `80`, `22`) or in musical notes (`:G4`, `:Ab5`, `:Bb`), it's up to you. Here's a chart displaying notes and corresponding MIDI values:
