@@ -22,7 +22,7 @@ bundle exec jekyll serve
 
 ## How to contribute
 
-- Go to your flder:
+- Go to your folder:
 ```
 cd <path to your folder>
 ```
