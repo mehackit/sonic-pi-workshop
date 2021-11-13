@@ -1,5 +1,10 @@
 # Website for Mehackit creative programming workshops with Sonic Pi
 
+## Prerequisites
+
+- [Ruby](https://www.ruby-lang.org/en/downloads/) version 2.5.0 or higher, including all development headers (check your Ruby version using ruby -v)
+- [RubyGems](https://rubygems.org/pages/download) (check your Gems version using gem -v)
+
 ## Setting up
 
 - Log in to GitHub and fork this repo
